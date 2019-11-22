@@ -95,7 +95,7 @@
                     <div class="col-sm-2">
                     <ul>
                     
-                        <li><a href="/greengardenph/users.php"   >Manage Users</a></li>
+                        <li><a href="/greengardenph/admin.php"  >Manage Users</a></li>
                         <li><a href="/greengardenph/manageguest.php">Manage Guest</a></li>
                         <li><a href="/greengardenph/viewpayments.php">View Payments</a></li>
                         <li><a href="/greengardenph/manageproducts.php" >Manage Products</a></Li>
