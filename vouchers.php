@@ -112,8 +112,8 @@
             <br>
             <div class="vouchers">
                 <h6>Green Garden</h6>
-                <p id="discount">₱ 50.00</p>
-                <p>Minimum Spend ₱500.00</p>
+                <p id="discount">₱ 100.00</p>
+                <p>Minimum Spend ₱1000.00</p>
                 <br><br>
                 <p id="dot">
                 <center><p>Valid from 2019-09-14 12:00AM - 2020-09-14 12:00AM</p></center>
