@@ -340,13 +340,82 @@ cursor: pointer;
   
 
 /*=========================================================
-	
+	users
 ===========================================================*/
 
-.feedback{
-
-    widows: 600px;
-    height: 200px;
-    background-color: black;
+.panel{
+    width: 500px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 6px 10px 10px -4px rgba(0,0,0,.75);
+    margin-bottom: 100px;
+    
+}
+.history p{
+    margin: 10px;
 
 }
+.history label{
+     margin: 10px;
+}
+
+#peso{
+    
+    font-size: 50px;
+    font-weight: bolder;
+    color: #19e64d;
+    text-align: center;
+    height: 140px;
+    
+
+}
+
+.e-wallet label{
+
+    margin: 15px;
+
+}
+.e-wallet p{
+    padding-top: 50px;
+}
+
+#dot{
+    
+
+    border-bottom:2px dotted #19e64d;
+    width:100%;
+   
+  } 
+
+  .vouchers{
+      width: 500px;
+      background-color: whitesmoke;
+      height: 300px;
+      border-radius: 0px 20px 0px 20px;
+      box-shadow: 6px 10px 10px -4px #52A6CA;
+      
+
+  }
+  .vouchers p{
+      color: #19e64d;
+      font-size: 16px;
+      
+      
+  }
+
+  .vouchers h6{
+
+    font-size: 20px;
+    color: #19e64d;
+    box-shadow: 6px 20px 50px 0px #19e64d;
+
+    
+
+  }
+  #discount{
+
+    font-size: 30px;
+    font-weight: bold;
+   
+
+  }
