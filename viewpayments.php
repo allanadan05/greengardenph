@@ -6,6 +6,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
     <link rel="stylesheet" href="./import/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="./import/css/animate.css">
@@ -89,106 +91,114 @@
                     <div class="col-sm-2">
                     <ul>
                     
-                        <li><a href="#posts" class="active">Posts</a></li>
-                        <li><a href="#purchased">Purchased History</a></li>
-                        <li><a href="#wallet">E-wallet</a></Li>
-                        <li><a href="#vouchers">Vouchers</a></li>
-                        <li><a href="#cards">Cards</a></li>
-                        <li><a href="#rewards">Rewards</a> </li>
+                        <li><a href="/greengardenph/users.php" >Manage Users</a></li>
+                        <li><a href="/greengardenph/manageguest.php">Manage Guest</a></li>
+                        <li><a href="#purchased" class="active">View Payments</a></li>
+                        <li><a href="/greengardenph/manageproducts.php" >Manage Products</a></Li>
+                        <li><a href="/greengardenph/managefeedback.php">Manage Feedback</a></li>
+                        
+                        
                         
                     </ul>
                     </div>
                 </div>
                 <!-- /SIDEBAR -->
-                <!-- TABLE -->
-                    <div class="col-sm-10">
-                    <!-- ADMIN TABLE -->
-                    <div class="admin-table">
-                        <table border='.5'>
-                                <thead>
-                                <tr>
-                                    <th>Customer Name</th>
-                                    <th>Product purchased</th>
-                                    <th>Cost</th>
-                                    <th>Breakdown of fee</th>
-                                    <th>Mode of payment</th>
-                                    <th>Reference Number</th>
+                <!-- VIEW PAYMENTS -->
+               
+                    
+                <table border='.5' class="view-payment">
+                            <thead>
+                            <tr>
+                                <th>Customer Name</th>
+                                <th>purchased products</th>
+                                <th>Cost</th>
+                                <th>Breakdown of fee</th>
+                                <th>mode of payment</th>
+                                <th>reference number</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                    <td>John Steven Francisco</td>
+                                    <td>july/30/2019</td>
+                                    <td>john@example.com</td>
+                                    <td>123</td>
+                                    <td>123</td>
+                                    <td>123</td>
 
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                        <td>Pepsi</td>
-                                        <td>asdasd</td>
-                                        <td>john@example.com</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                        
-                                </tr>
-                                <tr>
-                                        <td>ESpencer</td>
-                                        <td>sdsdsd</td>
-                                        <td>adfadfa</td>
-                                        <td>sdfsdfsdfsd</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                </tr>
-                                <tr>
-                                        <td>sadasd</td>
-                                        <td>sadasdas</td>
-                                        <td>asdasdas</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                </tr>
-                                <tr>
-                                        <td>John</td>
-                                        <td>july/30/2019</td>
-                                        <td>john@example.com</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                </tr>
-                                <tr>
-                                        <td>sdsdsd</td>
-                                        <td>asdasdasd</td>
-                                        <td>sdsdsds</td>
-                                        <td>sss</td>
-                                        <td>123</td>
-                                        <td>123</td>
+                                   
+                                     
+                            </tr>
+                            <tr>
+                                    <td>John</td>
+                                    <td>july/30/2019</td>
+                                    <td>john@example.com</td>
+                                    <td>3 pataas</td>
+                                    <td>123</td>
+                                    <td>123</td>
+                            </tr>
+                            <tr>
+                                    <td>John</td>
+                                    <td>july/30/2019</td>
+                                    <td>john@example.com</td>
+                                    <td>123</td>
+                                    <td>123</td>
+                                    <td>123</td>
 
-                                </tr>
-                                <tr>
-                                        <td>sdsd</td>
-                                        <td>asdasd</td>
-                                        <td>asdasda</td>
-                                        <td>sadasdas</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                </tr>
-                                <tr>
-                                        <td>sad</td>
-                                        <td>asdasdsa</td>
-                                        <td>jaasdas</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                </tr>
-                                <tr>
-                                        <td>John</td>
-                                        <td>july/30/2019</td>
-                                        <td>john@example.com</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <!-- /ADMIN TABLE -->
-                <!-- /TABLE -->
+                            </tr>
+                            <tr>
+                                    <td>John</td>
+                                    <td>july/30/2019</td>
+                                    <td>john@example.com</td>
+                                    <td>123</td>
+                                    <td>123</td>
+                                    <td>123</td>
+                                    
+
+                            </tr>
+                            <tr>
+                                    <td>John</td>
+                                    <td>july/30/2019</td>
+                                    <td>john@example.com</td>
+                                    <td>123</td>
+                                    <td>123</td>
+                                    <td>123</td>
+                                   
+
+                            </tr>
+                            <tr>
+                                    <td>John</td>
+                                    <td>july/30/2019</td>
+                                    <td>john@example.com</td>
+                                    <td>123</td>
+                                    <td>123</td>
+                                    <td>123</td>
+
+                            </tr>
+                            <tr>
+                                    <td>John</td>
+                                    <td>july/30/2019</td>
+                                    <td>john@example.com</td>
+                                    <td>123</td>
+                                    <td>123</td>
+                                    <td>123</td>
+
+                            </tr>
+                            <tr>
+                                    <td>John</td>
+                                    <td>july/30/2019</td>
+                                    <td>john@example.com</td>
+                                    <td>123</td>
+                                    <td>123</td>
+                                    <td>123</td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                
+                   
+                <!-- /VIEW PAYMENTS -->
+            
                 
         </div><!-- /row -->
     </div>

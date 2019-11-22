@@ -1,3 +1,29 @@
+<?php
+session_start();
+echo "<h1>sample log in form</h1>";
+$count=1;
+if(isset($_POST["login"])){
+	$con= new mysqli("localhost","root","","sampledb");
+
+	$email = $con->real_escape_string($_POST["email"]);
+	$userpass = $con->real_escape_string($_POST["userpass"]);
+
+	$data = $con->query("Select email from userstbl where email='$email' AND userpass='$userpass'" );
+	if($data ->num_rows>0)
+	{
+		$_SESSION["email"]=$email;
+		$_SESSION["loggedin"]=1;
+		header("Location: profile.php");
+		exit();
+
+	}
+	else {
+		echo "incorrect emial or password";
+	}
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,6 +54,19 @@
     <link rel="stylesheet" href="./import/css/flaticon.css">
     <link rel="stylesheet" href="./import/css/icomoon.css">
     <link rel="stylesheet" href="./import/css/style.css">
+    <link rel="stylesheet" href="./stevenimport/style.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="C:/Users/stevenigop/Documents/GitHub/GreenGarden2/Sources/fonts/fontawesome-webfont">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 </head>
 
 <body class="goto-here">
@@ -77,7 +116,7 @@
                     <!-- <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li> -->
                     <li class="nav-item cta cta-colored"><a href="wishlist.php" class="nav-link"><span class="icon-heart"></span>[0]</a></li>
                     <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-                    <li class="nav-item cta cta-colored"><a href="profile.php" class="nav-link"><span class="icon-person"></span>Hi, [name] !</a></li>
+                    <li class="nav-item cta cta-colored"><button id="login-btn"><span class="icon-person"></span>Hi, [name] !</button></li>
                 </ul>
             </div>
         </div>
@@ -550,6 +589,82 @@
             </div>
         </div>
     </section>
+    
+<!--LOGIN MODAL-->
+<div class="popup">
+                <div class="popup-content">
+                 <img src="images/close.png" alt="Close" class="close">
+                
+                 
+                        <div class="row">
+                                <div class="col-sm-5 col-xs-6">
+                                    <br>
+                                
+                                    <br><!--login social media accounts-->
+                                        <div class="fb-login">
+                                            <Button>
+                                            <img src="images/facebook-icon.png" alt="">Login with Facebook</Button>
+                                        </div>
+                                        <div class="twit-login">
+                                                <Button>
+                                                <img src="images/twitter-icon.png" alt="">Login with Twitter</Button>
+                                        </div>
+                                        <div class="google-login">
+                                                <Button>
+                                                <img src="images/google-icon.png" alt="">Login with Gmail</Button>
+                                        </div>
+
+
+
+
+                                </div>
+                
+                                <div class="col-sm-2 col-xs-6">
+                                    <div class="or">
+                                       <h6>OR</h6> 
+                                    </div>
+
+                                </div>
+                                <!--manually login-->
+                                <div class="col-sm-5 col-xs-6">
+                                        <div class="manually">
+                                        <h5>Sign in manually</h5>
+                                        <br>
+                                        <form method="post" action="index.php">
+                                        <input type="text" placeholder="Username or Email" name="email">
+                                        <input type="password" class="glyphicon glyphicon-user" name="userpass" placeholder="Password">
+                    
+                                         </div>
+                                         <div class="btn">
+                                         <span>
+                                         <input type="checkbox" name="" value="" class="checkbox" placeholder="Remember me">
+                                         <label for="remember">Remember me</label>
+                                         </span>
+                                         <button type="submit" value="Login" name="login" class="btn btn-success btn-sm">Log in</button>
+                                        </div>
+                                        <div class="lower-btn">
+                                        
+                                        <a href="#" class="reg">Register now</a>|<a href="#"class="forgot">Forgot Password?</a>
+                                        </div>
+                                    </form>
+
+                                        
+                                </div>
+
+                                
+                         </div>
+
+
+
+
+
+              
+                    
+
+                </div>
+            </div>
+            <!--/LOGIN MODAL-->
+               
 
     <footer class="ftco-footer ftco-section">
         <div class="container">
@@ -636,7 +751,17 @@
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
+    <script> 
+     document.getElementById("login-btn").addEventListener("click",function(){
 
+        document.querySelector(".popup").style.display = "flex";
+
+        });
+
+        document.querySelector(".close").addEventListener("click",function(){
+        document.querySelector(".popup").style.display = "none";
+        });
+    </script>
 
 
     <script src="./import/js/jquery.min.js"></script>
