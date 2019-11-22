@@ -1,29 +1,4 @@
-<?php
-session_start();
-echo "<h1>sample log in form</h1>";
-$count=1;
-if(isset($_POST["login"])){
-	$con= new mysqli("localhost","root","","sampledb");
 
-	$email = $con->real_escape_string($_POST["email"]);
-	$userpass = $con->real_escape_string($_POST["userpass"]);
-
-	$data = $con->query("Select email from userstbl where email='$email' AND userpass='$userpass'" );
-	if($data ->num_rows>0)
-	{
-		$_SESSION["email"]=$email;
-		$_SESSION["loggedin"]=1;
-		header("Location: profile.php");
-		exit();
-
-	}
-	else {
-		echo "incorrect emial or password";
-	}
-
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -116,7 +91,7 @@ if(isset($_POST["login"])){
                     <!-- <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li> -->
                     <li class="nav-item cta cta-colored"><a href="wishlist.php" class="nav-link"><span class="icon-heart"></span>[0]</a></li>
                     <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-                    <li class="nav-item cta cta-colored"><button id="login-btn"><span class="icon-person"></span>Hi, [name] !</button></li>
+                    <li class="nav-item cta cta-colored"><button id="login-btn"><span class="icon-person"></span>Hi,[name]!</button></li>
                 </ul>
             </div>
         </div>

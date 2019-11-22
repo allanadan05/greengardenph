@@ -107,39 +107,9 @@
                 </div>
                 <!-- /SIDEBAR -->
 
-                    <!-- PANEL -->
-                    <div class="col-sm-10">
-
-                        <div class="panel panel-default">
-                            
-                            <div class="panel-body">Panel Content
-                            <script>
-	$(document).ready(function(){
-			$("#show").hide();
-
-		$("#show").click(function(){
-			$(".body").show();
-			$("#show").hide();
-			
-			});
-		$("#hide").click(function(){
-			$(".body").hide();
-			$("#show").show();
-
-			});
-		});
-        </script>
-
-
-
-
-                            </div>
-                            <div class="panel-footer">Panel Footer</div>
-                        </div>
-                   
-
-                    </div>
-                    <!-- /PANEL -->
+                <!-- PANEL -->
+                
+                <!-- /PANEL -->
 
 
 
