@@ -1,0 +1,163 @@
+
+.side-bar li{
+	
+list-style:none;
+margin-top:30px;
+
+}
+.side-bar a{
+	color:grey;
+	font-size: 18px;
+
+}
+.side-bar a:hover{
+	
+	color:#19e64d;
+	text-decoration:none;
+}
+#searchs{
+	width:400px;
+	height:30;
+
+}
+
+
+#btn-search{
+
+	width:60px;
+	height: 30px;
+	background-color:blue;
+	color: white;
+}
+.firstdrop{
+	width:140px;
+	height:200px;
+	background:black;
+	margin-top:50px; 
+	position:absolute;
+	margin-left:900px;
+	margin-top:100px;
+	color:white;
+}
+.seconddrop{
+	width:140px;
+	height:200px;
+	background:red;
+	margin-top:50px; 
+	position: absolute;
+	margin-left:900px;
+	margin-top:100px;
+	color:white;
+}
+.thirddrop{
+	width:140px;
+	height:200px;
+	background:blue;
+	margin-top:50px; 
+	position: absolute;
+	margin-left:900px;
+	margin-top:100px;
+	color:white;
+}
+th{
+	color:white;
+	background-color:black;
+}
+.dropdrop{
+	width:140px;
+	height:200px;
+	background:blue;
+	margin-top:50px; 
+	position: absolute;
+	margin-left:1150px;
+	margin-top:100px;
+	color:white;
+}
+
+
+.admin-table th{
+background-color: #333333;
+color: white;
+font-family: sans-serif;
+font-size: 18px;
+border: none;
+width: 700px;
+height: 60px;
+text-align: center;
+text-transform: uppercase;
+
+
+
+}
+
+.admin-table td{
+    color: gray;
+    font-family: sans-serif;
+    font-size: 18px;
+	border: none;  
+	height: 40px;
+	text-align: center;
+	
+}
+
+  
+.admin-table tr{
+
+    border: none;
+    max-height: 30px;
+    min-height: 20px;
+}
+
+.admin-table tr:hover{
+    color: white;
+    font-family: sans-serif;
+    border: 2px solid #19e64d;
+    cursor: pointer;
+    background-color: whitesmoke;   
+}
+
+
+.admin-table button{
+    font-size: 12px;
+    border-radius: 50px;
+    border: 1px solid green;
+   width: 60px;
+   height: 25px;
+    
+   
+}
+.admin-table button:hover{
+    font-size: 10px;
+    background: #19e64d;
+    color:white;
+    transition: 0.5s;
+  
+   
+}
+.modal button{
+     
+    font-size: 10px;
+}
+.modal-body label{
+
+    font-size: 17px;
+    font-family: sans-serif;
+    color: #333333;
+
+
+}
+
+li a .icon-envelope{
+	
+	font-size: 20px;
+}
+.icon-person{
+
+	font-size: 20px;
+}
+
+.icon-bell{
+
+	font-size: 20px;
+
+}
