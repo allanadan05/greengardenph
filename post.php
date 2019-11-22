@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="./import/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="./import/css/jquery.timepicker.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    
 
     <link rel="stylesheet" href="./import/css/flaticon.css">
     <link rel="stylesheet" href="./import/css/icomoon.css">
@@ -89,14 +92,14 @@
                 <div class="col-sm-2">
                     <div class="side-bar">
                     <ul>
-                    <hr><a href="post.php"><button type="button"style="width:150px;" class="btn btn-primary">
+                    <hr><button type="button"style="width:150px;" class="btn btn-primary">
                     Posts <span class="badge badge-light">9</span>
                     <span class="sr-only">unread messages</span>
-                    </button></a></hr>
-                    <hr><a href="message.php"><button type="button"style="width:150px;" class="btn btn-primary">
+                    </button></hr>
+                    <hr><button type="button"style="width:150px;" class="btn btn-primary">
                     Messages <span class="badge badge-light">9</span>
                     <span class="sr-only">unread messages</span>
-                    </button></a></hr>
+                    </button></hr>
                     <hr> <button type="button"style="width:150px;" class="btn btn-primary">
                     Purchased History <span class="badge badge-light">9</span>
                     <span class="sr-only">unread messages</span>
@@ -115,92 +118,65 @@
                 <!-- /SIDEBAR -->
                 <!-- TABLE -->
                     <div class="col-sm-10">
-                    <!-- ADMIN TABLE -->
-                    <div class="admin-table">
-                        <table border='.5'>
-                                <thead>
-                                <tr>
-                                    <th>Customer Name</th>
-                                    <th>Product purchased</th>
-                                    <th>Cost</th>
-                                    <th>Breakdown of fee</th>
-                                    <th>Mode of payment</th>
-                                    <th>Reference Number</th>
+                    <div class="col-md-12 d-flex ftco-animate">
+                            
+                            <div class="blog-entry align-self-stretch d-md-flex">
+                                <a href="blog-single.php" class="block-20" style="background-image: url('images/image_1.jpg');">
+                                </a>
+                                <div class="text d-block pl-md-4">
+                                    <div class="meta mb-3">
+                                        <div><a href="#">July 20, 2019</a></div><br/>
+                                        <button type = "button" class = "btn"><span class = "fas fa-comment"> 3 </span></button>
+                                        <button type = "button" class = "btn"><span class = "fas fa-thumbs-up"> 5 </span></button>
+                                        <button type = "button" class = "btn"><span class = "fas fa-share-square"> 10 </span></button>
+                                        <div style="float: right;">
+                                            <span class = "far fa-star"></span>
+                                            <span class = "far fa-star"></span>
+                                            <span class = "far fa-star"></span>
+                                            <span class = "far fa-star"></span>
+                                            <span class = "far fa-star"></span>
+                                            <span class = "">2.6</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p><a href="blog-single.php" class="btn btn-primary py-2 px-3">Read more</a></p>
+                                </div>
+                            </div>
 
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                        <td>Pepsi</td>
-                                        <td>asdasd</td>
-                                        <td>john@example.com</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                        
-                                </tr>
-                                <tr>
-                                        <td>ESpencer</td>
-                                        <td>sdsdsd</td>
-                                        <td>adfadfa</td>
-                                        <td>sdfsdfsdfsd</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                </tr>
-                                <tr>
-                                        <td>sadasd</td>
-                                        <td>sadasdas</td>
-                                        <td>asdasdas</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                </tr>
-                                <tr>
-                                        <td>John</td>
-                                        <td>july/30/2019</td>
-                                        <td>john@example.com</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                </tr>
-                                <tr>
-                                        <td>sdsdsd</td>
-                                        <td>asdasdasd</td>
-                                        <td>sdsdsds</td>
-                                        <td>sss</td>
-                                        <td>123</td>
-                                        <td>123</td>
+                        </div><hr/>
 
-                                </tr>
-                                <tr>
-                                        <td>sdsd</td>
-                                        <td>asdasd</td>
-                                        <td>asdasda</td>
-                                        <td>sadasdas</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                </tr>
-                                <tr>
-                                        <td>sad</td>
-                                        <td>asdasdsa</td>
-                                        <td>jaasdas</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                </tr>
-                                <tr>
-                                        <td>John</td>
-                                        <td>july/30/2019</td>
-                                        <td>john@example.com</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <div class="col-md-12 d-flex ftco-animate">
+                            
+                            <div class="blog-entry align-self-stretch d-md-flex">
+                                <a href="blog-single.php" class="block-20" style="background-image: url('images/image_1.jpg');">
+                                </a>
+                                <div class="text d-block pl-md-4">
+                                    <div class="meta mb-3">
+                                        <div><a href="#">July 20, 2019</a></div><br/>
+                                        <button type = "button" class = "btn"><span class = "fas fa-comment"> 3 </span></button>
+                                        <button type = "button" class = "btn"><span class = "fas fa-thumbs-up"> 5 </span></button>
+                                        <button type = "button" class = "btn"><span class = "fas fa-share-square"> 10 </span></button>
+                                        <div style="float: right;">
+                                            <span class = "far fa-star"></span>
+                                            <span class = "far fa-star"></span>
+                                            <span class = "far fa-star"></span>
+                                            <span class = "far fa-star"></span>
+                                            <span class = "far fa-star"></span>
+                                            <span class = "">2.6</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p><a href="blog-single.php" class="btn btn-primary py-2 px-3">Read more</a></p>
+                                </div>
+                            </div>
+
+                        </div><hr/>
+                    
                     </div>
-                    <!-- /ADMIN TABLE -->
+
+                    
                 <!-- /TABLE -->
               </div>  
         </div><!-- /row -->
