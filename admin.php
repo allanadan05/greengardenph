@@ -6,6 +6,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
     <link rel="stylesheet" href="./import/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="./import/css/animate.css">
@@ -26,6 +28,7 @@
     <link rel="stylesheet" href="./import/css/icomoon.css">
     <link rel="stylesheet" href="./import/css/style.css">
     <link rel="stylesheet" href="./angelicoimport/angelicostyles.css">
+    <link rel="stylesheet" href="./stevenimport/style.css">
 
 </head>
 
@@ -82,116 +85,163 @@
     <!-- END nav -->
 
     <!-- CONTENT -->
-    <div class="container-fluid">
+<div class="container-fluid">
         <div class="row"><!-- row -->
                 <!-- SIDEBAR -->
+                <div class="col-sm-2">
                 <div class="side-bar">
-                    <div class="col-sm-2">
-                    <ul>
-                    
-                        <li><a href="#posts" class="active">Posts</a></li>
-                        <li><a href="#purchased">Purchased History</a></li>
-                        <li><a href="#wallet">E-wallet</a></Li>
-                        <li><a href="#vouchers">Vouchers</a></li>
-                        <li><a href="#cards">Cards</a></li>
-                        <li><a href="#rewards">Rewards</a> </li>
-                        
-                    </ul>
-                    </div>
+                   
+                    <ul>                  
+                        <li><a href="/greengardenph/admin.php"  class="active" >Manage Users</a></li>
+                        <li><a href="/greengardenph/manageguest.php">Manage Guest</a></li>
+                        <li><a href="/greengardenph/viewpayments.php">View Payments</a></li>
+                        <li><a href="/greengardenph/manageproducts.php" >Manage Products</a></Li>
+                        <li><a href="/greengardenph/managefeedback.php">Manage Feedback</a></li>
+                    </ul>    
+                </div>
                 </div>
                 <!-- /SIDEBAR -->
                 <!-- TABLE -->
-                    <div class="col-sm-10">
+                   <div class="col-sm-10">
                     <!-- ADMIN TABLE -->
-                    <div class="admin-table">
-                        <table border='.5'>
-                                <thead>
-                                <tr>
-                                    <th>Customer Name</th>
-                                    <th>Product purchased</th>
-                                    <th>Cost</th>
-                                    <th>Breakdown of fee</th>
-                                    <th>Mode of payment</th>
-                                    <th>Reference Number</th>
+                    
+                    <table border='.5' class="user-table">
+                            <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Date registered</th>
+                                <th>Email</th>
+                                <th>No. of purchased products</th>
+                                <th><center>Action</center></th>
 
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                        <td>Pepsi</td>
-                                        <td>asdasd</td>
-                                        <td>john@example.com</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                        
-                                </tr>
-                                <tr>
-                                        <td>ESpencer</td>
-                                        <td>sdsdsd</td>
-                                        <td>adfadfa</td>
-                                        <td>sdfsdfsdfsd</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                </tr>
-                                <tr>
-                                        <td>sadasd</td>
-                                        <td>sadasdas</td>
-                                        <td>asdasdas</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                </tr>
-                                <tr>
-                                        <td>John</td>
-                                        <td>july/30/2019</td>
-                                        <td>john@example.com</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                </tr>
-                                <tr>
-                                        <td>sdsdsd</td>
-                                        <td>asdasdasd</td>
-                                        <td>sdsdsds</td>
-                                        <td>sss</td>
-                                        <td>123</td>
-                                        <td>123</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                    <td>John Steven Francisco</td>
+                                    <td>july/30/2019</td>
+                                    <td>john@example.com</td>
+                                    <td>123</td>
 
-                                </tr>
-                                <tr>
-                                        <td>sdsd</td>
-                                        <td>asdasd</td>
-                                        <td>asdasda</td>
-                                        <td>sadasdas</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                </tr>
-                                <tr>
-                                        <td>sad</td>
-                                        <td>asdasdsa</td>
-                                        <td>jaasdas</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                </tr>
-                                <tr>
-                                        <td>John</td>
-                                        <td>july/30/2019</td>
-                                        <td>john@example.com</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                        <td>123</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                                    <td>
+                                       
+                                     <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
+                                    </center>
+                                    </td>
+                                     
+                            </tr>
+                            <tr>
+                                    <td>John</td>
+                                    <td>july/30/2019</td>
+                                    <td>john@example.com</td>
+                                    <td>3 pataas</td>
+                                    <td>
+                                    <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
+                                    </center> 
+                                    </td>
+                            </tr>
+                            <tr>
+                                    <td>John</td>
+                                    <td>july/30/2019</td>
+                                    <td>john@example.com</td>
+                                    <td>123</td>
+                                    <td>
+                                    <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
+                                    </center>
+                                    </td>
+
+                            </tr>
+                            <tr>
+                                    <td>John</td>
+                                    <td>july/30/2019</td>
+                                    <td>john@example.com</td>
+                                    <td>123</td>
+                                    <td>
+                                        <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
+                                        </center>
+                                    </td>
+
+                            </tr>
+                            <tr>
+                                    <td>John</td>
+                                    <td>july/30/2019</td>
+                                    <td>john@example.com</td>
+                                    <td>123</td>
+                                    <td>
+                                        <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
+                                    </center> 
+                                    </td>
+
+                            </tr>
+                            <tr>
+                                    <td>John</td>
+                                    <td>july/30/2019</td>
+                                    <td>john@example.com</td>
+                                    <td>123</td>
+                                    <td>
+                                        <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
+                                    </center>
+                                    </td>
+
+                            </tr>
+                            <tr>
+                                    <td>John</td>
+                                    <td>july/30/2019</td>
+                                    <td>john@example.com</td>
+                                    <td>123</td>
+                                    <td>
+                                        <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
+                                    </center>
+                                     </td>
+
+                            </tr>
+                            <tr>
+                                    <td>John</td>
+                                    <td>july/30/2019</td>
+                                    <td>john@example.com</td>
+                                    <td>123</td>
+                                    <td>
+                                        <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
+                                    </center>
+                                    </td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                
                     <!-- /ADMIN TABLE -->
                 <!-- /TABLE -->
-                
+                <!-- The Modal -->
+                <div class="modal" id="myModal">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                             <!-- Modal body -->
+                                    <div class="modal-body">
+                                         <div class="form-group">
+                                           <label for="comment">Message</label>
+                                          <textarea class="form-control" rows="4" id="message"></textarea>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                     <button type="button" class="btn btn-success" value="submit">Sumbit</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                    <!-- /The Modal -->           </div>
         </div><!-- /row -->
-    </div>
+</div>
     <!-- /CONTENT -->
 
 

@@ -18,9 +18,6 @@
 
 }
 
-#login-btn:hover{
-  
-}
 
 .popup{
 
@@ -208,3 +205,148 @@ cursor: pointer;
 /*=========================================================
 	/login
 ===========================================================*/
+
+
+
+
+/*=========================================================
+  Manage users and guests
+===========================================================*/
+
+.user-table th{
+    background-color: #333333;
+    color: white;
+    font-family: sans-serif;
+    font-size: 18px;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+    height: 50px;
+    
+    }
+  
+    .user-table td{
+        color: gray;
+        font-family: sans-serif;
+        font-size: 14px;
+        border: none;
+        height: 50px;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+        
+    }
+    
+      
+   
+    .user-table tr{
+    
+        border: none;
+        max-height: 30px;
+        min-height: 20px;
+    }
+    
+    .user-table tr:hover{
+        color: white;
+        font-family: sans-serif;
+        border: 2px solid #19e64d;
+        cursor: pointer;
+        background-color: whitesmoke;   
+       
+    }
+    
+    
+    .user-table button{
+        font-size: 12px;
+        border-radius: 50px;
+        border: 1px solid green;
+       width: 80px;
+       height: 25px;
+       color: white;
+        
+       
+    }
+    .user-table button:hover{
+        font-size: 10px;
+        background: #19e64d;
+        color:white;
+        transition: 0.5s;
+        
+      
+       
+    }
+    .modal button{
+         
+        font-size: 10px;
+    }
+    .modal-body label{
+    
+        font-size: 17px;
+        font-family: sans-serif;
+        color: #333333;
+    
+    
+    }
+    #message{
+    
+        font-size: 14px;
+        font-family: sans-serif;
+        text-decoration: none;
+    }
+
+.side-bar a.active{
+
+        font-size: 18px;
+        color: #19e64d;
+
+    }
+
+    .view-payment th{
+
+    background-color: #333333;
+    color: white;
+    font-family: sans-serif;
+    font-size: 18px;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+    height: 50px;
+    padding-left: 10px;
+
+    }
+
+    .view-payment td{
+        color: gray;
+        font-family: sans-serif;
+        font-size: 14px;
+        border: none;
+        height: 50px;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+       
+    }
+
+      
+    .view-payment tr:hover{
+        color: white;
+        font-family: sans-serif;
+        border: 2px solid #19e64d;
+        cursor: pointer;
+        background-color: whitesmoke;   
+       
+    }
+
+  
+
+/*=========================================================
+	
+===========================================================*/
+
+.feedback{
+
+    widows: 600px;
+    height: 200px;
+    background-color: black;
+
+}

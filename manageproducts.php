@@ -28,7 +28,8 @@
     <link rel="stylesheet" href="./import/css/icomoon.css">
     <link rel="stylesheet" href="./import/css/style.css">
     <link rel="stylesheet" href="./angelicoimport/angelicostyles.css">
-
+    <link rel="stylesheet" href="./stevenimport/style.css">
+    
 </head>
 
 <body class="goto-here">
@@ -84,166 +85,180 @@
     <!-- END nav -->
 
     <!-- CONTENT -->
-    <div class="container-fluid">
-        <div class="row"><!-- row -->
-                <!-- SIDEBAR -->
-                <div class="side-bar">
-                    <div class="col-sm-2">
-                    <ul>
-                    
-                        <li><a href="/greengardenph/users.php"  >Manage Users</a></li>
-                        <li><a href="/greengardenph/manageguest.php">Manage Guest</a></li>
-                        <li><a href="/greengardenph/viewpayments.php">View Payments</a></li>
-                        <li><a href="/greengardenph/manageproducts.php" class="active">Manage Products</a></Li>
-                        <li><a href="/greengardenph/managefeedback.php">Manage Feedback</a></li>
-                        
-                        
-                        
-                    </ul>
+ <div class="container-fluid">
+    <div class="row">
+        <!-- row -->
+        <!-- SIDEBAR -->
+        <div class="col-sm-2">
+            <div class="side-bar">
+                <ul>
+                    <li><a href="/greengardenph/admin.php">Manage Users</a></li>
+                    <li><a href="/greengardenph/manageguest.php">Manage Guest</a></li>
+                    <li><a href="/greengardenph/viewpayments.php">View Payments</a></li>
+                    <li><a href="/greengardenph/manageproducts.php" class="active">Manage Products</a></li>
+                    <li><a href="/greengardenph/managefeedback.php">Manage Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /SIDEBAR -->
+        <!-- TABLE -->
+        <div class="col-sm-10">
+            <!-- PRODUCT TABLE-->
+            <table border=".5" class="user-table">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th><center>Action</center></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pepsi</td>
+                        <td>asdasd</td>
+                        <td>john@example.com</td>
+                        <td>123</td>
+                        <td>123</td>
+
+                        <td>
+                            <center>
+                                <button class="btn-success">ADD</button>
+                                <button class="btn-warning">EDIT</button>
+                                <button class="btn-danger">Remove</button>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ESpencer</td>
+                        <td>sdsdsd</td>
+                        <td>adfadfa</td>
+                        <td>sdfsdfsdfsd</td>
+                        <td>123</td>
+                        <td>
+                            <center>
+                                <button class="btn-success">ADD</button>
+                                <button class="btn-warning">EDIT</button>
+                                <button class="btn-danger">Remove</button>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>sadasd</td>
+                        <td>sadasdas</td>
+                        <td>asdasdas</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>
+                            <center>
+                                <button class="btn-success">ADD</button>
+                                <button class="btn-warning">EDIT</button>
+                                <button class="btn-danger">Remove</button>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>july/30/2019</td>
+                        <td>john@example.com</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>
+                            <center>
+                                <button class="btn-success">ADD</button>
+                                <button class="btn-warning">EDIT</button>
+                                <button class="btn-danger">Remove</button>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>sdsdsd</td>
+                        <td>asdasdasd</td>
+                        <td>sdsdsds</td>
+                        <td>sss</td>
+                        <td>123</td>
+                        <td>
+                            <center>
+                                <button class="btn-success">ADD</button>
+                                <button class="btn-warning">EDIT</button>
+                                <button class="btn-danger">Remove</button>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>sdsd</td>
+                        <td>asdasd</td>
+                        <td>asdasda</td>
+                        <td>sadasdas</td>
+                        <td>123</td>
+                        <td>
+                            <center>
+                                <button class="btn-success">ADD</button>
+                                <button class="btn-warning">EDIT</button>
+                                <button class="btn-danger">Remove</button>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>sad</td>
+                        <td>asdasdsa</td>
+                        <td>jaasdas</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>
+                            <center>
+                                <button class="btn-success">ADD</button>
+                                <button class="btn-warning">EDIT</button>
+                                <button class="btn-danger">Remove</button>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>july/30/2019</td>
+                        <td>john@example.com</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>
+                            <center>
+                                <button class="btn-success">ADD</button>
+                                <button class="btn-warning">EDIT</button>
+                                <button class="btn-danger">Remove</button>
+                            </center>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- /PRODUCT TABLE -->
+            <!-- /TABLE -->
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="comment">Message</label>
+                                <textarea class="form-control" rows="4" id="message"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" value="submit">Sumbit</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                        </div>
                     </div>
                 </div>
-                <!-- /SIDEBAR -->
-                <!-- TABLE -->
-                    <div class="col-sm-10">
-                    <!-- PRODUCT TABLE-->
-                    <table border='.5' class="user-table">
-                            <thead>
-                            <tr>
-                                <th>Product Name</th>
-                                <th>Description</th>
-                                <th>Category</th>
-                                <th>Quantity</th>
-                                <th>Price</th>
-                                <th><center>Action</center></th>
-
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                    <td>Pepsi</td>
-                                    <td>asdasd</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
-                                     <td>123</td>
-
-                                    <td><center><button class="btn-success">ADD</button> <button class="btn-warning">EDIT</button>
-                                        <button class="btn-danger">Remove</button> 
-                                    </center></td>
-                                     
-                            </tr>
-                            <tr>
-                                    <td>ESpencer</td>
-                                    <td>sdsdsd</td>
-                                    <td>adfadfa</td>
-                                    <td>sdfsdfsdfsd</td>
-                                     <td>123</td>
-                                    <td><center><button class="btn-success">ADD</button> <button class="btn-warning">EDIT</button>
-                                        <button class="btn-danger">Remove</button> 
-                                    </center> </td>
-                            </tr>
-                            <tr>
-                                    <td>sadasd</td>
-                                    <td>sadasdas</td>
-                                    <td>asdasdas</td>
-                                    <td>123</td>
-                                     <td>123</td>
-                                    <td><center><button class="btn-success">ADD</button> <button class="btn-warning">EDIT</button>
-                                        <button class="btn-danger">Remove</button> 
-                                    </center></td>
-
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
-                                     <td>123</td>
-                                    <td><center><button class="btn-success">ADD</button> <button class="btn-warning">EDIT</button>
-                                        <button class="btn-danger">Remove</button> 
-                                    </center></td>
-
-                            </tr>
-                            <tr>
-                                    <td>sdsdsd</td>
-                                    <td>asdasdasd</td>
-                                    <td>sdsdsds</td>
-                                    <td>sss</td>
-                                     <td>123</td>
-                                    <td><center><button class="btn-success">ADD</button> <button class="btn-warning">EDIT</button>
-                                        <button class="btn-danger">Remove</button>
-                                    </center> </td>
-
-                            </tr>
-                            <tr>
-                                    <td>sdsd</td>
-                                    <td>asdasd</td>
-                                    <td>asdasda</td>
-                                    <td>sadasdas</td>
-                                     <td>123</td>
-                                    <td><center><button class="btn-success">ADD</button> <button class="btn-warning">EDIT</button>
-                                        <button class="btn-danger">Remove</button> 
-                                    </center></td>
-
-                            </tr>
-                            <tr>
-                                    <td>sad</td>
-                                    <td>asdasdsa</td>
-                                    <td>jaasdas</td>
-                                    <td>123</td>
-                                     <td>123</td>
-                                    <td><center><button class="btn-success">ADD</button> <button class="btn-warning">EDIT</button>
-                                        <button class="btn-danger">Remove</button> 
-                                    </center> </td>
-
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
-                                     <td>123</td>
-                                    <td><center><button class="btn-success">ADD</button> <button class="btn-warning">EDIT</button>
-                                        <button class="btn-danger">Remove</button>
-                                    </center></td>
-
-                            </tr>
-                            </tbody>
-                        </table>
-                    
-                    
-                           
-                
-                    <!-- /PRODUCT TABLE -->
-                <!-- /TABLE -->
-                <!-- The Modal -->
-                <div class="modal" id="myModal">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                                
-                                   
-                                   
-                                    
-                                    <!-- Modal body -->
-                                    <div class="modal-body">
-                                                <div class="form-group">
-                                                    <label for="comment">Message</label>
-                                                    <textarea class="form-control" rows="4" id="message"></textarea>
-                                                  </div>
-                                    </div>
-                                    
-                                    <!-- Modal footer -->
-                                    <div class="modal-footer">
-                                     <button type="button" class="btn btn-success" value="submit">Sumbit</button>
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                                    </div>
-                                    
-                                </div>
-                                </div>
-                            </div>
-                    <!-- /The Modal -->
-                
-        </div><!-- /row -->
+            </div>
+            <!-- /The Modal -->
+        </div>
+        <!-- /row -->
     </div>
+</div>
     <!-- /CONTENT -->
 
 
