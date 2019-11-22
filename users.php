@@ -61,22 +61,22 @@
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item cta cta-colored"><a href="#" class="nav-link"><span class="icon-bell"></span></a></li>
-                    <li class="nav-item cta cta-colored"><a href="#" class="nav-link"><span class="icon-envelope"></span></a></li>
-                    <li class="nav-item cta cta-colored"><a href="profile.html" class="nav-link"><span class="icon-person"></span> [name]</a></li>
+                                 <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" style="background-color:green;"type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   <span class="icon-person"></span>&nbsp Angelico Gomez
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Account</a>
+    <a class="dropdown-item" href="#">Settings</a>
+    <a class="dropdown-item" href="#">Logout</a
+    
+</div>
+                    
                 </ul>
             </div>
         </div>
 
         <!-- Search Bar -->
-
-
-        <form action="index.html" class="search-form">
-            <form class="form-group">
-                <span class="icon ion-ios-search" style="color: green ;"></span>
-                <input type="text" class="form-control" placeholder="Search..." style="font-size: small;">
-            </form>
-        </form>
 
     </nav>
 
@@ -86,16 +86,28 @@
     <div class="container-fluid">
         <div class="row"><!-- row -->
                 <!-- SIDEBAR -->
-                <div class="side-bar">
-                    <div class="col-sm-2">
+                <div class="col-sm-2">
+                    <div class="side-bar">
                     <ul>
+                    <hr><button type="button"style="width:150px;" class="btn btn-primary">
+                    Posts <span class="badge badge-light">9</span>
+                    <span class="sr-only">unread messages</span>
+                    </button></hr>
+                    <hr><button type="button"style="width:150px;" class="btn btn-primary">
+                    Messages <span class="badge badge-light">9</span>
+                    <span class="sr-only">unread messages</span>
+                    </button></hr>
+                    <hr> <button type="button"style="width:150px;" class="btn btn-primary">
+                    Purchased History <span class="badge badge-light">9</span>
+                    <span class="sr-only">unread messages</span>
+                    </button></hr>
+                    <hr><button type="button"style="width:150px;" class="btn btn-primary">
+                    Vouchers <span class="badge badge-light">9</span>
+                    <span class="sr-only">unread messages</span>
+                    </button></hr>
                     
-                        <li><a href="#posts" class="active">Posts</a></li>
-                        <li><a href="#purchased">Purchased History</a></li>
-                        <li><a href="#wallet">E-wallet</a></Li>
-                        <li><a href="#vouchers">Vouchers</a></li>
-                        <li><a href="#cards">Cards</a></li>
-                        <li><a href="#rewards">Rewards</a> </li>
+                    
+
                         
                     </ul>
                     </div>
@@ -190,7 +202,7 @@
                     </div>
                     <!-- /ADMIN TABLE -->
                 <!-- /TABLE -->
-                
+              </div>  
         </div><!-- /row -->
     </div>
     <!-- /CONTENT -->

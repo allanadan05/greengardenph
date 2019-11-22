@@ -1,4 +1,35 @@
 
+<?php
+session_start();
+
+$count=1;
+if(isset($_POST["login"])){
+    $con= new mysqli("localhost","root","","project");
+
+    $email = $con->real_escape_string($_POST["email"]);
+    $userpass = $con->real_escape_string($_POST["userpass"]);
+
+    $data = $con->query("Select lname from usertbl where email='$email' AND userpass='$userpass'" );
+    if($data ->num_rows>0)
+    {
+        $_SESSION["email"]=$email;
+        $_SESSION["loggedin"]=1;
+            while($sql=$data ->fetch_array()){
+            
+
+        }
+
+        header("Location: shop.php");
+        exit();
+
+    }
+    else {
+        echo "incorrect email or password";
+    }
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,10 +122,11 @@
                     <!-- <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li> -->
                     <li class="nav-item cta cta-colored"><a href="wishlist.php" class="nav-link"><span class="icon-heart"></span>[0]</a></li>
                     <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-                    <li class="nav-item cta cta-colored"><button id="login-btn"><span class="icon-person"></span>Hi,[name]!</button></li>
+                    <li class="nav-item cta cta-colored"><button id="login-btn"><span class="icon-person"></span>hi,<?php echo $_SESSION["email"];?></button></li>
                 </ul>
             </div>
         </div>
+
 
         <!-- Search Bar -->
 
@@ -220,7 +252,7 @@
                             </div>
                             <div class="bottom-area d-flex px-3">
                                 <div class="m-auto d-flex">
-                                    <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                                    <a href="product-single.php" class="add-to-cart d-flex justify-content-center align-items-center text-center">
                                         <span><i class="ion-ios-menu"></i></span>
                                     </a>
                                     <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
@@ -437,26 +469,6 @@
         </div>
     </section>
 
-    <!-- <section class="ftco-section img" style="background-image: url(images/bg_3.jpg);">
-        <div class="container">
-            <div class="row justify-content-end">
-                <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
-                    <span class="subheading">Best Price For You</span>
-                    <h2 class="mb-4">Deal of the day</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                    <h3><a href="#">Spinach</a></h3>
-                    <span class="price">$10 <a href="#">now $5 only</a></span>
-                    <div id="timer" class="d-flex mt-5">
-                        <div class="time" id="days"></div>
-                        <div class="time pl-3" id="hours"></div>
-                        <div class="time pl-3" id="minutes"></div>
-                        <div class="time pl-3" id="seconds"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <section class="ftco-section testimony-section">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
@@ -602,6 +614,7 @@
                                 </div>
                                 <!--manually login-->
                                 <div class="col-sm-5 col-xs-6">
+                                    <form method="post" action="index.php">
                                         <div class="manually">
                                         <h5>Sign in manually</h5>
                                         <br>
@@ -755,6 +768,9 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="./import/js/google-map.js"></script>
     <script src="./import/js/main.js"></script>
+
+
+
 
 </body>
 
