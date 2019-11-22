@@ -8,14 +8,14 @@ if(isset($_POST["login"])){
 
     $email = $con->real_escape_string($_POST["email"]);
     $userpass = $con->real_escape_string($_POST["userpass"]);
-
-    $data = $con->query("Select lname from usertbl where email='$email' AND userpass='$userpass'" );
+    $data = $con->query("Select Lname from usertbl where email='$email' AND userpass='$userpass'" );
     if($data ->num_rows>0)
     {
         $_SESSION["email"]=$email;
+    
         $_SESSION["loggedin"]=1;
             while($sql=$data ->fetch_array()){
-            
+        
 
         }
 
@@ -122,7 +122,7 @@ if(isset($_POST["login"])){
                     <!-- <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li> -->
                     <li class="nav-item cta cta-colored"><a href="wishlist.php" class="nav-link"><span class="icon-heart"></span>[0]</a></li>
                     <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-                    <li class="nav-item cta cta-colored"><button id="login-btn"><span class="icon-person"></span>hi,<?php echo $_SESSION["email"];?></button></li>
+                    <li class="nav-item cta cta-colored"><a id="login-btn" class="nav-link"><span class="icon-person">hi,<?php echo $_SESSION["email"] ?></span></a></li>
                 </ul>
             </div>
         </div>
