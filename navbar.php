@@ -1,3 +1,5 @@
+
+
 <div class="py-1 bg-primary">
         <div class="container">
             <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
@@ -14,6 +16,7 @@
                         <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
                             <span class="text">3-5 Business days delivery &amp; Free Returns</span>
                         </div>
+                
                     </div>
                 </div>
             </div>
@@ -33,10 +36,10 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown04">
-                            <a class="dropdown-item" href="#">Bonsai</a>
-                            <a class="dropdown-item" href="#">Fortune Plants</a>
-                            <a class="dropdown-item" href="#">Pots</a>
-                            <a class="dropdown-item" href="#">Miniatures</a>
+                            <a class="dropdown-item" href="pots.php">Pots</a>
+                            <a class="dropdown-item" href="bonsai.php">Bonsai</a>
+                            <a class="dropdown-item" href="fortuneplants.php">Fortune plants</a>
+                            <a class="dropdown-item" href="miniatures.php">Miniatures</a>
                         </div>
                     </li>
                     <!-- <li class="nav-item"><a href="about.php" class="nav-link">About</a></li> -->
@@ -44,9 +47,10 @@
                     <!-- <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li> -->
                     <li class="nav-item cta cta-colored"><a href="wishlist.php" class="nav-link"><span class="icon-heart"></span>[0]</a></li>
                     <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-                    <li class="nav-item cta cta-colored"><a name="prof" id="login-btn" class="nav-link"><span class="icon-person">
-                  
-                       
+                    <li class="nav-item cta cta-colored"><a name="prof" id="login-btn" class="nav-link"><?php
+                    echo $name;
+                    ?> <span class="icon-person">
+
                     </span></a></li>
                 </ul>
             </div>
