@@ -1,19 +1,20 @@
 
         <?php
 session_start();
-$name="";
+    $name="";
 
 if(isset($_POST["login"])){
+
     $con= new mysqli("localhost","root","","project");
 
-    $email = $con->real_escape_string($_POST["fname"]);
+    $email = $con->real_escape_string($_POST["email"]);
     $userpass = $con->real_escape_string($_POST["userpass"]);
-    $data = $con->query("Select Lname from usertbl where fname='$email' AND userpass='$userpass'" );
+    $data = $con->query("Select * from usertbl where email='$email' AND userpass='$userpass'" );
     if($data ->num_rows>0)
     {
         
             while($sql=$data ->fetch_array()){
-                $name=$sql["Lname"];
+                   $name=$sql['Fname'];
         }
   
     }
@@ -72,10 +73,8 @@ if(isset($_POST["login"])){
                     <li class="nav-item cta cta-colored"><a href="wishlist.php" class="nav-link"><span class="icon-heart"></span>[0]</a></li>
                     <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
                         
-                    <li class="nav-item cta cta-colored"><a name="prof" id="login-btn" class="nav-link"><?php
-                    echo $name;
-                    ?> <span class="icon-person">
-
+                    <li class="nav-item cta cta-colored"><a name="prof" id="login-btn" class="nav-link"><span class="icon-person"> 
+                        <?php echo $name;?> 
                     </span></a></li>
                 </ul>
             </div>
