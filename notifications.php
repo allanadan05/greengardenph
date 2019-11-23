@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="./import/css/style.css">
     <link rel="stylesheet" href="./angelicoimport/angelicostyles.css">
     <link rel="stylesheet" href="./stevenimport/style.css">
+    <link rel="stylesheet" href="./espencerimport/style.css">
 
 </head>
 
@@ -115,12 +116,82 @@
                 <!-- /SIDEBAR -->
                 <!-- TABLE -->
                     
-                    <div class="col-sm-10">
-                    <br/><br/>
+                
+                <!-- col 10 -->
+                <div class="col-sm-10">
                     
-                    <h3>Notifcation panel shows here</h3>
-                    
+
+                    <div class="notif">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="images/person_4.jpg" alt="" />
+                            </div>
+
+                            <div class="col-sm-7">
+                                <label>Dan Astillero</label>
+                                <span>
+                                    <button><i class="fa fa-ellipsis-h"></i></button>
+                                </span>
+                                <p>2m ago</p>
+                                <p>Message Goes here!!..Message Goes here!!..</p>
+                            </div>
+                        </div>
                     </div>
+                    <br />
+                    <div class="notif">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="images/person_4.jpg" alt="" />
+                            </div>
+
+                            <div class="col-sm-7">
+                                <label>Dan Astillero</label>
+                                <span>
+                                    <button><i class="fa fa-ellipsis-h"></i></button>
+                                </span>
+                                <p>2m ago</p>
+                                <p>Message Goes here!!..Message Goes here!!..</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="notif">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="images/person_4.jpg" alt="" />
+                            </div>
+
+                            <div class="col-sm-7">
+                                <label>Dan Astillero</label>
+                                <span>
+                                    <button><i class="fa fa-ellipsis-h"></i></button>
+                                </span>
+                                <p>2m ago</p>
+                                <p>Message Goes here!!..Message Goes here!!..</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="notif">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="images/person_4.jpg" alt="" />
+                            </div>
+
+                            <div class="col-sm-7">
+                                <label>Dan Astillero</label>
+                                <span>
+                                    <button><i class="fa fa-ellipsis-h"></i></button>
+                                </span>
+                                <p>2m ago</p>
+                                <p>Message Goes here!!..Message Goes here!!..</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /col 10 -->
+
+                
 
                     
                 <!-- /TABLE -->
@@ -132,9 +203,9 @@
 
 
 
-    <!-- Footer -->
+<!-- Footer -->
 
-    <footer class="ftco-footer ftco-section">
+<footer class="ftco-footer ftco-section">
     <div class="container">
         <div class="row">
             <div class="mouse">
@@ -149,9 +220,15 @@
                     <h2 class="ftco-heading-2">GreenGarden</h2>
                     <p>Far far away, behind the word mountains, far from the countries Philippines and China.</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                        <li class="ftco-animate">
+                            <a href="#"><span class="icon-twitter"></span></a>
+                        </li>
+                        <li class="ftco-animate">
+                            <a href="#"><span class="icon-facebook"></span></a>
+                        </li>
+                        <li class="ftco-animate">
+                            <a href="#"><span class="icon-instagram"></span></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -190,9 +267,22 @@
                     <h2 class="ftco-heading-2">Have a Questions?</h2>
                     <div class="block-23 mb-3">
                         <ul>
-                            <li><span class="icon icon-map-marker"></span><span class="text">Bulacan State Univerysity, Brgy. Kaypian, CSJDM, Bulacan 3023</span></li>
-                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">+63 945 0928 187</span></a></li>
-                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">greengarden@gmail.com</span></a></li>
+                            <li>
+                                <span class="icon icon-map-marker"></span>
+                                <span class="text">Bulacan State Univerysity, Brgy. Kaypian, CSJDM, Bulacan 3023</span>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon icon-phone"></span>
+                                    <span class="text">+63 945 0928 187</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon icon-envelope"></span>
+                                    <span class="text">greengarden@gmail.com</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -200,7 +290,6 @@
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
-
                 <p>
                     Copyright &copy;
                     <script>
