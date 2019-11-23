@@ -213,10 +213,10 @@
 }
 
 .user-table button {
-    font-size: 12px;
+    font-size: 10px;
     border-radius: 50px;
     border: 1px solid green;
-    width: 80px;
+    width: 90px;
     height: 25px;
     color: white;
 }
