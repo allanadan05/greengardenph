@@ -303,34 +303,43 @@
                     <div class="sidebar-box ftco-animate">
                         <h3 class="heading">Categories</h3>
                         <ul class="categories">
-                            <li><a href="#">Vegetables <span>(12)</span></a></li>
-                            <li><a href="#">Fruits <span>(22)</span></a></li>
-                            <li><a href="#">Juice <span>(37)</span></a></li>
-                            <li><a href="#">Dries <span>(42)</span></a></li>
+                            <li><a href="#">Bonsai <span>(12)</span></a></li>
+                            <li><a href="#">Fortune Plants <span>(22)</span></a></li>
+                            <li><a href="#">Pots <span>(37)</span></a></li>
+                            <li><a href="#">Miniatures <span>(42)</span></a></li>
                         </ul>
                     </div>
 
                     <div class="sidebar-box ftco-animate">
-                        <h3 class="heading">Recent Blog</h3>
+                        <h3 class="heading">Recent Post</h3>
                         <div class="block-21 mb-4 d-flex">
                             <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                            <div class="text">
+                         <div class="text">
                                 <h3 class="heading-1"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                                
+                            <div class="btn-awesome">
+                                    <button type = "button" class = "btn"><span class = "fas fa-comment"> 3 </span></button>
+                                    <button type = "button" class = "btn"><span class = "fas fa-thumbs-up"> 5 </span></button>
+                                    <button type = "button" class = "btn"><span class = "fas fa-share-square"> 10 </span></button>
                                 <div class="meta">
                                     <div><a href="#"><span class="icon-calendar"></span> April 09, 2019</a></div>
-                                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                                    
                                 </div>
                             </div>
+                          </div>
                         </div>
                         <div class="block-21 mb-4 d-flex">
                             <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
                             <div class="text">
                                 <h3 class="heading-1"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                               <div class="btn-awesome">
+                                    <button type = "button" class = "btn"><span class = "fas fa-comment"> 3 </span></button>
+                                    <button type = "button" class = "btn"><span class = "fas fa-thumbs-up"> 5 </span></button>
+                                    <button type = "button" class = "btn"><span class = "fas fa-share-square"> 10 </span></button>
                                 <div class="meta">
                                     <div><a href="#"><span class="icon-calendar"></span> April 09, 2019</a></div>
-                                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -338,26 +347,25 @@
                             <a class="blog-img mr-4" style="background-image: url(images/image_3.jpg);"></a>
                             <div class="text">
                                 <h3 class="heading-1"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                                <div class="btn-awesome">
+                                    <button type = "button" class = "btn"><span class = "fas fa-comment"> 3 </span></button>
+                                    <button type = "button" class = "btn"><span class = "fas fa-thumbs-up"> 5 </span></button>
+                                    <button type = "button" class = "btn"><span class = "fas fa-share-square"> 10 </span></button>
                                 <div class="meta">
                                     <div><a href="#"><span class="icon-calendar"></span> April 09, 2019</a></div>
-                                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                            
+                                </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
                     <div class="sidebar-box ftco-animate">
                         <h3 class="heading">Tag Cloud</h3>
                         <div class="tagcloud">
-                            <a href="#" class="tag-cloud-link">fruits</a>
-                            <a href="#" class="tag-cloud-link">tomatoe</a>
-                            <a href="#" class="tag-cloud-link">mango</a>
-                            <a href="#" class="tag-cloud-link">apple</a>
-                            <a href="#" class="tag-cloud-link">carrots</a>
-                            <a href="#" class="tag-cloud-link">orange</a>
-                            <a href="#" class="tag-cloud-link">pepper</a>
-                            <a href="#" class="tag-cloud-link">eggplant</a>
+                            <a href="#" class="tag-cloud-link">Bonsai</a>
+                            <a href="#" class="tag-cloud-link">Fortune Plants</a>
+                            <a href="#" class="tag-cloud-link">Pots</a>
+                            <a href="#" class="tag-cloud-link">Miniatures</a>
                         </div>
                     </div>
 
