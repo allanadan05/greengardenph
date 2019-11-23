@@ -30,13 +30,12 @@
     <link rel="stylesheet" href="./import/css/style.css">
     <link rel="stylesheet" href="./angelicoimport/angelicostyles.css">
     <link rel="stylesheet" href="./stevenimport/style.css">
+    <link rel="stylesheet" href="./espencerimport/style.css">
 
 </head>
 
 <body class="goto-here">
     <?php require_once("navbar.php");?>
-
-    <!-- END nav -->
 
     <!-- CONTENT -->
     <div class="container-fluid">
@@ -71,12 +70,82 @@
                 <!-- /SIDEBAR -->
                 <!-- TABLE -->
                     
-                    <div class="col-sm-10">
-                    <br/><br/>
+                
+                <!-- col 10 -->
+                <div class="col-sm-10">
                     
-                    <h3>Notifcation panel shows here</h3>
-                    
+
+                    <div class="notif">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="images/person_4.jpg" alt="" />
+                            </div>
+
+                            <div class="col-sm-7">
+                                <label>Dan Astillero</label>
+                                <span>
+                                    <button><i class="fa fa-ellipsis-h"></i></button>
+                                </span>
+                                <p>2m ago</p>
+                                <p>Message Goes here!!..Message Goes here!!..</p>
+                            </div>
+                        </div>
                     </div>
+                    <br />
+                    <div class="notif">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="images/person_4.jpg" alt="" />
+                            </div>
+
+                            <div class="col-sm-7">
+                                <label>Dan Astillero</label>
+                                <span>
+                                    <button><i class="fa fa-ellipsis-h"></i></button>
+                                </span>
+                                <p>2m ago</p>
+                                <p>Message Goes here!!..Message Goes here!!..</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="notif">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="images/person_4.jpg" alt="" />
+                            </div>
+
+                            <div class="col-sm-7">
+                                <label>Dan Astillero</label>
+                                <span>
+                                    <button><i class="fa fa-ellipsis-h"></i></button>
+                                </span>
+                                <p>2m ago</p>
+                                <p>Message Goes here!!..Message Goes here!!..</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="notif">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="images/person_4.jpg" alt="" />
+                            </div>
+
+                            <div class="col-sm-7">
+                                <label>Dan Astillero</label>
+                                <span>
+                                    <button><i class="fa fa-ellipsis-h"></i></button>
+                                </span>
+                                <p>2m ago</p>
+                                <p>Message Goes here!!..Message Goes here!!..</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /col 10 -->
+
+                
 
                     
                 <!-- /TABLE -->
@@ -85,12 +154,8 @@
     </div>
     <!-- /CONTENT -->
 
-
-
-
-    <!-- Footer -->
-
   <?php require_once("footer.php"); ?>
+
 
 
 

@@ -9,3 +9,35 @@
 .rating {
     float: right;
 }
+
+.notif {
+    width: 700px;
+    background-color: whitesmoke;
+    height: 150px;
+    border-radius: 2px 20px 2px 20px;
+    box-shadow: 6px 10px 10px -4px #19E64D;
+}
+
+.notif img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 30px;
+}
+
+.notif label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.notif button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 250px;
+}
+
+.notif p {
+    font-size: 12px;
+    font-weight: lighter;
+}
