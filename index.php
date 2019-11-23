@@ -1,3 +1,31 @@
+
+<?php
+session_start();
+    $name="";
+
+if(isset($_POST["login"])){ 
+
+    $con= new mysqli("localhost","root","","project");
+
+    $email = $con->real_escape_string($_POST["email"]);
+    $userpass = $con->real_escape_string($_POST["userpass"]);
+    $data = $con->query("Select * from usertbl where email='$email' AND userpass='$userpass'" );
+    if($data ->num_rows>0)
+    {
+        
+            while($sql=$data ->fetch_array()){
+                   $name=$sql['Fname'];
+        }
+  
+    }
+    else {
+        echo "incorrect email or password";
+    }
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,6 +74,9 @@
 <body class="goto-here">
    
    <?php require_once("navbar.php"); ?>
+
+         <!--LOGIN MODAL-->
+
 
     <section id="home-section" class="hero">
         <div class="home-slider owl-carousel">
@@ -482,8 +513,8 @@
         </div>
     </section>
     
-<!--LOGIN MODAL-->
-<div class="popup">
+
+   <div class="popup">
                 <div class="popup-content">
                  <img src="images/close.png" alt="Close" class="close">
                 
@@ -506,9 +537,6 @@
                                                 <img src="images/google-icon.png" alt="">Login with Gmail</Button>
                                         </div>
 
-
-
-
                                 </div>
                 
                                 <div class="col-sm-2 col-xs-6">
@@ -525,7 +553,7 @@
                                         <h5>Sign in manually</h5>
 
                                         <br>
-                                        <form method="post" action="index.php">
+                                        <form method="post" action="shop.php">
                                         <input type="text" placeholder="Username or Email" name="email" required>
                                         <input type="password" class="glyphicon glyphicon-user" name="userpass" placeholder="Password" required> 
                     
@@ -548,12 +576,6 @@
 
                                 
                          </div>
-
-
-
-
-
-              
                     
 
                 </div>
@@ -561,11 +583,6 @@
             <!--/LOGIN MODAL-->
                
 
-   
-
-<?php require_once("footer.php"); ?>
-
-   
     <script> 
      document.getElementById("login-btn").addEventListener("click",function(){
 
@@ -577,6 +594,9 @@
         document.querySelector(".popup").style.display = "none";
         });
     </script>
+
+<?php require_once("footer.php"); ?>
+
 
 
     <script src="./import/js/jquery.min.js"></script>

@@ -1,30 +1,5 @@
 
-        <?php
-session_start();
-    $name="";
 
-if(isset($_POST["login"])){
-
-    $con= new mysqli("localhost","root","","project");
-
-    $email = $con->real_escape_string($_POST["email"]);
-    $userpass = $con->real_escape_string($_POST["userpass"]);
-    $data = $con->query("Select * from usertbl where email='$email' AND userpass='$userpass'" );
-    if($data ->num_rows>0)
-    {
-        
-            while($sql=$data ->fetch_array()){
-                   $name=$sql['Fname'];
-        }
-  
-    }
-    else {
-        echo "incorrect email or password";
-    }
-
-}
-
-?>
 <div class="py-1 bg-primary">
         <div class="container">
             <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
@@ -95,5 +70,4 @@ if(isset($_POST["login"])){
 
     <!-- END nav -->
 
-     <!-- loader -->
-     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+ 
