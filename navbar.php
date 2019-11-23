@@ -8,7 +8,7 @@ if(isset($_POST["login"])){
 
     $email = $con->real_escape_string($_POST["fname"]);
     $userpass = $con->real_escape_string($_POST["userpass"]);
-    $data = $con->query("Select Lname from usertbl where fname='$email' AND userpass='$userpass'" );
+    $data = $con->query("Select * from usertbl where fname='$email' AND userpass='$userpass'" );
     if($data ->num_rows>0)
     {
         
