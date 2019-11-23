@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="./import/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="./import/css/jquery.timepicker.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    
 
     <link rel="stylesheet" href="./import/css/flaticon.css">
     <link rel="stylesheet" href="./import/css/icomoon.css">
@@ -52,177 +55,82 @@
             </div>
         </div>
     </div>
-    <!-- NAV -->
-   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">GreenGarden</a>
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#ftco-nav"
-            aria-controls="ftco-nav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
-            <span class="oi oi-menu"></span>
-            Menu
-        </button>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">GreenGarden</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+            </button>
 
-        <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav ml-auto">
-                <div class="dropdown">
-                    <button
-                        class="btn btn-secondary dropdown-toggle"
-                        style="background-color:green;"
-                        type="button"
-                        id="dropdownMenuButton"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                    >
-                        <span class="icon-person"></span>
-                        &nbsp Angelico Gomez
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Account</a>
-                        <a class="dropdown-item" href="#">Settings</a>
-                        <a class="dropdown-item" href="index.php">Logout</a>
-                    </div>
-                </div>
-            </ul>
-        </div>
-    </div>
-</nav>
-                        
-                    </ul>
-                </div>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                  <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" style="background-color:green;"type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="icon-person"></span>&nbsp Angelico Gomez
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Account</a>
+                <a class="dropdown-item" href="#">Settings</a>
+                <a class="dropdown-item" href="#">Logout</a>    
+                  </div>
+                    
+                </ul>
             </div>
+        </div>
+        </div>
+    </nav>
 
-            <!-- Search Bar -->
-
-        </nav>
-
-        <!-- END nav -->
+    <!-- END nav -->
 
     <!-- CONTENT -->
-  <div class="container-fluid">
-    <div class="row">
-        <!-- row -->
-        <!-- SIDEBAR -->
-        <div class="col-sm-2">
-            <div class="side-bar">
-            <ul>
-                    <hr><a href="user.php" class="active"><button type="button"style="width:150px;" class="btn btn-primary">
-                    Posts <span class="badge badge-light">9</span>
+    <div class="container-fluid">
+        <div class="row"><!-- row -->
+                <!-- SIDEBAR -->
+                <div class="col-sm-2">
+                    <div class="side-bar">
+                    <ul>
+                    <hr><a href="messageadmin.php" class="active"><button type="button"style="width:180px;" class="btn btn-primary">
+                    Messages <span class="badge badge-light"> 9 </span>
                     <span class="sr-only">unread messages</span>
                     </button></a></hr>
-                    <hr><a href="messageuser.php"><button type="button"style="width:150px;" class="btn btn-primary">
-                    Messages <span class="badge badge-light">9</span>
-                    <span class="sr-only">unread messages</span>
-                    </button></a></hr>
-                    <hr><a href="notifications.php"><button type="button"style="width:150px;" class="btn btn-primary">
+                    <hr><a href="notificationsadmin.php"><button type="button"style="width:180px;" class="btn btn-primary">
                     Notifications <span class="badge badge-light">9</span>
                     <span class="sr-only">unread messages</span>
                     </button></a></hr>
-                    <hr><a href="purchasedhistory.php"><button type="button"style="width:150px;" class="btn btn-primary">
-                    Purchased History <span class="badge badge-light">9</span>
+                    <hr><a href="admin.php"><button type="button"style="width:180px;" class="btn btn-primary">
+                    Manage Users <span class="badge badge-light">9</span>
                     <span class="sr-only">unread messages</span>
                     </button></a></hr>
-                    <hr><a href="vouchers.php"><button type="button"style="width:150px;" class="btn btn-primary">
-                    Vouchers <span class="badge badge-light">9</span>
+                    <hr><a href="viewpayments.php"><button type="button"style="width:180px;" class="btn btn-primary">
+                    View Payments <span class="badge badge-light">9</span>
+                    <span class="sr-only">unread messages</span>
+                    </button></a></hr>
+                    <hr><a href="manageproducts.php"><button type="button"style="width:180px;" class="btn btn-primary">
+                    Manage Products <span class="badge badge-light">9</span>
+                    <span class="sr-only">unread messages</span>
+                    </button></a></hr>
+                    <hr><a href="managefeedback.php"><button type="button"style="width:180px;" class="btn btn-primary">
+                    Manage Feedback <span class="badge badge-light">9</span>
                     <span class="sr-only">unread messages</span>
                     </button></a></hr>
                     </ul>
-            </div>
-        </div>
-        <!-- /SIDEBAR -->
-        <!-- TABLE -->
-        <!-- purchased history -->
-        <div class="col-sm-5">
-                <h6>Purchased History</h6>
-                <div class="panel panel-default">
-                    <div class="history">
-                        <div class="row">
-                                <!-- 1st column -->
-                                <div class="col-sm-7">
-                                <label>Purchased from</label>
-                                <p>Paymaya</p>   
-                                </div>
-                                <div class="col-sm-5">
-                                    <label>21 September, 2019</label>
-                                      <p>PHP 47.50</p>
-                                </div>
-                                <!-- /1st column -->
-                                <hr>
-                                 <!-- 2st column -->
-                                 <div class="col-sm-7">
-                                <label>Purchased from</label>
-                                <p>Paymaya</p>   
-                                </div>
-                                <div class="col-sm-5">
-                                    <label>21 September, 2019</label>
-                                      <p>PHP 47.50</p>
-                                </div>
-                                <!-- /2st column -->
-                                <hr>
-                                 <!-- 3st column -->
-                                 <div class="col-sm-7">
-                                <label>Purchased from</label>
-                                <p>Paymaya</p>   
-                                </div>
-                                <div class="col-sm-5">
-                                    <label>21 September, 2019</label>
-                                     <p>PHP 47.50</p>
-                                </div>
-                                <!-- /3st column -->
-                                <!-- 3st column -->
-                                <div class="col-sm-7">
-                                <label>Purchased from</label>
-                                <p>Paymaya</p>   
-                                </div>
-                                <div class="col-sm-5">
-                                    <label>21 September, 2019</label>
-                                      <p>PHP 47.50</p>
-                                </div>
-                                <!-- /3st column -->
-                        </div>
                     </div>
                 </div>
-
-           
-        </div>
-        <!-- /purchased history -->
-        <!-- E-wallet -->
-        <div class="col-sm-5">
-        <h6>Green Garden E-Wallet</h6>
-                <div class="panel panel-default">
-                    <div class="e-wallet">
-                        <p id="peso">₱204.50</p>
-                        <br>
-                        <center>
-                        <label>One Click</label>
-                        <label>Get Rebates</label>
-                        <label>Earn Rebates</label>
-                        </center>
-                        <center>
-                        <img src="images/oneclick.png">
-                        <img src="images/earnrebates.png">
-                        <img src="images/getrebates.png">
-                        </center>
-                        
+                <!-- /SIDEBAR -->
+                <!-- TABLE -->
+                    
+                    <div class="col-sm-10">
+                    <br/><br/>
+                    
+                    <h3>Notifcation panel shows here</h3>
+                    
                     </div>
-                </div>
 
-        </div>
-        <!-- /E-wallet -->
-
-        
-        
-        
+                    
+                <!-- /TABLE -->
+             
+        </div><!-- /row -->
     </div>
-    <!-- /row -->
-</div>
     <!-- /CONTENT -->
 
 

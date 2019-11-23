@@ -60,27 +60,24 @@
             <a class="navbar-brand" href="index.html">GreenGarden</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
-          </button>
+            </button>
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                                 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" style="background-color:green;"type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   <span class="icon-person"></span>&nbsp Angelico Gomez
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Account</a>
-    <a class="dropdown-item" href="#">Settings</a>
-    <a class="dropdown-item" href="#">Logout</a
-    
-</div>
+                  <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" style="background-color:green;"type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="icon-person"></span>&nbsp Angelico Gomez
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Account</a>
+                <a class="dropdown-item" href="#">Settings</a>
+                <a class="dropdown-item" href="#">Logout</a>    
+                  </div>
                     
                 </ul>
             </div>
         </div>
-
-        <!-- Search Bar -->
-
+        </div>
     </nav>
 
     <!-- END nav -->
@@ -92,93 +89,42 @@
                 <div class="col-sm-2">
                     <div class="side-bar">
                     <ul>
-                    <hr><button type="button"style="width:150px;" class="btn btn-primary">
+                    <hr><a href="user.php" class="active"><button type="button"style="width:150px;" class="btn btn-primary">
                     Posts <span class="badge badge-light">9</span>
                     <span class="sr-only">unread messages</span>
-                    </button></hr>
-                    <hr><button type="button"style="width:150px;" class="btn btn-primary">
+                    </button></a></hr>
+                    <hr><a href="messageuser.php"><button type="button"style="width:150px;" class="btn btn-primary">
                     Messages <span class="badge badge-light">9</span>
                     <span class="sr-only">unread messages</span>
-                    </button></hr>
-                    <hr> <button type="button"style="width:150px;" class="btn btn-primary">
+                    </button></a></hr>
+                    <hr><a href="notifications.php"><button type="button"style="width:150px;" class="btn btn-primary">
+                    Notifications <span class="badge badge-light">9</span>
+                    <span class="sr-only">unread messages</span>
+                    </button></a></hr>
+                    <hr><a href="purchasedhistory.php"><button type="button"style="width:150px;" class="btn btn-primary">
                     Purchased History <span class="badge badge-light">9</span>
                     <span class="sr-only">unread messages</span>
-                    </button></hr>
-                    <hr><button type="button"style="width:150px;" class="btn btn-primary">
+                    </button></a></hr>
+                    <hr><a href="vouchers.php"><button type="button"style="width:150px;" class="btn btn-primary">
                     Vouchers <span class="badge badge-light">9</span>
                     <span class="sr-only">unread messages</span>
-                    </button></hr>
-                    
-                    
-
-                        
+                    </button></a></hr>
                     </ul>
                     </div>
                 </div>
                 <!-- /SIDEBAR -->
                 <!-- TABLE -->
+                    
                     <div class="col-sm-10">
-                    <div class="col-md-12 d-flex ftco-animate">
-                            
-                            <div class="blog-entry align-self-stretch d-md-flex">
-                                <a href="blog-single.php" class="block-20" style="background-image: url('images/image_1.jpg');">
-                                </a>
-                                <div class="text d-block pl-md-4">
-                                    <div class="meta mb-3">
-                                        <div><a href="#">July 20, 2019</a></div><br/>
-                                        <button type = "button" class = "btn"><span class = "fas fa-comment"> 3 </span></button>
-                                        <button type = "button" class = "btn"><span class = "fas fa-thumbs-up"> 5 </span></button>
-                                        <button type = "button" class = "btn"><span class = "fas fa-share-square"> 10 </span></button>
-                                        <div style="float: right;">
-                                            <span class = "far fa-star"></span>
-                                            <span class = "far fa-star"></span>
-                                            <span class = "far fa-star"></span>
-                                            <span class = "far fa-star"></span>
-                                            <span class = "far fa-star"></span>
-                                            <span class = "">2.6</span>
-                                        </div>
-                                    </div>
-                                    <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                    <p><a href="blog-single.php" class="btn btn-primary py-2 px-3">Read more</a></p>
-                                </div>
-                            </div>
-
-                        </div><hr/>
-
-                        <div class="col-md-12 d-flex ftco-animate">
-                            
-                            <div class="blog-entry align-self-stretch d-md-flex">
-                                <a href="blog-single.php" class="block-20" style="background-image: url('images/image_1.jpg');">
-                                </a>
-                                <div class="text d-block pl-md-4">
-                                    <div class="meta mb-3">
-                                        <div><a href="#">July 20, 2019</a></div><br/>
-                                        <button type = "button" class = "btn"><span class = "fas fa-comment"> 3 </span></button>
-                                        <button type = "button" class = "btn"><span class = "fas fa-thumbs-up"> 5 </span></button>
-                                        <button type = "button" class = "btn"><span class = "fas fa-share-square"> 10 </span></button>
-                                        <div style="float: right;">
-                                            <span class = "far fa-star"></span>
-                                            <span class = "far fa-star"></span>
-                                            <span class = "far fa-star"></span>
-                                            <span class = "far fa-star"></span>
-                                            <span class = "far fa-star"></span>
-                                            <span class = "">2.6</span>
-                                        </div>
-                                    </div>
-                                    <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                    <p><a href="blog-single.php" class="btn btn-primary py-2 px-3">Read more</a></p>
-                                </div>
-                            </div>
-
-                        </div><hr/>
+                    <br/><br/>
+                    
+                    <h3>Notifcation panel shows here</h3>
                     
                     </div>
 
                     
                 <!-- /TABLE -->
-              </div>  
+             
         </div><!-- /row -->
     </div>
     <!-- /CONTENT -->

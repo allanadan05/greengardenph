@@ -96,13 +96,32 @@
         <!-- SIDEBAR -->
         <div class="col-sm-2">
             <div class="side-bar">
-                <ul>
-                    <li><a href="/greengardenph/admin.php">Manage Users</a></li>
-                    <li><a href="/greengardenph/manageguest.php">Manage Guest</a></li>
-                    <li><a href="/greengardenph/viewpayments.php">View Payments</a></li>
-                    <li><a href="/greengardenph/manageproducts.php">Manage Products</a></li>
-                    <li><a href="/greengardenph/managefeedback.php" class="active">Manage Feedback</a></li>
-                </ul>
+            <ul>
+                    <hr><a href="messageadmin.php" class="active"><button type="button"style="width:180px;" class="btn btn-primary">
+                    Messages <span class="badge badge-light"> 9 </span>
+                    <span class="sr-only">unread messages</span>
+                    </button></a></hr>
+                    <hr><a href="notificationsadmin.php"><button type="button"style="width:180px;" class="btn btn-primary">
+                    Notifications <span class="badge badge-light">9</span>
+                    <span class="sr-only">unread messages</span>
+                    </button></a></hr>
+                    <hr><a href="admin.php"><button type="button"style="width:180px;" class="btn btn-primary">
+                    Manage Users <span class="badge badge-light">9</span>
+                    <span class="sr-only">unread messages</span>
+                    </button></a></hr>
+                    <hr><a href="viewpayments.php"><button type="button"style="width:180px;" class="btn btn-primary">
+                    View Payments <span class="badge badge-light">9</span>
+                    <span class="sr-only">unread messages</span>
+                    </button></a></hr>
+                    <hr><a href="manageproducts.php"><button type="button"style="width:180px;" class="btn btn-primary">
+                    Manage Products <span class="badge badge-light">9</span>
+                    <span class="sr-only">unread messages</span>
+                    </button></a></hr>
+                    <hr><a href="managefeedback.php"><button type="button"style="width:180px;" class="btn btn-primary">
+                    Manage Feedback <span class="badge badge-light">9</span>
+                    <span class="sr-only">unread messages</span>
+                    </button></a></hr>
+                    </ul>
             </div>
         </div>
         <!-- /SIDEBAR -->
@@ -310,6 +329,7 @@
     </div>
     <!-- /row -->
 </div>
+<hr/><br/><br/>
     <!-- /CONTENT -->
 
 

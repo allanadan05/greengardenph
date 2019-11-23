@@ -777,12 +777,16 @@
                 <div class="col-sm-2">
                     <div class="side-bar">
                     <ul>
-                    <hr><a href="users.php" class="active"><button type="button"style="width:150px;" class="btn btn-primary">
+                    <hr><a href="user.php" class="active"><button type="button"style="width:150px;" class="btn btn-primary">
                     Posts <span class="badge badge-light">9</span>
                     <span class="sr-only">unread messages</span>
                     </button></a></hr>
-                    <hr><a href="message.php"><button type="button"style="width:150px;" class="btn btn-primary">
+                    <hr><a href="messageuser.php"><button type="button"style="width:150px;" class="btn btn-primary">
                     Messages <span class="badge badge-light">9</span>
+                    <span class="sr-only">unread messages</span>
+                    </button></a></hr>
+                    <hr><a href="notifications.php"><button type="button"style="width:150px;" class="btn btn-primary">
+                    Notifications <span class="badge badge-light">9</span>
                     <span class="sr-only">unread messages</span>
                     </button></a></hr>
                     <hr><a href="purchasedhistory.php"><button type="button"style="width:150px;" class="btn btn-primary">
