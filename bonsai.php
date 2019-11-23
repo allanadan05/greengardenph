@@ -1,36 +1,6 @@
-
-<?php
-session_start();
-    $name="";
-
-if(isset($_POST["login"])){
-
-    $con= new mysqli("localhost","root","","project");
-
-    $email = $con->real_escape_string($_POST["email"]);
-    $userpass = $con->real_escape_string($_POST["userpass"]);
-    $data = $con->query("Select * from usertbl where email='$email' AND userpass='$userpass'" );
-    if($data ->num_rows>0)
-    {
-        
-            while($sql=$data ->fetch_array()){
-                   $name=$sql['Fname'];
-        }
-  
-    }
-    else {
-        echo "incorrect email or password";
-    }
-
-}
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
-       
         <title>GreenGarden</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -60,8 +30,9 @@ if(isset($_POST["login"])){
     </head>
     
     <body class="goto-here">
-
-       <?php include'navbar.php';?>
+        <?php require_once("navbar.php");?>
+    
+        <!-- END nav -->
 
     <div class="hero-wrap hero-bread" style="background-image: url('images/bg_1.jpg');">
         <div class="container">
@@ -79,19 +50,19 @@ if(isset($_POST["login"])){
             <div class="row justify-content-center">
                 <div class="col-md-10 mb-5 text-center">
                     <ul class="product-category">
-                        <li><a href="shop.php" class="active">All</a></li>
+                        <li><a href="shop.php">All</a></li>
                         <li><a href="pots.php">Pots</a></li>
-                        <li><a href="bonsai.php">Bonsai</a></li>
+                        <li><a href="bonsai.php"class="active">Bonsai</a></li>
                         <li><a href="fortuneplants.php">Fortune Plants</a></li>
                         <li><a href="miniatures.php">Miniatures</a></li>
                     </ul>
                 </div>
-			</div>
-			<div class="row">
-				<div class="col-md-10">
-					<p>Showing 12 of 60 results</p>
-				</div>
-			</div>
+      </div>
+      <div class="row">
+        <div class="col-md-10">
+          <p>Showing 12 of 60 results</p>
+        </div>
+      </div>
             <div class="row">
                 <div class="col-md-6 col-lg-3 ftco-animate">
                     <div class="product">
@@ -472,90 +443,7 @@ if(isset($_POST["login"])){
             </div>
         </div>
     </section>
-
-    <div class="popup">
-                <div class="popup-content">
-                 <img src="images/close.png" alt="Close" class="close">
-                
-                 
-                        <div class="row">
-                                <div class="col-sm-5 col-xs-6">
-                                    <br>
-                                
-                                    <br><!--login social media accounts-->
-                                        <div class="fb-login">
-                                            <Button>
-                                            <img src="images/facebook-icon.png" alt="">Login with Facebook</Button>
-                                        </div>
-                                        <div class="twit-login">
-                                                <Button>
-                                                <img src="images/twitter-icon.png" alt="">Login with Twitter</Button>
-                                        </div>
-                                        <div class="google-login">
-                                                <Button>
-                                                <img src="images/google-icon.png" alt="">Login with Gmail</Button>
-                                        </div>
-
-                                </div>
-                
-                                <div class="col-sm-2 col-xs-6">
-                                    <div class="or">
-                                       <h6>OR</h6> 
-                                    </div>
-
-                                </div>
-                                <!--manually login-->
-                                <div class="col-sm-5 col-xs-6">
-                                    <form method="post" action="index.php">
-                                        <div class="manually">
-
-                                        <h5>Sign in manually</h5>
-
-                                        <br>
-                                        <form method="post" action="shop.php">
-                                        <input type="text" placeholder="Username or Email" name="email" required>
-                                        <input type="password" class="glyphicon glyphicon-user" name="userpass" placeholder="Password" required> 
-                    
-                                         </div>
-                                         <div class="btn">
-                                         <span>
-                                         <input type="checkbox" name="" value="" class="checkbox" placeholder="Remember me">
-                                         <label for="remember">Remember me</label>
-                                         </span>
-                                         <button type="submit" value="Login" name="login" class="btn btn-success btn-sm">Log in</button>
-                                        </div>
-                                        <div class="lower-btn">
-                                        
-                                        <a href="#" class="reg">Register now</a>|<a href="forgot.php"class="forgot">Forgot Password?</a>
-                                        </div>
-                                    </form>
-
-                                        
-                                </div>
-
-                                
-                         </div>
-                    
-
-                </div>
-            </div>
-            <!--/LOGIN MODAL-->
-               
-
-    <script> 
-     document.getElementById("login-btn").addEventListener("click",function(){
-
-        document.querySelector(".popup").style.display = "flex";
-
-        });
-
-        document.querySelector(".close").addEventListener("click",function(){
-        document.querySelector(".popup").style.display = "none";
-        });
-    </script>
-
-    <?php include'footer.php';?>
-
+    <?php require_once("footer.php");?>
 
 
 

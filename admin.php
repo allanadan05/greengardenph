@@ -33,54 +33,7 @@
 </head>
 
 <body class="goto-here">
-    <div class="py-1 bg-primary">
-        <div class="container">
-            <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
-                <div class="col-lg-12 d-block">
-                    <div class="row d-flex">
-                        <div class="col-md pr-4 d-flex topper align-items-center">
-                            <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
-                            <span class="text">+63 945 0928 187</span>
-                        </div>
-                        <div class="col-md pr-4 d-flex topper align-items-center">
-                            <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-                            <span class="text">greengarden@gmail.com</span>
-                        </div>
-                        <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
-                            <span class="text">3-5 Business days delivery &amp; Free Returns</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">GreenGarden</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
-          </button>
-
-            <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item cta cta-colored"><a href="#" class="nav-link"><span class="icon-bell"></span></a></li>
-                    <li class="nav-item cta cta-colored"><a href="#" class="nav-link"><span class="icon-envelope"></span></a></li>
-                    <li class="nav-item cta cta-colored"><a href="profile.html" class="nav-link"><span class="icon-person"></span> [name]</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Search Bar -->
-
-
-        <form action="index.html" class="search-form">
-            <form class="form-group">
-                <span class="icon ion-ios-search" style="color: green ;"></span>
-                <input type="text" class="form-control" placeholder="Search..." style="font-size: small;">
-            </form>
-        </form>
-
-    </nav>
+   <?php require_once("navbaruseradmin.php"); ?>
 
     <!-- END nav -->
 
@@ -89,23 +42,42 @@
         <div class="row"><!-- row -->
                 <!-- SIDEBAR -->
                 <div class="col-sm-2">
-                <div class="side-bar">
-                   
-                    <ul>                  
-                        <li><a href="/greengardenph/admin.php"  class="active" >Manage Users</a></li>
-                        <li><a href="/greengardenph/manageguest.php">Manage Guest</a></li>
-                        <li><a href="/greengardenph/viewpayments.php">View Payments</a></li>
-                        <li><a href="/greengardenph/manageproducts.php" >Manage Products</a></Li>
-                        <li><a href="/greengardenph/managefeedback.php">Manage Feedback</a></li>
-                    </ul>    
-                </div>
+                    <div class="side-bar">  
+                        <ul>
+                        <hr><a href="messageadmin.php" class="active"><button type="button"style="width:180px;" class="btn btn-primary">
+                        Messages <span class="badge badge-light"> 9 </span>
+                        <span class="sr-only">unread messages</span>
+                        </button></a></hr>
+                        <hr><a href="notificationsadmin.php"><button type="button"style="width:180px;" class="btn btn-primary">
+                        Notifications <span class="badge badge-light">9</span>
+                        <span class="sr-only">unread messages</span>
+                        </button></a></hr>
+                        <hr><a href="admin.php"><button type="button"style="width:180px;" class="btn btn-primary">
+                        Manage Users <span class="badge badge-light">9</span>
+                        <span class="sr-only">unread messages</span>
+                        </button></a></hr>
+                        <hr><a href="viewpayments.php"><button type="button"style="width:180px;" class="btn btn-primary">
+                        View Payments <span class="badge badge-light">9</span>
+                        <span class="sr-only">unread messages</span>
+                        </button></a></hr>
+                        <hr><a href="manageproducts.php"><button type="button"style="width:180px;" class="btn btn-primary">
+                        Manage Products <span class="badge badge-light">9</span>
+                        <span class="sr-only">unread messages</span>
+                        </button></a></hr>
+                        <hr><a href="managefeedback.php"><button type="button"style="width:180px;" class="btn btn-primary">
+                        Manage Feedback <span class="badge badge-light">9</span>
+                        <span class="sr-only">unread messages</span>
+                        </button></a></hr>
+                        </ul>
+                    </div>
                 </div>
                 <!-- /SIDEBAR -->
                 <!-- TABLE -->
-                   <div class="col-sm-10">
-                    <!-- ADMIN TABLE -->
-                    
+            <div class="col-sm-10">
+                <div class="user-table">
+                   <button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button>
                     <table border='.5' class="user-table">
+                        
                             <thead>
                             <tr>
                                 <th>Name</th>
@@ -125,7 +97,7 @@
 
                                     <td>
                                        
-                                     <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                     <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center>
                                     </td>
@@ -137,7 +109,7 @@
                                     <td>john@example.com</td>
                                     <td>3 pataas</td>
                                     <td>
-                                    <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                    <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center> 
                                     </td>
@@ -148,7 +120,7 @@
                                     <td>john@example.com</td>
                                     <td>123</td>
                                     <td>
-                                    <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                    <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center>
                                     </td>
@@ -160,31 +132,7 @@
                                     <td>john@example.com</td>
                                     <td>123</td>
                                     <td>
-                                        <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
-                                        </center>
-                                    </td>
-
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
-                                    <td>
-                                        <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
-                                    </center> 
-                                    </td>
-
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
-                                    <td>
-                                        <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                    <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center>
                                     </td>
@@ -196,7 +144,31 @@
                                     <td>john@example.com</td>
                                     <td>123</td>
                                     <td>
-                                        <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
+                                    </center> 
+                                    </td>
+
+                            </tr>
+                            <tr>
+                                    <td>John</td>
+                                    <td>july/30/2019</td>
+                                    <td>john@example.com</td>
+                                    <td>123</td>
+                                    <td>
+                                        <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
+                                    </center>
+                                    </td>
+
+                            </tr>
+                            <tr>
+                                    <td>John</td>
+                                    <td>july/30/2019</td>
+                                    <td>john@example.com</td>
+                                    <td>123</td>
+                                    <td>
+                                        <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center>
                                      </td>
@@ -208,7 +180,7 @@
                                     <td>john@example.com</td>
                                     <td>123</td>
                                     <td>
-                                        <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <center><button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center>
                                     </td>
@@ -217,122 +189,95 @@
                             </tbody>
                         </table>
                 
-                    <!-- /ADMIN TABLE -->
-                <!-- /TABLE -->
-                <!-- The Modal -->
-                <div class="modal" id="myModal">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                             <!-- Modal body -->
-                                    <div class="modal-body">
-                                         <div class="form-group">
-                                           <label for="comment">Message</label>
-                                          <textarea class="form-control" rows="4" id="message"></textarea>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Modal footer -->
-                                    <div class="modal-footer">
-                                     <button type="button" class="btn btn-success" value="submit">Sumbit</button>
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                    <!-- /The Modal -->           </div>
-        </div><!-- /row -->
+                   
+                
+               
+                </div>
+                
+            </div><!-- col 10 -->
+                 <!-- /TABLE -->   
+       </div><!-- /row -->
 </div>
     <!-- /CONTENT -->
 
 
+<!-- MODAL MESSAGE -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="comment">Message</label>
+                    <textarea class="form-control" rows="4" id="message"></textarea>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" value="submit">Sumbit</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL MESSAGE -->
+
+<!-- MODAL ADD -->
+<div class="add-user-modal">
+ <div class="modal" id="add">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h6 class="modal-title">Add Users</h6>
+                
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                
+                <form>
+                    <input type="text"  name="firstname" placeholder="Firstname"/>
+                    <input type="text"  name="lastname" placeholder="Lastname"/>
+                    <input type="text"  name="middlename" placeholder="Middlename"/>
+                    <input type="text"  name="age" placeholder="Age"/>
+                    <br>
+                    <select name="gender" id="gender">
+                        <<option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <br>
+                    <input type="text"  name="address" placeholder="Address"/>
+                    <input type="email"  name="email" placeholder="Email"/>
+                    <input type="password"  name="password" placeholder="Password"/>
+
+                    </form>
+                    
+
+                
+                
+            
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" id="" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                
+                
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+<!-- /MODAL ADD -->
 
 
     <!-- Footer -->
 
-    <footer class="ftco-footer ftco-section">
-    <div class="container">
-        <div class="row">
-            <div class="mouse">
-                <a href="#" class="mouse-icon">
-                    <div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
-                </a>
-            </div>
-        </div>
-        <div class="row mb-5">
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">GreenGarden</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Philippines and China.</p>
-                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4 ml-md-5">
-                    <h2 class="ftco-heading-2">Menu</h2>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="py-2 d-block">Home</a></li>
-                        <li><a href="#" class="py-2 d-block">Products</a></li>
-                        <li><a href="#" class="py-2 d-block">Category</a></li>
-                        <li><a href="#" class="py-2 d-block">Feed</a></li>
-                        <li><a href="#" class="py-2 d-block">Cart</a></li>
-                        <li><a href="#" class="py-2 d-block">Wishlist</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Help</h2>
-                    <div class="d-flex">
-                        <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
-                            <li><a href="#" class="py-2 d-block">Shipping Information</a></li>
-                            <li><a href="#" class="py-2 d-block">Returns &amp; Exchange</a></li>
-                            <li><a href="#" class="py-2 d-block">Terms &amp; Conditions</a></li>
-                            <li><a href="#" class="py-2 d-block">Privacy Policy</a></li>
-                        </ul>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">FAQs</a></li>
-                            <li><a href="#" class="py-2 d-block">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Have a Questions?</h2>
-                    <div class="block-23 mb-3">
-                        <ul>
-                            <li><span class="icon icon-map-marker"></span><span class="text">Bulacan State Univerysity, Brgy. Kaypian, CSJDM, Bulacan 3023</span></li>
-                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">+63 945 0928 187</span></a></li>
-                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">greengarden@gmail.com</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
-
-                <p>
-                    Copyright &copy;
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script>
-                    All rights reserved | This website is made for completion of Advanced Web Application requirement
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-
-
-
-<!-- loader -->
-<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+<?php require_once("footer.php"); ?>
 
 
 

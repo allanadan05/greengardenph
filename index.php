@@ -1,27 +1,22 @@
 
 <?php
 session_start();
+    $name="";
 
-$count=1;
-if(isset($_POST["login"])){
+if(isset($_POST["login"])){ 
+
     $con= new mysqli("localhost","root","","project");
 
     $email = $con->real_escape_string($_POST["email"]);
     $userpass = $con->real_escape_string($_POST["userpass"]);
-
-    $data = $con->query("Select lname from usertbl where email='$email' AND userpass='$userpass'" );
+    $data = $con->query("Select * from usertbl where email='$email' AND userpass='$userpass'" );
     if($data ->num_rows>0)
     {
-        $_SESSION["email"]=$email;
-        $_SESSION["loggedin"]=1;
+        
             while($sql=$data ->fetch_array()){
-            
-
+                   $name=$sql['Fname'];
         }
-
-        header("Location: shop.php");
-        exit();
-
+  
     }
     else {
         echo "incorrect email or password";
@@ -30,6 +25,7 @@ if(isset($_POST["login"])){
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,71 +72,11 @@ if(isset($_POST["login"])){
 </head>
 
 <body class="goto-here">
-    <div class="py-1 bg-primary">
-        <div class="container">
-            <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
-                <div class="col-lg-12 d-block">
-                    <div class="row d-flex">
-                        <div class="col-md pr-4 d-flex topper align-items-center">
-                            <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
-                            <span class="text">+63 945 0928 187</span>
-                        </div>
-                        <div class="col-md pr-4 d-flex topper align-items-center">
-                            <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-                            <span class="text">greengarden@gmail.com</span>
-                        </div>
-                        <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
-                            <span class="text">3-5 Business days delivery &amp; Free Returns</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="index.php">GreenGarden</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
-          </button>
+   
+   <?php require_once("navbar.php"); ?>
 
-            <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="shop.php" class="nav-link">Products</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown04">
-                            <a class="dropdown-item" href="#">Bonsai</a>
-                            <a class="dropdown-item" href="#">Fortune Plants</a>
-                            <a class="dropdown-item" href="#">Pots</a>
-                            <a class="dropdown-item" href="#">Miniatures</a>
-                        </div>
-                    </li>
-                    <!-- <li class="nav-item"><a href="about.php" class="nav-link">About</a></li> -->
-                    <li class="nav-item"><a href="blog.php" class="nav-link">Feed</a></li>
-                    <!-- <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li> -->
-                    <li class="nav-item cta cta-colored"><a href="wishlist.php" class="nav-link"><span class="icon-heart"></span>[0]</a></li>
-                    <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-                    <li class="nav-item cta cta-colored"><button id="login-btn"><span class="icon-person"></span>hi,<?php echo $_SESSION["email"];?></button></li>
-                </ul>
-            </div>
-        </div>
+         <!--LOGIN MODAL-->
 
-
-        <!-- Search Bar -->
-
-
-        <form action="index.php" class="search-form">
-            <form class="form-group">
-                <span class="icon ion-ios-search" style="color: green ;"></span>
-                <input type="text" class="form-control" placeholder="Search..." style="font-size: small;">
-            </form>
-        </form>
-
-    </nav>
-
-    <!-- END nav -->
 
     <section id="home-section" class="hero">
         <div class="home-slider owl-carousel">
@@ -252,7 +188,7 @@ if(isset($_POST["login"])){
                             </div>
                             <div class="bottom-area d-flex px-3">
                                 <div class="m-auto d-flex">
-                                    <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                                    <a href="product-single.php" class="add-to-cart d-flex justify-content-center align-items-center text-center">
                                         <span><i class="ion-ios-menu"></i></span>
                                     </a>
                                     <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
@@ -469,26 +405,6 @@ if(isset($_POST["login"])){
         </div>
     </section>
 
-    <!-- <section class="ftco-section img" style="background-image: url(images/bg_3.jpg);">
-        <div class="container">
-            <div class="row justify-content-end">
-                <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
-                    <span class="subheading">Best Price For You</span>
-                    <h2 class="mb-4">Deal of the day</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                    <h3><a href="#">Spinach</a></h3>
-                    <span class="price">$10 <a href="#">now $5 only</a></span>
-                    <div id="timer" class="d-flex mt-5">
-                        <div class="time" id="days"></div>
-                        <div class="time pl-3" id="hours"></div>
-                        <div class="time pl-3" id="minutes"></div>
-                        <div class="time pl-3" id="seconds"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <section class="ftco-section testimony-section">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
@@ -597,8 +513,8 @@ if(isset($_POST["login"])){
         </div>
     </section>
     
-<!--LOGIN MODAL-->
-<div class="popup">
+
+   <div class="popup">
                 <div class="popup-content">
                  <img src="images/close.png" alt="Close" class="close">
                 
@@ -621,9 +537,6 @@ if(isset($_POST["login"])){
                                                 <img src="images/google-icon.png" alt="">Login with Gmail</Button>
                                         </div>
 
-
-
-
                                 </div>
                 
                                 <div class="col-sm-2 col-xs-6">
@@ -636,11 +549,13 @@ if(isset($_POST["login"])){
                                 <div class="col-sm-5 col-xs-6">
                                     <form method="post" action="index.php">
                                         <div class="manually">
+
                                         <h5>Sign in manually</h5>
+
                                         <br>
-                                        <form method="post" action="index.php">
-                                        <input type="text" placeholder="Username or Email" name="email">
-                                        <input type="password" class="glyphicon glyphicon-user" name="userpass" placeholder="Password">
+                                        <form method="post" action="shop.php">
+                                        <input type="text" placeholder="Username or Email" name="email" required>
+                                        <input type="password" class="glyphicon glyphicon-user" name="userpass" placeholder="Password" required> 
                     
                                          </div>
                                          <div class="btn">
@@ -652,7 +567,7 @@ if(isset($_POST["login"])){
                                         </div>
                                         <div class="lower-btn">
                                         
-                                        <a href="#" class="reg">Register now</a>|<a href="#"class="forgot">Forgot Password?</a>
+                                        <a href="#" class="reg">Register now</a>|<a href="forgot.php"class="forgot">Forgot Password?</a>
                                         </div>
                                     </form>
 
@@ -661,103 +576,12 @@ if(isset($_POST["login"])){
 
                                 
                          </div>
-
-
-
-
-
-              
                     
 
                 </div>
             </div>
             <!--/LOGIN MODAL-->
                
-
-    <footer class="ftco-footer ftco-section">
-        <div class="container">
-            <div class="row">
-                <div class="mouse">
-                    <a href="#" class="mouse-icon">
-                        <div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
-                    </a>
-                </div>
-            </div>
-            <div class="row mb-5">
-                <div class="col-md">
-                    <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">GreenGarden</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Philippines and China.</p>
-                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="ftco-footer-widget mb-4 ml-md-5">
-                        <h2 class="ftco-heading-2">Menu</h2>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">Home</a></li>
-                            <li><a href="#" class="py-2 d-block">Products</a></li>
-                            <li><a href="#" class="py-2 d-block">Category</a></li>
-                            <li><a href="#" class="py-2 d-block">Feed</a></li>
-                            <li><a href="#" class="py-2 d-block">Cart</a></li>
-                            <li><a href="#" class="py-2 d-block">Wishlist</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">Help</h2>
-                        <div class="d-flex">
-                            <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
-                                <li><a href="#" class="py-2 d-block">Shipping Information</a></li>
-                                <li><a href="#" class="py-2 d-block">Returns &amp; Exchange</a></li>
-                                <li><a href="#" class="py-2 d-block">Terms &amp; Conditions</a></li>
-                                <li><a href="#" class="py-2 d-block">Privacy Policy</a></li>
-                            </ul>
-                            <ul class="list-unstyled">
-                                <li><a href="#" class="py-2 d-block">FAQs</a></li>
-                                <li><a href="#" class="py-2 d-block">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">Have a Questions?</h2>
-                        <div class="block-23 mb-3">
-                            <ul>
-                                <li><span class="icon icon-map-marker"></span><span class="text">Bulacan State Univerysity, Brgy. Kaypian, CSJDM, Bulacan 3023</span></li>
-                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+63 945 0928 187</span></a></li>
-                                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">greengarden@gmail.com</span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 text-center">
-
-                    <p>
-                        Copyright &copy;
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script>
-                        All rights reserved | This website is made for completion of Advanced Web Application requirement
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-
-
-
-    <!-- loader -->
-    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
     <script> 
      document.getElementById("login-btn").addEventListener("click",function(){
@@ -770,6 +594,9 @@ if(isset($_POST["login"])){
         document.querySelector(".popup").style.display = "none";
         });
     </script>
+
+<?php require_once("footer.php"); ?>
+
 
 
     <script src="./import/js/jquery.min.js"></script>
@@ -788,6 +615,9 @@ if(isset($_POST["login"])){
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="./import/js/google-map.js"></script>
     <script src="./import/js/main.js"></script>
+
+
+
 
 </body>
 
