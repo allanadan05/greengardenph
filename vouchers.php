@@ -52,33 +52,50 @@
             </div>
         </div>
     </div>
+    <!-- NAV -->
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">GreenGarden</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
-          </button>
+    <div class="container">
+        <a class="navbar-brand" href="index.html">GreenGarden</a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#ftco-nav"
+            aria-controls="ftco-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="oi oi-menu"></span>
+            Menu
+        </button>
 
-            <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item cta cta-colored"><a href="#" class="nav-link"><span class="icon-bell"></span></a></li>
-                    <li class="nav-item cta cta-colored"><a href="#" class="nav-link"><span class="icon-envelope"></span></a></li>
-                    <li class="nav-item cta cta-colored"><a href="profile.html" class="nav-link"><span class="icon-person"></span> [name]</a></li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <div class="dropdown">
+                    <button
+                        class="btn btn-secondary dropdown-toggle"
+                        style="background-color:green;"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                    >
+                        <span class="icon-person"></span>
+                        &nbsp Angelico Gomez
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Account</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+                </div>
+            </ul>
         </div>
+    </div>
 
-        <!-- Search Bar -->
-
-
-        <form action="index.html" class="search-form">
-            <form class="form-group">
-                <span class="icon ion-ios-search" style="color: green ;"></span>
-                <input type="text" class="form-control" placeholder="Search..." style="font-size: small;">
-            </form>
-        </form>
-
-    </nav>
+    <!-- Search Bar -->
+</nav>
 
     <!-- END nav -->
 
@@ -89,11 +106,24 @@
         <!-- SIDEBAR -->
         <div class="col-sm-2">
             <div class="side-bar">
-                <ul>
-                    <li><a href="/greengardenph/users.php" >Posts</a></li>
-                    <li><a href="/greengardenph/purchasedhistory.php" >Purchased History & E-Wallet</a></li>
-                    <li><a href="/greengardenph/vouchers.php" class="active">Vouchers</a></li>
-                </ul>
+            <ul>
+                    <hr><a href="users.php" class="active"><button type="button"style="width:150px;" class="btn btn-primary">
+                    Posts <span class="badge badge-light">9</span>
+                    <span class="sr-only">unread messages</span>
+                    </button></a></hr>
+                    <hr><a href="message.php"><button type="button"style="width:150px;" class="btn btn-primary">
+                    Messages <span class="badge badge-light">9</span>
+                    <span class="sr-only">unread messages</span>
+                    </button></a></hr>
+                    <hr><a href="purchasedhistory.php"><button type="button"style="width:150px;" class="btn btn-primary">
+                    Purchased History <span class="badge badge-light">9</span>
+                    <span class="sr-only">unread messages</span>
+                    </button></a></hr>
+                    <hr><a href="vouchers.php"><button type="button"style="width:150px;" class="btn btn-primary">
+                    Vouchers <span class="badge badge-light">9</span>
+                    <span class="sr-only">unread messages</span>
+                    </button></a></hr>
+                    </ul>
             </div>
         </div>
         <!-- /SIDEBAR -->
@@ -112,8 +142,8 @@
             <br>
             <div class="vouchers">
                 <h6>Green Garden</h6>
-                <p id="discount">₱ 50.00</p>
-                <p>Minimum Spend ₱500.00</p>
+                <p id="discount">₱ 100.00</p>
+                <p>Minimum Spend ₱1000.00</p>
                 <br><br>
                 <p id="dot">
                 <center><p>Valid from 2019-09-14 12:00AM - 2020-09-14 12:00AM</p></center>

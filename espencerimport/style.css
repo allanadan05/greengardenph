@@ -1,0 +1,11 @@
+.item {
+    box-shadow: 6px 10px 10px -4px #19E64D;
+}
+
+.checked {
+    color: orange;
+}
+
+.rating {
+    float: right;
+}

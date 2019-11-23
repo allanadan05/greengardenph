@@ -632,7 +632,7 @@ if(isset($_POST["login"])){
                                         </div>
                                         <div class="lower-btn">
                                         
-                                        <a href="#" class="reg">Register now</a>|<a href="#"class="forgot">Forgot Password?</a>
+                                        <a href="#" class="reg">Register now</a>|<a href=""class="forgot">Forgot Password?</a>
                                         </div>
                                     </form>
 

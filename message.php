@@ -723,35 +723,52 @@
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">GreenGarden</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
+   <!-- NAV -->
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">GreenGarden</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#ftco-nav"
+      aria-controls="ftco-nav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="oi oi-menu"></span>
+      Menu
+    </button>
+
+    <div class="collapse navbar-collapse" id="ftco-nav">
+      <ul class="navbar-nav ml-auto">
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            style="background-color:green;"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span class="icon-person"></span>
+            &nbsp Angelico Gomez
           </button>
-
-            <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav ml-auto">
-                                 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" style="background-color:green;"type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   <span class="icon-person"></span>&nbsp Angelico Gomez
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Account</a>
-    <a class="dropdown-item" href="#">Settings</a>
-    <a class="dropdown-item" href="#">Logout</a
-    
-</div>
-                    
-                </ul>
-            </div>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Account</a>
+            <a class="dropdown-item" href="#">Settings</a>
+            <a class="dropdown-item" href="#">Logout</a>
+          </div>
         </div>
+      </ul>
+    </div>
+  </div>
 
-        <!-- Search Bar -->
+  <!-- Search Bar -->
+</nav>
 
-    </nav>
-
-    <!-- END nav -->
+<!-- END nav -->
 
     <!-- CONTENT -->
     <div class="container-fluid">
@@ -760,26 +777,22 @@
                 <div class="col-sm-2">
                     <div class="side-bar">
                     <ul>
-                    <hr><button type="button"style="width:150px;" class="btn btn-primary">
+                    <hr><a href="users.php" class="active"><button type="button"style="width:150px;" class="btn btn-primary">
                     Posts <span class="badge badge-light">9</span>
                     <span class="sr-only">unread messages</span>
-                    </button></hr>
-                    <hr><button type="button"style="width:150px;" class="btn btn-primary">
+                    </button></a></hr>
+                    <hr><a href="message.php"><button type="button"style="width:150px;" class="btn btn-primary">
                     Messages <span class="badge badge-light">9</span>
                     <span class="sr-only">unread messages</span>
-                    </button></hr>
-                    <hr> <button type="button"style="width:150px;" class="btn btn-primary">
+                    </button></a></hr>
+                    <hr><a href="purchasedhistory.php"><button type="button"style="width:150px;" class="btn btn-primary">
                     Purchased History <span class="badge badge-light">9</span>
                     <span class="sr-only">unread messages</span>
-                    </button></hr>
-                    <hr><button type="button"style="width:150px;" class="btn btn-primary">
+                    </button></a></hr>
+                    <hr><a href="vouchers.php"><button type="button"style="width:150px;" class="btn btn-primary">
                     Vouchers <span class="badge badge-light">9</span>
                     <span class="sr-only">unread messages</span>
-                    </button></hr>
-                    
-                    
-
-                        
+                    </button></a></hr>
                     </ul>
                     </div>
                 </div>

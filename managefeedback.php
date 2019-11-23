@@ -12,6 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+
     <link rel="stylesheet" href="./import/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="./import/css/animate.css">
 
@@ -32,6 +33,7 @@
     <link rel="stylesheet" href="./import/css/style.css">
     <link rel="stylesheet" href="./angelicoimport/angelicostyles.css">
     <link rel="stylesheet" href="./stevenimport/style.css">
+    <link rel="stylesheet" href="./espencerimport/style.css">
 
 </head>
 
@@ -88,7 +90,7 @@
     <!-- END nav -->
 
     <!-- CONTENT -->
-  <div class="container-fluid">
+ <div class="container-fluid">
     <div class="row">
         <!-- row -->
         <!-- SIDEBAR -->
@@ -106,6 +108,203 @@
         <!-- /SIDEBAR -->
 
         <!-- PANEL -->
+        <!-- 1st column -->
+        <div class="col-sm-3">
+            <!-- FIRST -->
+            <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
+                        <span class="quote d-flex align-items-center justify-content-center">
+                            <i class="icon-quote-left"></i>
+                        </span>
+                    </div>
+                    <div class="text text-center">
+                        <p class="name">Garreth Smith</p>
+                        <span class="position">Customer</span>
+                        <p class="mb-5 pl-4 line">
+                            Far far away, behind the word mountains, far from the countries Philipines and China, there
+                            live the amazing peeps.
+                        </p>
+                        <br />
+                        <button type="button" class="btn btn-outline-primary">Hide</button>
+                        <button type="button" class="btn btn-outline-secondary">Edit</button>
+                        <button type="button" class="btn btn-outline-success">Show</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /FIRST -->
+            <br />
+            <!-- SECOND -->
+            <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
+                        <span class="quote d-flex align-items-center justify-content-center">
+                            <i class="icon-quote-left"></i>
+                        </span>
+                    </div>
+                    <div class="text text-center">
+                        <p class="name">Garreth Smith</p>
+                        <span class="position">Customer</span>
+                        <p class="mb-5 pl-4 line">
+                            Far far away, behind the word mountains, far from the countries Philipines and China, there
+                            live the amazing peeps.
+                        </p>
+                        <br />
+                        <button type="button" class="btn btn-outline-primary">Hide</button>
+                        <button type="button" class="btn btn-outline-secondary">Edit</button>
+                        <button type="button" class="btn btn-outline-success">Show</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /SECOND-->
+        </div>
+        <!-- /1st column -->
+
+        <!-- 2nd column -->
+        <div class="col-sm-3">
+            <!-- FIRST -->
+            <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
+                        <span class="quote d-flex align-items-center justify-content-center">
+                            <i class="icon-quote-left"></i>
+                        </span>
+                    </div>
+                    <div class="text text-center">
+                        <p class="name">Garreth Smith</p>
+                        <span class="position">Customer</span>
+                        <p class="mb-5 pl-4 line">
+                            Far far away, behind the word mountains, far from the countries Philipines and China, there
+                            live the amazing peeps.
+                        </p>
+                        <br />
+                        <button type="button" class="btn btn-outline-primary">Hide</button>
+                        <button type="button" class="btn btn-outline-secondary">Edit</button>
+                        <button type="button" class="btn btn-outline-success">Show</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /FIRST -->
+            <br />
+            <!-- SECOND -->
+            <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
+                        <span class="quote d-flex align-items-center justify-content-center">
+                            <i class="icon-quote-left"></i>
+                        </span>
+                    </div>
+                    <div class="text text-center">
+                        <p class="name">Garreth Smith</p>
+                        <span class="position">Customer</span>
+                        <p class="mb-5 pl-4 line">
+                            Far far away, behind the word mountains, far from the countries Philipines and China, there
+                            live the amazing peeps.
+                        </p>
+                        <br />
+                        <button type="button" class="btn btn-outline-primary">Hide</button>
+                        <button type="button" class="btn btn-outline-secondary">Edit</button>
+                        <button type="button" class="btn btn-outline-success">Show</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /SECOND-->
+        </div>
+        <!-- /2nd column -->
+
+        <!-- 3rd column -->
+        <div class="col-sm-3">
+            <!-- FIRST -->
+            <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
+                        <span class="quote d-flex align-items-center justify-content-center">
+                            <i class="icon-quote-left"></i>
+                        </span>
+                    </div>
+                    <div class="text text-center">
+                        <p class="name">Garreth Smith</p>
+                        <span class="position">Customer</span>
+                        <p class="mb-5 pl-4 line">
+                            Far far away, behind the word mountains, far from the countries Philipines and China, there
+                            live the amazing peeps.
+                        </p>
+                        <br />
+                        <button type="button" class="btn btn-outline-primary">Hide</button>
+                        <button type="button" class="btn btn-outline-secondary">Edit</button>
+                        <button type="button" class="btn btn-outline-success">Show</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /FIRST -->
+            <br />
+            <!-- SECOND -->
+            <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
+                        <span class="quote d-flex align-items-center justify-content-center">
+                            <i class="icon-quote-left"></i>
+                        </span>
+                    </div>
+                    <div class="text text-center">
+                        <p class="name">Garreth Smith</p>
+                        <span class="position">Customer</span>
+                        <p class="mb-5 pl-4 line">
+                            Far far away, behind the word mountains, far from the countries Philipines and China, there
+                            live the amazing peeps.
+                        </p>
+                        <br />
+                        <button type="button" class="btn btn-outline-primary">Hide</button>
+                        <button type="button" class="btn btn-outline-secondary">Edit</button>
+                        <button type="button" class="btn btn-outline-success">Show</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /SECOND-->
+        </div>
+        <!-- /3rd column -->
 
         <!-- /PANEL -->
     </div>
