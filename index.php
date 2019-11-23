@@ -6,22 +6,15 @@ $count=1;
 if(isset($_POST["login"])){
     $con= new mysqli("localhost","root","","project");
 
-    $email = $con->real_escape_string($_POST["email"]);
+    $email = $con->real_escape_string($_POST["fname"]);
     $userpass = $con->real_escape_string($_POST["userpass"]);
-    $data = $con->query("Select Lname from usertbl where email='$email' AND userpass='$userpass'" );
+    $data = $con->query("Select Lname from usertbl where fname='$email' AND userpass='$userpass'" );
     if($data ->num_rows>0)
     {
-        $_SESSION["email"]=$email;
-    
-        $_SESSION["loggedin"]=1;
-            while($sql=$data ->fetch_array()){
         
-
+            while($sql=$data ->fetch_array()){
         }
-
-        header("Location: shop.php");
-        exit();
-
+  
     }
     else {
         echo "incorrect email or password";
@@ -122,7 +115,10 @@ if(isset($_POST["login"])){
                     <!-- <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li> -->
                     <li class="nav-item cta cta-colored"><a href="wishlist.php" class="nav-link"><span class="icon-heart"></span>[0]</a></li>
                     <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-                    <li class="nav-item cta cta-colored"><a id="login-btn" class="nav-link"><span class="icon-person">hi,<?php echo $_SESSION["email"] ?></span></a></li>
+                    <li class="nav-item cta cta-colored"><a name="prof" id="login-btn" class="nav-link"><span class="icon-person">
+                  
+                       
+                    </span></a></li>
                 </ul>
             </div>
         </div>
@@ -619,8 +615,8 @@ if(isset($_POST["login"])){
                                         <h5>Sign in manually</h5>
                                         <br>
                                         <form method="post" action="index.php">
-                                        <input type="text" placeholder="Username or Email" name="email">
-                                        <input type="password" class="glyphicon glyphicon-user" name="userpass" placeholder="Password">
+                                        <input type="text" placeholder="Username or Email" name="fname" required>
+                                        <input type="password" class="glyphicon glyphicon-user" name="userpass" placeholder="Password" required> 
                     
                                          </div>
                                          <div class="btn">
@@ -632,7 +628,7 @@ if(isset($_POST["login"])){
                                         </div>
                                         <div class="lower-btn">
                                         
-                                        <a href="#" class="reg">Register now</a>|<a href=""class="forgot">Forgot Password?</a>
+                                        <a href="#" class="reg">Register now</a>|<a href="forgot.php"class="forgot">Forgot Password?</a>
                                         </div>
                                     </form>
 

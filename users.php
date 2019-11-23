@@ -27,6 +27,12 @@
     <link rel="stylesheet" href="./import/css/style.css">
     <link rel="stylesheet" href="./angelicoimport/angelicostyles.css">
     <link rel="stylesheet" href="./stevenimport/style.css">
+    <script>
+    function myFunction() {
+    location.replace("index.php")
+    }
+ 
+    </script>
 
 </head>
 
@@ -87,7 +93,7 @@
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="#">Account</a>
                         <a class="dropdown-item" href="#">Settings</a>
-                        <a class="dropdown-item" href="#">Logout</a>
+                        <a class="dropdown-item" href="#" onclick="myFunction()">Logout</a>
                     </div>
                 </div>
             </ul>
@@ -224,6 +230,7 @@
 
 
     <!-- Footer -->
+    
 
     <footer class="ftco-footer ftco-section">
     <div class="container">
