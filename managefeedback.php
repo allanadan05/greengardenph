@@ -64,27 +64,24 @@
             <a class="navbar-brand" href="index.html">GreenGarden</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
-          </button>
+            </button>
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item cta cta-colored"><a href="#" class="nav-link"><span class="icon-bell"></span></a></li>
-                    <li class="nav-item cta cta-colored"><a href="#" class="nav-link"><span class="icon-envelope"></span></a></li>
-                    <li class="nav-item cta cta-colored"><a href="profile.html" class="nav-link"><span class="icon-person"></span> [name]</a></li>
+                  <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" style="background-color:green;"type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="icon-person"></span>&nbsp Angelico Gomez
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Account</a>
+                <a class="dropdown-item" href="#">Settings</a>
+                <a class="dropdown-item" href="#">Logout</a>    
+                  </div>
+                    
                 </ul>
             </div>
         </div>
-
-        <!-- Search Bar -->
-
-
-        <form action="index.html" class="search-form">
-            <form class="form-group">
-                <span class="icon ion-ios-search" style="color: green ;"></span>
-                <input type="text" class="form-control" placeholder="Search..." style="font-size: small;">
-            </form>
-        </form>
-
+        </div>
     </nav>
 
     <!-- END nav -->
