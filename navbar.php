@@ -1,3 +1,5 @@
+
+
 <div class="py-1 bg-primary">
         <div class="container">
             <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
@@ -14,6 +16,7 @@
                         <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
                             <span class="text">3-5 Business days delivery &amp; Free Returns</span>
                         </div>
+                
                     </div>
                 </div>
             </div>
@@ -44,9 +47,10 @@
                     <!-- <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li> -->
                     <li class="nav-item cta cta-colored"><a href="wishlist.php" class="nav-link"><span class="icon-heart"></span>[0]</a></li>
                     <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-                    <li class="nav-item cta cta-colored"><a name="prof" id="login-btn" class="nav-link"><span class="icon-person">
-                  
-                       
+                    <li class="nav-item cta cta-colored"><a name="prof" id="login-btn" class="nav-link"><?php
+                    echo $name;
+                    ?> <span class="icon-person">
+
                     </span></a></li>
                 </ul>
             </div>

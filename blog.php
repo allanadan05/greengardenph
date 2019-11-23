@@ -1,3 +1,29 @@
+
+<?php
+session_start();
+
+$name="";
+if(isset($_POST["login"])){
+    $con= new mysqli("localhost","root","","project");
+
+    $email = $con->real_escape_string($_POST["email"]);
+    $userpass = $con->real_escape_string($_POST["userpass"]);
+    $data = $con->query("Select Lname from usertbl where email='$email' AND userpass='$userpass'" );
+    if($data ->num_rows>0)
+    {
+        
+            while($sql=$data ->fetch_array()){
+                $name=$sql["Lname"];
+        }
+  
+    }
+    else {
+        echo "<b>incorrect email or password</b>";
+    }
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -103,7 +129,9 @@
                         <!-- <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li> -->
                         <li class="nav-item cta cta-colored"><a href="wishlist.php" class="nav-link"><span class="icon-heart"></span>[0]</a></li>
                         <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-                        <li class="nav-item cta cta-colored"><a href="profile.php" class="nav-link"><span class="icon-person"></span>Hi, [name] !</a></li>
+                        <li class="nav-item cta cta-colored"><a href="profile.php" class="nav-link"><span class="icon-person"></span>Hi <?php
+                    echo $name;
+                    ?>  !</a></li>
                     </ul>
                 </div>
             </div>

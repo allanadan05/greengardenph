@@ -2,25 +2,28 @@
 <?php
 session_start();
 
-$count=1;
+$name="";
+$error="";
 if(isset($_POST["login"])){
     $con= new mysqli("localhost","root","","project");
 
-    $email = $con->real_escape_string($_POST["fname"]);
+    $email = $con->real_escape_string($_POST["email"]);
     $userpass = $con->real_escape_string($_POST["userpass"]);
-    $data = $con->query("Select Lname from usertbl where fname='$email' AND userpass='$userpass'" );
+    $data = $con->query("Select Lname from usertbl where email='$email' AND userpass='$userpass'" );
     if($data ->num_rows>0)
     {
         
             while($sql=$data ->fetch_array()){
+                $name=$sql["Fname"];
         }
   
     }
     else {
-        echo "incorrect email or password";
+        $error ="incorrect email or password";
     }
 
 }
+echo $error;
 
 ?>
 <!DOCTYPE html>
@@ -546,10 +549,12 @@ if(isset($_POST["login"])){
                                 <div class="col-sm-5 col-xs-6">
                                     <form method="post" action="index.php">
                                         <div class="manually">
+
                                         <h5>Sign in manually</h5>
+
                                         <br>
                                         <form method="post" action="index.php">
-                                        <input type="text" placeholder="Username or Email" name="fname" required>
+                                        <input type="text" placeholder="Username or Email" name="email" required>
                                         <input type="password" class="glyphicon glyphicon-user" name="userpass" placeholder="Password" required> 
                     
                                          </div>
