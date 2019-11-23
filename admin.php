@@ -85,27 +85,24 @@
     <!-- END nav -->
 
     <!-- CONTENT -->
-    <div class="container-fluid">
+<div class="container-fluid">
         <div class="row"><!-- row -->
                 <!-- SIDEBAR -->
+                <div class="col-sm-2">
                 <div class="side-bar">
-                    <div class="col-sm-2">
-                    <ul>
-                    
+                   
+                    <ul>                  
                         <li><a href="/greengardenph/admin.php"  class="active" >Manage Users</a></li>
                         <li><a href="/greengardenph/manageguest.php">Manage Guest</a></li>
                         <li><a href="/greengardenph/viewpayments.php">View Payments</a></li>
                         <li><a href="/greengardenph/manageproducts.php" >Manage Products</a></Li>
                         <li><a href="/greengardenph/managefeedback.php">Manage Feedback</a></li>
-                        
-                        
-                        
-                    </ul>
-                    </div>
+                    </ul>    
+                </div>
                 </div>
                 <!-- /SIDEBAR -->
                 <!-- TABLE -->
-                    <div class="col-sm-10">
+                   <div class="col-sm-10">
                     <!-- ADMIN TABLE -->
                     
                     <table border='.5' class="user-table">
@@ -226,16 +223,12 @@
                 <div class="modal" id="myModal">
                                 <div class="modal-dialog">
                                 <div class="modal-content">
-                                
-                                   
-                                   
-                                    
-                                    <!-- Modal body -->
+                             <!-- Modal body -->
                                     <div class="modal-body">
-                                                <div class="form-group">
-                                                    <label for="comment">Message</label>
-                                                    <textarea class="form-control" rows="4" id="message"></textarea>
-                                                  </div>
+                                         <div class="form-group">
+                                           <label for="comment">Message</label>
+                                          <textarea class="form-control" rows="4" id="message"></textarea>
+                                        </div>
                                     </div>
                                     
                                     <!-- Modal footer -->
@@ -243,14 +236,12 @@
                                      <button type="button" class="btn btn-success" value="submit">Sumbit</button>
                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                                     </div>
-                                    
                                 </div>
                                 </div>
                             </div>
-                    <!-- /The Modal -->
-                
+                    <!-- /The Modal -->           </div>
         </div><!-- /row -->
-    </div>
+</div>
     <!-- /CONTENT -->
 
 

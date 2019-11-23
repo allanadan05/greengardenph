@@ -85,146 +85,221 @@
     <!-- END nav -->
 
     <!-- CONTENT -->
-    <div class="container-fluid">
-        <div class="row"><!-- row -->
-                <!-- SIDEBAR -->
-                <div class="side-bar">
-                    <div class="col-sm-2">
-                    <ul>
-                    
-                        <li><a href="/greengardenph/admin.php"   >Manage Users</a></li>
-                        <li><a href="/greengardenph/manageguest.php" class="active">Manage Guest</a></li>
-                        <li><a href="/greengardenph/viewpayments.php">View Payments</a></li>
-                        <li><a href="/greengardenph/manageproducts.php" >Manage Products</a></Li>
-                        <li><a href="#vouchers">Manage Feedback</a></li>
-                        
-                        
-                        
-                    </ul>
-                    </div>
-                </div>
-                <!-- /SIDEBAR -->
-                <!-- TABLE -->
-                    <div class="col-sm-10">
-                    <!-- ADMIN TABLE -->
-                    
-                    <table border='.5' class="user-table">
-                            <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Date registered</th>
-                                <th>Email</th>
-                                <th><center>Action</center></th>
+  <div class="container-fluid">
+    <div class="row">
+        <!-- row -->
+        <!-- SIDEBAR -->
+        <div class="col-sm-2">
+            <div class="side-bar">
+                <ul>
+                    <li><a href="/greengardenph/admin.php">Manage Users</a></li>
+                    <li><a href="/greengardenph/manageguest.php" class="active">Manage Guest</a></li>
+                    <li><a href="/greengardenph/viewpayments.php">View Payments</a></li>
+                    <li><a href="/greengardenph/manageproducts.php">Manage Products</a></li>
+                    <li><a href="#vouchers">Manage Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /SIDEBAR -->
+        <!-- TABLE -->
+        <div class="col-sm-10">
+            <!-- ADMIN TABLE -->
 
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                    <td>John Steven Francisco</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                  
+            <table border=".5" class="user-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date registered</th>
+                        <th>Email</th>
+                        <th><center>Action</center></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Steven Francisco</td>
+                        <td>july/30/2019</td>
+                        <td>john@example.com</td>
 
-                                    <td>
-                                       
-                                     <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> 
-                                    </center>
-                                    </td>
-                                     
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    
-                                    <td>
-                                    <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> 
-                                    </center> 
-                                    </td>
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    
-                                    <td>
-                                    <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button>
-                                    </center>
-                                    </td>
+                        <td>
+                            <center>
+                                <button class="btn-success">
+                                    <i class="fas fa-user-plus"></i>
+                                    ADD
+                                </button>
+                                <button class="btn-warning">
+                                    <i class="fas fa-user-edit"></i>
+                                    EDIT
+                                </button>
+                                <button class="btn-danger">
+                                    <i class="fas fa-user-times"></i>
+                                    BAN
+                                </button>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>july/30/2019</td>
+                        <td>john@example.com</td>
 
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    
-                                    <td>
-                                        <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> 
-                                        </center>
-                                    </td>
+                        <td>
+                            <center>
+                                <button class="btn-success">
+                                    <i class="fas fa-user-plus"></i>
+                                    ADD
+                                </button>
+                                <button class="btn-warning">
+                                    <i class="fas fa-user-edit"></i>
+                                    EDIT
+                                </button>
+                                <button class="btn-danger">
+                                    <i class="fas fa-user-times"></i>
+                                    BAN
+                                </button>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>july/30/2019</td>
+                        <td>john@example.com</td>
 
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    
-                                    <td>
-                                        <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> 
-                                    </center> 
-                                    </td>
+                        <td>
+                            <center>
+                                <button class="btn-success">
+                                    <i class="fas fa-user-plus"></i>
+                                    ADD
+                                </button>
+                                <button class="btn-warning">
+                                    <i class="fas fa-user-edit"></i>
+                                    EDIT
+                                </button>
+                                <button class="btn-danger">
+                                    <i class="fas fa-user-times"></i>
+                                    BAN
+                                </button>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>july/30/2019</td>
+                        <td>john@example.com</td>
 
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    
-                                    <td>
-                                        <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> 
-                                    </center>
-                                    </td>
+                        <td>
+                            <center>
+                                <button class="btn-success">
+                                    <i class="fas fa-user-plus"></i>
+                                    ADD
+                                </button>
+                                <button class="btn-warning">
+                                    <i class="fas fa-user-edit"></i>
+                                    EDIT
+                                </button>
+                                <button class="btn-danger">
+                                    <i class="fas fa-user-times"></i>
+                                    BAN
+                                </button>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>july/30/2019</td>
+                        <td>john@example.com</td>
 
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                   
-                                    <td>
-                                        <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> 
-                                    </center>
-                                     </td>
+                        <td>
+                            <center>
+                                <button class="btn-success">
+                                    <i class="fas fa-user-plus"></i>
+                                    ADD
+                                </button>
+                                <button class="btn-warning">
+                                    <i class="fas fa-user-edit"></i>
+                                    EDIT
+                                </button>
+                                <button class="btn-danger">
+                                    <i class="fas fa-user-times"></i>
+                                    BAN
+                                </button>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>july/30/2019</td>
+                        <td>john@example.com</td>
 
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                   
-                                    <td>
-                                        <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> 
-                                    </center>
-                                    </td>
+                        <td>
+                            <center>
+                                <button class="btn-success">
+                                    <i class="fas fa-user-plus"></i>
+                                    ADD
+                                </button>
+                                <button class="btn-warning">
+                                    <i class="fas fa-user-edit"></i>
+                                    EDIT
+                                </button>
+                                <button class="btn-danger">
+                                    <i class="fas fa-user-times"></i>
+                                    BAN
+                                </button>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>july/30/2019</td>
+                        <td>john@example.com</td>
 
-                            </tr>
-                            </tbody>
-                        </table>
-                
-                    <!-- /ADMIN TABLE -->
-                <!-- /TABLE -->
-               
-                
-        </div><!-- /row -->
+                        <td>
+                            <center>
+                                <button class="btn-success">
+                                    <i class="fas fa-user-plus"></i>
+                                    ADD
+                                </button>
+                                <button class="btn-warning">
+                                    <i class="fas fa-user-edit"></i>
+                                    EDIT
+                                </button>
+                                <button class="btn-danger">
+                                    <i class="fas fa-user-times"></i>
+                                    BAN
+                                </button>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>july/30/2019</td>
+                        <td>john@example.com</td>
+
+                        <td>
+                            <center>
+                                <button class="btn-success">
+                                    <i class="fas fa-user-plus"></i>
+                                    ADD
+                                </button>
+                                <button class="btn-warning">
+                                    <i class="fas fa-user-edit"></i>
+                                    EDIT
+                                </button>
+                                <button class="btn-danger">
+                                    <i class="fas fa-user-times"></i>
+                                    BAN
+                                </button>
+                            </center>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- /ADMIN TABLE -->
+            <!-- /TABLE -->
+        </div>
     </div>
+    <!-- /row -->
+</div>
     <!-- /CONTENT -->
 
 

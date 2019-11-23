@@ -85,124 +85,109 @@
     <!-- END nav -->
 
     <!-- CONTENT -->
-    <div class="container-fluid">
-        <div class="row"><!-- row -->
-                <!-- SIDEBAR -->
-                <div class="side-bar">
-                    <div class="col-sm-2">
-                    <ul>
-                    
-                        <li><a href="/greengardenph/admin.php" >Manage Users</a></li>
-                        <li><a href="/greengardenph/manageguest.php">Manage Guest</a></li>
-                        <li><a href="#purchased" class="active">View Payments</a></li>
-                        <li><a href="/greengardenph/manageproducts.php" >Manage Products</a></Li>
-                        <li><a href="/greengardenph/managefeedback.php">Manage Feedback</a></li>
-                        
-                        
-                        
-                    </ul>
-                    </div>
-                </div>
-                <!-- /SIDEBAR -->
-                <!-- VIEW PAYMENTS -->
-               
-                    
-                <table border='.5' class="view-payment">
-                            <thead>
-                            <tr>
-                                <th>Customer Name</th>
-                                <th>purchased products</th>
-                                <th>Cost</th>
-                                <th>Breakdown of fee</th>
-                                <th>mode of payment</th>
-                                <th>reference number</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                    <td>John Steven Francisco</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
-                                    <td>123</td>
-                                    <td>123</td>
-
-                                   
-                                     
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>3 pataas</td>
-                                    <td>123</td>
-                                    <td>123</td>
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
-                                    <td>123</td>
-                                    <td>123</td>
-
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
-                                    <td>123</td>
-                                    <td>123</td>
-                                    
-
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
-                                    <td>123</td>
-                                    <td>123</td>
-                                   
-
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
-                                    <td>123</td>
-                                    <td>123</td>
-
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
-                                    <td>123</td>
-                                    <td>123</td>
-
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
-                                    <td>123</td>
-                                    <td>123</td>
-
-                            </tr>
-                            </tbody>
-                        </table>
-                
-                   
-                <!-- /VIEW PAYMENTS -->
-            
-                
-        </div><!-- /row -->
+  <div class="container-fluid">
+    <div class="row">
+        <!-- row -->
+        <!-- SIDEBAR -->
+        <div class="col-sm-2">
+            <div class="side-bar">
+                <ul>
+                    <li><a href="/greengardenph/admin.php">Manage Users</a></li>
+                    <li><a href="/greengardenph/manageguest.php">Manage Guest</a></li>
+                    <li><a href="#purchased" class="active">View Payments</a></li>
+                    <li><a href="/greengardenph/manageproducts.php">Manage Products</a></li>
+                    <li><a href="/greengardenph/managefeedback.php">Manage Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /SIDEBAR -->
+        <!-- VIEW PAYMENTS -->
+    <div class="col-sm-2">
+        <table border=".5" class="view-payment">
+            <thead>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>purchased products</th>
+                    <th>Cost</th>
+                    <th>Breakdown of fee</th>
+                    <th>mode of payment</th>
+                    <th>reference number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Steven Francisco</td>
+                    <td>july/30/2019</td>
+                    <td>john@example.com</td>
+                    <td>123</td>
+                    <td>123</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>july/30/2019</td>
+                    <td>john@example.com</td>
+                    <td>3 pataas</td>
+                    <td>123</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>july/30/2019</td>
+                    <td>john@example.com</td>
+                    <td>123</td>
+                    <td>123</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>july/30/2019</td>
+                    <td>john@example.com</td>
+                    <td>123</td>
+                    <td>123</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>july/30/2019</td>
+                    <td>john@example.com</td>
+                    <td>123</td>
+                    <td>123</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>july/30/2019</td>
+                    <td>john@example.com</td>
+                    <td>123</td>
+                    <td>123</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>july/30/2019</td>
+                    <td>john@example.com</td>
+                    <td>123</td>
+                    <td>123</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>july/30/2019</td>
+                    <td>john@example.com</td>
+                    <td>123</td>
+                    <td>123</td>
+                    <td>123</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+
+        <!-- /VIEW PAYMENTS -->
+
+    </div>
+    <!-- /row -->
+</div>
     <!-- /CONTENT -->
 
 
