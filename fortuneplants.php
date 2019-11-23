@@ -67,7 +67,7 @@
                             <div class="dropdown-menu" aria-labelledby="dropdown04">
                                 <a class="dropdown-item" href="pots.php">Pots</a>
                                 <a class="dropdown-item" href="bonsai.php">Bonsai</a>
-                                <a class="dropdown-item" href="fortuneplants.php">Fortune Plants</a>
+                                <a class="dropdown-item" href="fortuneplants">Fortune Plants</a>
                                 <a class="dropdown-item" href="miniatures.php">Miniatures</a>
                             </div>
                         </li>
@@ -111,19 +111,19 @@
             <div class="row justify-content-center">
                 <div class="col-md-10 mb-5 text-center">
                     <ul class="product-category">
-                        <li><a href="#" class="active">All</a></li>
+                        <li><a href="#">All</a></li>
                         <li><a href="#">Pots</a></li>
                         <li><a href="#">Bonsai</a></li>
-                        <li><a href="#">Fortune Plants</a></li>
+                        <li><a href="#"class="active">Fortune Plants</a></li>
                         <li><a href="#">Miniatures</a></li>
                     </ul>
                 </div>
-			</div>
-			<div class="row">
-				<div class="col-md-10">
-					<p>Showing 12 of 60 results</p>
-				</div>
-			</div>
+      </div>
+      <div class="row">
+        <div class="col-md-10">
+          <p>Showing 12 of 60 results</p>
+        </div>
+      </div>
             <div class="row">
                 <div class="col-md-6 col-lg-3 ftco-animate">
                     <div class="product">
