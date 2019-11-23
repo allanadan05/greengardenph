@@ -1,4 +1,35 @@
 
+<?php
+session_start();
+
+$count=1;
+if(isset($_POST["login"])){
+    $con= new mysqli("localhost","root","","project");
+
+    $email = $con->real_escape_string($_POST["email"]);
+    $userpass = $con->real_escape_string($_POST["userpass"]);
+
+    $data = $con->query("Select lname from usertbl where email='$email' AND userpass='$userpass'" );
+    if($data ->num_rows>0)
+    {
+        $_SESSION["email"]=$email;
+        $_SESSION["loggedin"]=1;
+            while($sql=$data ->fetch_array()){
+            
+
+        }
+
+        header("Location: shop.php");
+        exit();
+
+    }
+    else {
+        echo "incorrect email or password";
+    }
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,10 +122,11 @@
                     <!-- <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li> -->
                     <li class="nav-item cta cta-colored"><a href="wishlist.php" class="nav-link"><span class="icon-heart"></span>[0]</a></li>
                     <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-                    <li class="nav-item cta cta-colored"><button id="login-btn"><span class="icon-person"></span>Hi,[name]!</button></li>
+                    <li class="nav-item cta cta-colored"><button id="login-btn"><span class="icon-person"></span>hi,<?php echo $_SESSION["email"];?></button></li>
                 </ul>
             </div>
         </div>
+
 
         <!-- Search Bar -->
 
@@ -582,6 +614,7 @@
                                 </div>
                                 <!--manually login-->
                                 <div class="col-sm-5 col-xs-6">
+                                    <form method="post" action="index.php">
                                         <div class="manually">
                                         <h5>Sign in manually</h5>
                                         <br>
