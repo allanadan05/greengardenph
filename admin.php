@@ -74,7 +74,7 @@
                 <!-- /SIDEBAR -->
                 <!-- TABLE -->
                    <div class="col-sm-10">
-                    <!-- ADMIN TABLE -->
+                    
                     
                     <table border='.5' class="user-table">
                             <thead>
@@ -96,7 +96,7 @@
 
                                     <td>
                                        
-                                     <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                     <center><button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center>
                                     </td>
@@ -108,7 +108,7 @@
                                     <td>john@example.com</td>
                                     <td>3 pataas</td>
                                     <td>
-                                    <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                    <center><button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center> 
                                     </td>
@@ -119,7 +119,7 @@
                                     <td>john@example.com</td>
                                     <td>123</td>
                                     <td>
-                                    <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                    <center><button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center>
                                     </td>
@@ -131,7 +131,7 @@
                                     <td>john@example.com</td>
                                     <td>123</td>
                                     <td>
-                                        <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <center><button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                         </center>
                                     </td>
@@ -143,7 +143,7 @@
                                     <td>john@example.com</td>
                                     <td>123</td>
                                     <td>
-                                        <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <center><button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center> 
                                     </td>
@@ -155,7 +155,7 @@
                                     <td>john@example.com</td>
                                     <td>123</td>
                                     <td>
-                                        <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <center><button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center>
                                     </td>
@@ -167,7 +167,7 @@
                                     <td>john@example.com</td>
                                     <td>123</td>
                                     <td>
-                                        <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <center><button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center>
                                      </td>
@@ -179,7 +179,7 @@
                                     <td>john@example.com</td>
                                     <td>123</td>
                                     <td>
-                                        <center><button class="btn-success"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <center><button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center>
                                     </td>
@@ -188,34 +188,88 @@
                             </tbody>
                         </table>
                 
-                    <!-- /ADMIN TABLE -->
-                <!-- /TABLE -->
-                <!-- The Modal -->
-                <div class="modal" id="myModal">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                             <!-- Modal body -->
-                                    <div class="modal-body">
-                                         <div class="form-group">
-                                           <label for="comment">Message</label>
-                                          <textarea class="form-control" rows="4" id="message"></textarea>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Modal footer -->
-                                    <div class="modal-footer">
-                                     <button type="button" class="btn btn-success" value="submit">Sumbit</button>
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                    <!-- /The Modal -->           </div>
-        </div><!-- /row -->
+                   
+                
+               
+                </div><!-- col 10 -->
+                 <!-- /TABLE -->   
+    </div><!-- /row -->
 </div>
     <!-- /CONTENT -->
 
 
+<!-- MODAL MESSAGE -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="comment">Message</label>
+                    <textarea class="form-control" rows="4" id="message"></textarea>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" value="submit">Sumbit</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL MESSAGE -->
+
+<!-- MODAL ADD -->
+<div class="add-user-modal">
+ <div class="modal" id="add">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h6 class="modal-title">Add Users</h6>
+                
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                
+                <form>
+                    <input type="text"  name="firstname" placeholder="Firstname"/>
+                    <input type="text"  name="lastname" placeholder="Lastname"/>
+                    <input type="text"  name="middlename" placeholder="Middlename"/>
+                    <input type="text"  name="age" placeholder="Age"/>
+                    <br>
+                    <select name="gender" id="gender">
+                        <<option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <br>
+                    <input type="text"  name="address" placeholder="Address"/>
+                    <input type="email"  name="email" placeholder="Email"/>
+                    <input type="password"  name="password" placeholder="Password"/>
+
+                    </form>
+                    
+
+                
+                
+            
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" id="" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                
+                
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+<!-- /MODAL ADD -->
 
 
     <!-- Footer -->

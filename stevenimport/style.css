@@ -376,3 +376,12 @@
     font-size: 18px;
     color: #19e64d;
 }
+
+.add-user-modal input {
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.add-user-modal select {
+    margin: 5px
+}
