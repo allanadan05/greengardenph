@@ -47,7 +47,7 @@
             data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="false"
-          >
+          
             <span class="icon-person"></span>
             &nbsp Angelico Gomez
           </button>
