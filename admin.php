@@ -42,41 +42,42 @@
         <div class="row"><!-- row -->
                 <!-- SIDEBAR -->
                 <div class="col-sm-2">
-                <div class="side-bar">  
-                    <ul>
-                    <hr><a href="messageadmin.php" class="active"><button type="button"style="width:180px;" class="btn btn-primary">
-                    Messages <span class="badge badge-light"> 9 </span>
-                    <span class="sr-only">unread messages</span>
-                    </button></a></hr>
-                    <hr><a href="notificationsadmin.php"><button type="button"style="width:180px;" class="btn btn-primary">
-                    Notifications <span class="badge badge-light">9</span>
-                    <span class="sr-only">unread messages</span>
-                    </button></a></hr>
-                    <hr><a href="admin.php"><button type="button"style="width:180px;" class="btn btn-primary">
-                    Manage Users <span class="badge badge-light">9</span>
-                    <span class="sr-only">unread messages</span>
-                    </button></a></hr>
-                    <hr><a href="viewpayments.php"><button type="button"style="width:180px;" class="btn btn-primary">
-                    View Payments <span class="badge badge-light">9</span>
-                    <span class="sr-only">unread messages</span>
-                    </button></a></hr>
-                    <hr><a href="manageproducts.php"><button type="button"style="width:180px;" class="btn btn-primary">
-                    Manage Products <span class="badge badge-light">9</span>
-                    <span class="sr-only">unread messages</span>
-                    </button></a></hr>
-                    <hr><a href="managefeedback.php"><button type="button"style="width:180px;" class="btn btn-primary">
-                    Manage Feedback <span class="badge badge-light">9</span>
-                    <span class="sr-only">unread messages</span>
-                    </button></a></hr>
-                    </ul>
-                </div>
+                    <div class="side-bar">  
+                        <ul>
+                        <hr><a href="messageadmin.php" class="active"><button type="button"style="width:180px;" class="btn btn-primary">
+                        Messages <span class="badge badge-light"> 9 </span>
+                        <span class="sr-only">unread messages</span>
+                        </button></a></hr>
+                        <hr><a href="notificationsadmin.php"><button type="button"style="width:180px;" class="btn btn-primary">
+                        Notifications <span class="badge badge-light">9</span>
+                        <span class="sr-only">unread messages</span>
+                        </button></a></hr>
+                        <hr><a href="admin.php"><button type="button"style="width:180px;" class="btn btn-primary">
+                        Manage Users <span class="badge badge-light">9</span>
+                        <span class="sr-only">unread messages</span>
+                        </button></a></hr>
+                        <hr><a href="viewpayments.php"><button type="button"style="width:180px;" class="btn btn-primary">
+                        View Payments <span class="badge badge-light">9</span>
+                        <span class="sr-only">unread messages</span>
+                        </button></a></hr>
+                        <hr><a href="manageproducts.php"><button type="button"style="width:180px;" class="btn btn-primary">
+                        Manage Products <span class="badge badge-light">9</span>
+                        <span class="sr-only">unread messages</span>
+                        </button></a></hr>
+                        <hr><a href="managefeedback.php"><button type="button"style="width:180px;" class="btn btn-primary">
+                        Manage Feedback <span class="badge badge-light">9</span>
+                        <span class="sr-only">unread messages</span>
+                        </button></a></hr>
+                        </ul>
+                    </div>
                 </div>
                 <!-- /SIDEBAR -->
                 <!-- TABLE -->
-                   <div class="col-sm-10">
-                    
-                    
+            <div class="col-sm-10">
+                <div class="user-table">
+                   <button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button>
                     <table border='.5' class="user-table">
+                        
                             <thead>
                             <tr>
                                 <th>Name</th>
@@ -96,7 +97,7 @@
 
                                     <td>
                                        
-                                     <center><button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                     <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center>
                                     </td>
@@ -108,7 +109,7 @@
                                     <td>john@example.com</td>
                                     <td>3 pataas</td>
                                     <td>
-                                    <center><button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                    <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center> 
                                     </td>
@@ -119,7 +120,7 @@
                                     <td>john@example.com</td>
                                     <td>123</td>
                                     <td>
-                                    <center><button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                    <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center>
                                     </td>
@@ -131,31 +132,7 @@
                                     <td>john@example.com</td>
                                     <td>123</td>
                                     <td>
-                                        <center><button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
-                                        </center>
-                                    </td>
-
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
-                                    <td>
-                                        <center><button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
-                                    </center> 
-                                    </td>
-
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
-                                    <td>
-                                        <center><button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                    <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center>
                                     </td>
@@ -167,7 +144,31 @@
                                     <td>john@example.com</td>
                                     <td>123</td>
                                     <td>
-                                        <center><button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
+                                    </center> 
+                                    </td>
+
+                            </tr>
+                            <tr>
+                                    <td>John</td>
+                                    <td>july/30/2019</td>
+                                    <td>john@example.com</td>
+                                    <td>123</td>
+                                    <td>
+                                        <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
+                                    </center>
+                                    </td>
+
+                            </tr>
+                            <tr>
+                                    <td>John</td>
+                                    <td>july/30/2019</td>
+                                    <td>john@example.com</td>
+                                    <td>123</td>
+                                    <td>
+                                        <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center>
                                      </td>
@@ -179,7 +180,7 @@
                                     <td>john@example.com</td>
                                     <td>123</td>
                                     <td>
-                                        <center><button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <center><button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center>
                                     </td>
@@ -191,9 +192,11 @@
                    
                 
                
-                </div><!-- col 10 -->
+                </div>
+                
+            </div><!-- col 10 -->
                  <!-- /TABLE -->   
-    </div><!-- /row -->
+       </div><!-- /row -->
 </div>
     <!-- /CONTENT -->
 
