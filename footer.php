@@ -23,12 +23,11 @@
                     <div class="ftco-footer-widget mb-4 ml-md-5">
                         <h2 class="ftco-heading-2">Menu</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">Home</a></li>
-                            <li><a href="#" class="py-2 d-block">Products</a></li>
-                            <li><a href="#" class="py-2 d-block">Category</a></li>
-                            <li><a href="#" class="py-2 d-block">Feed</a></li>
-                            <li><a href="#" class="py-2 d-block">Cart</a></li>
-                            <li><a href="#" class="py-2 d-block">Wishlist</a></li>
+                            <li><a href="index.php" class="py-2 d-block">Home</a></li>
+                            <li><a href="shop.php" class="py-2 d-block">Products</a></li>
+                            <li><a href="blog.php" class="py-2 d-block">Feed</a></li>
+                            <li><a href="cart.php" class="py-2 d-block">Cart</a></li>
+                            <li><a href="wishlist.php" class="py-2 d-block">Wishlist</a></li>
                         </ul>
                     </div>
                 </div>
