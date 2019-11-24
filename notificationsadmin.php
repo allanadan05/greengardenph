@@ -36,8 +36,7 @@
 </head>
 
 <body class="goto-here">
-   <?php require_once("navbar.php");?>
-
+<?php require_once("navbaruseradmin.php"); ?>
     <!-- END nav -->
 
     <!-- CONTENT -->

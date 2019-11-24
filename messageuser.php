@@ -702,8 +702,7 @@
 </head>
 
 <body class="goto-here">
-  <?php require_once("navbar.php"); ?>
-<!-- END nav -->
+<?php require_once("navbaruseradmin.php"); ?><!-- END nav -->
 
     <!-- CONTENT -->
     <div class="container-fluid">
