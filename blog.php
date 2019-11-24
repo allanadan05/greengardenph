@@ -1,3 +1,29 @@
+
+<?php
+session_start();
+
+$name="";
+if(isset($_POST["login"])){
+    $con= new mysqli("localhost","root","","project");
+
+    $email = $con->real_escape_string($_POST["email"]);
+    $userpass = $con->real_escape_string($_POST["userpass"]);
+    $data = $con->query("Select Lname from usertbl where email='$email' AND userpass='$userpass'" );
+    if($data ->num_rows>0)
+    {
+        
+            while($sql=$data ->fetch_array()){
+                $name=$sql["Lname"];
+        }
+  
+    }
+    else {
+        echo "<b>incorrect email or password</b>";
+    }
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -58,8 +84,6 @@
     
     <body class="goto-here">
         <?php require_once("navbar.php"); ?>
-    
-        <!-- END nav -->
 
     <div class="hero-wrap hero-bread" style="background-image: url('images/bg_1.jpg');">
         <div class="container">
