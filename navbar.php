@@ -1,29 +1,5 @@
 
-        <?php
-session_start();
-$name="";
 
-if(isset($_POST["login"])){
-    $con= new mysqli("localhost","root","","project");
-
-    $email = $con->real_escape_string($_POST["fname"]);
-    $userpass = $con->real_escape_string($_POST["userpass"]);
-    $data = $con->query("Select Lname from usertbl where fname='$email' AND userpass='$userpass'" );
-    if($data ->num_rows>0)
-    {
-        
-            while($sql=$data ->fetch_array()){
-                $name=$sql["Lname"];
-        }
-  
-    }
-    else {
-        echo "incorrect email or password";
-    }
-
-}
-
-?>
 <div class="py-1 bg-primary">
         <div class="container">
             <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
@@ -72,10 +48,8 @@ if(isset($_POST["login"])){
                     <li class="nav-item cta cta-colored"><a href="wishlist.php" class="nav-link"><span class="icon-heart"></span>[0]</a></li>
                     <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
                         
-                    <li class="nav-item cta cta-colored"><a name="prof" id="login-btn" class="nav-link"><?php
-                    echo $name;
-                    ?> <span class="icon-person">
-
+                    <li class="nav-item cta cta-colored"><a name="prof" id="login-btn" class="nav-link"><span class="icon-person"> 
+                        <?php echo $name;?> 
                     </span></a></li>
                 </ul>
             </div>
@@ -96,5 +70,4 @@ if(isset($_POST["login"])){
 
     <!-- END nav -->
 
-     <!-- loader -->
-     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+ 

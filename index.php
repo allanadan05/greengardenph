@@ -1,31 +1,31 @@
 
 <?php
 session_start();
+    $name="";
 
-$name="";
-$error="";
-if(isset($_POST["login"])){
+if(isset($_POST["login"])){ 
+
     $con= new mysqli("localhost","root","","project");
 
     $email = $con->real_escape_string($_POST["email"]);
     $userpass = $con->real_escape_string($_POST["userpass"]);
-    $data = $con->query("Select Lname from usertbl where email='$email' AND userpass='$userpass'" );
+    $data = $con->query("Select * from usertbl where email='$email' AND userpass='$userpass'" );
     if($data ->num_rows>0)
     {
         
             while($sql=$data ->fetch_array()){
-                $name=$sql["Fname"];
+                   $name=$sql['Fname'];
         }
   
     }
     else {
-        $error ="incorrect email or password";
+        echo "incorrect email or password";
     }
 
 }
-echo $error;
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,6 +74,9 @@ echo $error;
 <body class="goto-here">
    
    <?php require_once("navbar.php"); ?>
+
+         <!--LOGIN MODAL-->
+
 
     <section id="home-section" class="hero">
         <div class="home-slider owl-carousel">
@@ -510,8 +513,8 @@ echo $error;
         </div>
     </section>
     
-<!--LOGIN MODAL-->
-<div class="popup">
+
+   <div class="popup">
                 <div class="popup-content">
                  <img src="images/close.png" alt="Close" class="close">
                 
@@ -534,9 +537,6 @@ echo $error;
                                                 <img src="images/google-icon.png" alt="">Login with Gmail</Button>
                                         </div>
 
-
-
-
                                 </div>
                 
                                 <div class="col-sm-2 col-xs-6">
@@ -553,7 +553,7 @@ echo $error;
                                         <h5>Sign in manually</h5>
 
                                         <br>
-                                        <form method="post" action="index.php">
+                                        <form method="post" action="shop.php">
                                         <input type="text" placeholder="Username or Email" name="email" required>
                                         <input type="password" class="glyphicon glyphicon-user" name="userpass" placeholder="Password" required> 
                     
@@ -576,12 +576,6 @@ echo $error;
 
                                 
                          </div>
-
-
-
-
-
-              
                     
 
                 </div>
@@ -589,11 +583,6 @@ echo $error;
             <!--/LOGIN MODAL-->
                
 
-   
-
-<?php require_once("footer.php"); ?>
-
-   
     <script> 
      document.getElementById("login-btn").addEventListener("click",function(){
 
@@ -605,6 +594,9 @@ echo $error;
         document.querySelector(".popup").style.display = "none";
         });
     </script>
+
+<?php require_once("footer.php"); ?>
+
 
 
     <script src="./import/js/jquery.min.js"></script>
