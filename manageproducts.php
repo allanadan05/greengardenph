@@ -75,7 +75,9 @@
         <!-- TABLE -->
         <div class="col-sm-10">
             <!-- PRODUCT TABLE-->
-            <table border=".5" class="user-table">
+        <div class="user-table">
+        <button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button>
+            <table border=".5">
                 <thead>
                     <tr>
                         <th>Product Name</th>
@@ -96,8 +98,8 @@
 
                         <td>
                             <center>
-                                <button class="btn-success">ADD</button>
-                                <button class="btn-warning">EDIT</button>
+                                
+                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
                                 <button class="btn-danger">Remove</button>
                             </center>
                         </td>
@@ -110,8 +112,8 @@
                         <td>123</td>
                         <td>
                             <center>
-                                <button class="btn-success">ADD</button>
-                                <button class="btn-warning">EDIT</button>
+                                
+                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
                                 <button class="btn-danger">Remove</button>
                             </center>
                         </td>
@@ -124,8 +126,8 @@
                         <td>123</td>
                         <td>
                             <center>
-                                <button class="btn-success">ADD</button>
-                                <button class="btn-warning">EDIT</button>
+                                
+                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
                                 <button class="btn-danger">Remove</button>
                             </center>
                         </td>
@@ -138,8 +140,8 @@
                         <td>123</td>
                         <td>
                             <center>
-                                <button class="btn-success">ADD</button>
-                                <button class="btn-warning">EDIT</button>
+                                
+                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
                                 <button class="btn-danger">Remove</button>
                             </center>
                         </td>
@@ -152,8 +154,8 @@
                         <td>123</td>
                         <td>
                             <center>
-                                <button class="btn-success">ADD</button>
-                                <button class="btn-warning">EDIT</button>
+                               
+                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
                                 <button class="btn-danger">Remove</button>
                             </center>
                         </td>
@@ -166,8 +168,8 @@
                         <td>123</td>
                         <td>
                             <center>
-                                <button class="btn-success">ADD</button>
-                                <button class="btn-warning">EDIT</button>
+                                
+                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
                                 <button class="btn-danger">Remove</button>
                             </center>
                         </td>
@@ -180,8 +182,8 @@
                         <td>123</td>
                         <td>
                             <center>
-                                <button class="btn-success">ADD</button>
-                                <button class="btn-warning">EDIT</button>
+                               
+                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
                                 <button class="btn-danger">Remove</button>
                             </center>
                         </td>
@@ -194,15 +196,15 @@
                         <td>123</td>
                         <td>
                             <center>
-                                <button class="btn-success">ADD</button>
-                                <button class="btn-warning">EDIT</button>
+                               
+                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
                                 <button class="btn-danger">Remove</button>
                             </center>
                         </td>
                     </tr>
                 </tbody>
             </table>
-
+        </div>
             <!-- /PRODUCT TABLE -->
             <!-- /TABLE -->
             <!-- The Modal -->
@@ -232,6 +234,93 @@
 </div>
     <!-- /CONTENT -->
 
+
+<!-- MODAL ADD -->
+<div class="add-user-modal">
+ <div class="modal" id="add">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h6 class="modal-title">Add Users</h6>
+                
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                
+                <form>
+                    <input type="text"  name="firstname" placeholder="Product name"/>
+                    <input type="text"  name="lastname" placeholder="Description"/>
+                    <input type="text"  name="middlename" placeholder="Category"/>
+                    <input type="text"  name="age" placeholder="Quantity"/>
+                    <input type="text"  name="address" placeholder="Price"/>
+                  
+
+                    </form>
+                    
+
+                
+                
+            
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" id="" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                
+                
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+<!-- /MODAL ADD -->
+
+<!-- MODAL EDIT -->
+<div class="add-user-modal">
+ <div class="modal" id="edit">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h6 class="modal-title">Edit Users</h6>
+                
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                
+                <form>
+                    <input type="text"  name="userid" placeholder="Product id" readonly/>
+                    <hr>
+                    <input type="text"  name="firstname" placeholder="Product name"/>
+                    <input type="text"  name="lastname" placeholder="Description"/>
+                    <input type="text"  name="middlename" placeholder="Category"/>
+                    <input type="text"  name="age" placeholder="Quantity"/>
+                    <input type="text"  name="address" placeholder="Price"/>
+
+                    </form>
+                    
+
+                
+                
+            
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" id="" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                
+                
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+<!-- /MODAL EDIT -->
 
 
 

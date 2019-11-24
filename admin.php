@@ -97,7 +97,7 @@
 
                                     <td>
                                        
-                                     <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
+                                     <center> <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center>
                                     </td>
@@ -273,6 +273,53 @@
  </div>
 </div>
 <!-- /MODAL ADD -->
+
+<!-- MODAL EDIT -->
+<div class="add-user-modal">
+ <div class="modal" id="edit">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h6 class="modal-title">Edit Users</h6>
+                
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                
+                <form>
+                    <input type="text"  name="userid" placeholder="Users Id" readonly/>
+                    <hr>
+                    <input type="text"  name="firstname" placeholder="Firstname"/>
+                    <input type="text"  name="lastname" placeholder="Lastname"/>
+                    <input type="text"  name="middlename" placeholder="Middlename"/>
+                    <input type="text"  name="age" placeholder="Age"/>
+                    <input type="text"  name="gender" placeholder="Gender"/>
+                    <input type="text"  name="address" placeholder="Address"/>
+                    <input type="email"  name="email" placeholder="Email"/>
+                    <input type="password"  name="password" placeholder="Password"/>
+
+                    </form>
+                    
+
+                
+                
+            
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" id="" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                
+                
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+<!-- /MODAL EDIT -->
 
 
     <!-- Footer -->

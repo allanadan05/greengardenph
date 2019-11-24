@@ -56,196 +56,141 @@
         <!-- TABLE -->
         <div class="col-sm-10">
             <!-- ADMIN TABLE -->
+            <div class="user-table">
+            <button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button>
+                <table border=".5" >
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Date registered</th>
+                            <th>Email</th>
+                            <th><center>Action</center></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Steven Francisco</td>
+                            <td>july/30/2019</td>
+                            <td>john@example.com</td>
 
-            <table border=".5" class="user-table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Date registered</th>
-                        <th>Email</th>
-                        <th><center>Action</center></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>John Steven Francisco</td>
-                        <td>july/30/2019</td>
-                        <td>john@example.com</td>
+                            <td>
+                                <center>
+                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
+                                    <button class="btn-danger">
+                                        <i class="fas fa-user-times"></i>
+                                        BAN
+                                    </button>
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>John</td>
+                            <td>july/30/2019</td>
+                            <td>john@example.com</td>
 
-                        <td>
-                            <center>
-                                <button class="btn-success">
-                                    <i class="fas fa-user-plus"></i>
-                                    ADD
-                                </button>
-                                <button class="btn-warning">
-                                    <i class="fas fa-user-edit"></i>
-                                    EDIT
-                                </button>
-                                <button class="btn-danger">
-                                    <i class="fas fa-user-times"></i>
-                                    BAN
-                                </button>
-                            </center>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>John</td>
-                        <td>july/30/2019</td>
-                        <td>john@example.com</td>
+                            <td>
+                                <center>
+                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
+                                    <button class="btn-danger">
+                                        <i class="fas fa-user-times"></i>
+                                        BAN
+                                    </button>
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>John</td>
+                            <td>july/30/2019</td>
+                            <td>john@example.com</td>
 
-                        <td>
-                            <center>
-                                <button class="btn-success">
-                                    <i class="fas fa-user-plus"></i>
-                                    ADD
-                                </button>
-                                <button class="btn-warning">
-                                    <i class="fas fa-user-edit"></i>
-                                    EDIT
-                                </button>
-                                <button class="btn-danger">
-                                    <i class="fas fa-user-times"></i>
-                                    BAN
-                                </button>
-                            </center>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>John</td>
-                        <td>july/30/2019</td>
-                        <td>john@example.com</td>
+                            <td>
+                                <center>
+                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
+                                    <button class="btn-danger">
+                                        <i class="fas fa-user-times"></i>
+                                        BAN
+                                    </button>
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>John</td>
+                            <td>july/30/2019</td>
+                            <td>john@example.com</td>
 
-                        <td>
-                            <center>
-                                <button class="btn-success">
-                                    <i class="fas fa-user-plus"></i>
-                                    ADD
-                                </button>
-                                <button class="btn-warning">
-                                    <i class="fas fa-user-edit"></i>
-                                    EDIT
-                                </button>
-                                <button class="btn-danger">
-                                    <i class="fas fa-user-times"></i>
-                                    BAN
-                                </button>
-                            </center>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>John</td>
-                        <td>july/30/2019</td>
-                        <td>john@example.com</td>
+                            <td>
+                                <center>
+                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
+                                    <button class="btn-danger">
+                                        <i class="fas fa-user-times"></i>
+                                        BAN
+                                    </button>
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>John</td>
+                            <td>july/30/2019</td>
+                            <td>john@example.com</td>
 
-                        <td>
-                            <center>
-                                <button class="btn-success">
-                                    <i class="fas fa-user-plus"></i>
-                                    ADD
-                                </button>
-                                <button class="btn-warning">
-                                    <i class="fas fa-user-edit"></i>
-                                    EDIT
-                                </button>
-                                <button class="btn-danger">
-                                    <i class="fas fa-user-times"></i>
-                                    BAN
-                                </button>
-                            </center>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>John</td>
-                        <td>july/30/2019</td>
-                        <td>john@example.com</td>
+                            <td>
+                                <center>
+                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
+                                    <button class="btn-danger">
+                                        <i class="fas fa-user-times"></i>
+                                        BAN
+                                    </button>
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>John</td>
+                            <td>july/30/2019</td>
+                            <td>john@example.com</td>
 
-                        <td>
-                            <center>
-                                <button class="btn-success">
-                                    <i class="fas fa-user-plus"></i>
-                                    ADD
-                                </button>
-                                <button class="btn-warning">
-                                    <i class="fas fa-user-edit"></i>
-                                    EDIT
-                                </button>
-                                <button class="btn-danger">
-                                    <i class="fas fa-user-times"></i>
-                                    BAN
-                                </button>
-                            </center>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>John</td>
-                        <td>july/30/2019</td>
-                        <td>john@example.com</td>
+                            <td>
+                                <center>
+                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
+                                    <button class="btn-danger">
+                                        <i class="fas fa-user-times"></i>
+                                        BAN
+                                    </button>
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>John</td>
+                            <td>july/30/2019</td>
+                            <td>john@example.com</td>
 
-                        <td>
-                            <center>
-                                <button class="btn-success">
-                                    <i class="fas fa-user-plus"></i>
-                                    ADD
-                                </button>
-                                <button class="btn-warning">
-                                    <i class="fas fa-user-edit"></i>
-                                    EDIT
-                                </button>
-                                <button class="btn-danger">
-                                    <i class="fas fa-user-times"></i>
-                                    BAN
-                                </button>
-                            </center>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>John</td>
-                        <td>july/30/2019</td>
-                        <td>john@example.com</td>
+                            <td>
+                                <center>
+                                    <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
+                                    <button class="btn-danger">
+                                        <i class="fas fa-user-times"></i>
+                                        BAN
+                                    </button>
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>John</td>
+                            <td>july/30/2019</td>
+                            <td>john@example.com</td>
 
-                        <td>
-                            <center>
-                                <button class="btn-success">
-                                    <i class="fas fa-user-plus"></i>
-                                    ADD
-                                </button>
-                                <button class="btn-warning">
-                                    <i class="fas fa-user-edit"></i>
-                                    EDIT
-                                </button>
-                                <button class="btn-danger">
-                                    <i class="fas fa-user-times"></i>
-                                    BAN
-                                </button>
-                            </center>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>John</td>
-                        <td>july/30/2019</td>
-                        <td>john@example.com</td>
-
-                        <td>
-                            <center>
-                                <button class="btn-success">
-                                    <i class="fas fa-user-plus"></i>
-                                    ADD
-                                </button>
-                                <button class="btn-warning">
-                                    <i class="fas fa-user-edit"></i>
-                                    EDIT
-                                </button>
-                                <button class="btn-danger">
-                                    <i class="fas fa-user-times"></i>
-                                    BAN
-                                </button>
-                            </center>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
+                            <td>
+                                <center>
+                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
+                                    <button class="btn-danger">
+                                        <i class="fas fa-user-times"></i>
+                                        BAN
+                                    </button>
+                                </center>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <!-- /ADMIN TABLE -->
             <!-- /TABLE -->
         </div>
@@ -254,6 +199,104 @@
 </div>
 <hr/><br/><br/>
     <!-- /CONTENT -->
+
+    <!-- MODAL ADD -->
+<div class="add-user-modal">
+ <div class="modal" id="add">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h6 class="modal-title">Add Users</h6>
+                
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                
+                <form>
+                    <input type="text"  name="firstname" placeholder="Firstname"/>
+                    <input type="text"  name="lastname" placeholder="Lastname"/>
+                    <input type="text"  name="middlename" placeholder="Middlename"/>
+                    <input type="text"  name="age" placeholder="Age"/>
+                    <br>
+                    <select name="gender" id="gender">
+                        <<option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <br>
+                    <input type="text"  name="address" placeholder="Address"/>
+                    <input type="email"  name="email" placeholder="Email"/>
+                    <input type="password"  name="password" placeholder="Password"/>
+
+                    </form>
+                    
+
+                
+                
+            
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" id="" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                
+                
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+<!-- /MODAL ADD -->
+
+<!-- MODAL ADD -->
+<div class="add-user-modal">
+ <div class="modal" id="edit">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h6 class="modal-title">Edit Users</h6>
+                
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                
+                <form>
+                    <input type="text"  name="userid" placeholder="Users Id" readonly/>
+                    <hr>
+                    <input type="text"  name="firstname" placeholder="Firstname"/>
+                    <input type="text"  name="lastname" placeholder="Lastname"/>
+                    <input type="text"  name="middlename" placeholder="Middlename"/>
+                    <input type="text"  name="age" placeholder="Age"/>
+                    <input type="text"  name="gender" placeholder="Gender"/>
+                    <input type="text"  name="address" placeholder="Address"/>
+                    <input type="email"  name="email" placeholder="Email"/>
+                    <input type="password"  name="password" placeholder="Password"/>
+
+                    </form>
+                    
+
+                
+                
+            
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" id="" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                
+                
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+<!-- /MODAL ADD -->
 
 
 
