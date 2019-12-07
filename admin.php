@@ -172,15 +172,19 @@
                     <input type="text" id="fname" placeholder="Firstname"/>
                     <input type="text" id="lname" placeholder="Lastname"/>
                     <input type="text" id="mname" placeholder="Middlename"/>
-                    <input type="text" id="age" placeholder="Age"/>
+                    <input type="text" id="bday" placeholder="Birthdate"/>
                     <br>
                     <select id="gender">
                         <option value="">Select Gender</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
+                    <select id="usertype">
+                        <option value="">Usertype</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Customer">Customer</option>
+                    </select>
                     <br>
-                    <input type="text" id="address" placeholder="Address"/>
                     <input type="email" id="email" placeholder="Email"/>
                     <input type="password" id="pword" placeholder="Password"/>
 
