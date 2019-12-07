@@ -1,4 +1,21 @@
+<?php 
+session_start();
+$logacc="";
+@$id=@$_SESSION['userid'];
 
+$sql="SELECT * FROM usertbl where email='$id'";
+$insert=mysqli_query($con, $sql);
+$result = mysqli_fetch_assoc($insert);
+if($id == true){
+
+$logacc=$_SESSION['fname'];
+
+}
+   
+
+
+
+?>
 
 <div class="py-1 bg-primary">
         <div class="container">
@@ -47,9 +64,7 @@
                     <!-- <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li> -->
                     <li class="nav-item cta cta-colored"><a href="wishlist.php" class="nav-link"><span class="icon-heart"></span>[0]</a></li>
                     <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-                        
-                    <li class="nav-item cta cta-colored"><a name="prof" id="login-btn" class="nav-link"><span class="icon-person"> 
-                        <?php echo $name;?> 
+                     <li class='nav-item cta cta-colored'><a name='prof' id='login-btn' class='nav-link'><span class='icon-person'><?php echo "$logacc"; ?>
                     </span></a></li>
                 </ul>
             </div>
