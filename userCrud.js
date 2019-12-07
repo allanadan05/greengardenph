@@ -38,9 +38,9 @@ function edit(ipinasa){
               document.getElementById("ufname").value = buongObject.ufname;
               document.getElementById("ulname").value = buongObject.ulname;
               document.getElementById("umname").value = buongObject.umname;
-              document.getElementById("uage").value = buongObject.uage;
+              document.getElementById("ubday").value = buongObject.ubday;
               document.getElementById("ugender").value = buongObject.ugender;
-              document.getElementById("uaddress").value = buongObject.uaddress;
+              document.getElementById("uusertype").value = buongObject.uusertype;
               document.getElementById("uemail").value = buongObject.uemail;
               document.getElementById("upword").value = buongObject.upword;
               document.getElementById("userid").value = forIpinasa;
@@ -63,15 +63,15 @@ function edit(ipinasa){
     var ufname = document.getElementById("ufname").value;
     var ulname = document.getElementById("ulname").value;
     var umname = document.getElementById("umname").value;
-    var uage = document.getElementById("uage").value;
+    var ubday = document.getElementById("ubday").value;
     var ugender = document.getElementById("ugender").value;
-    var uaddress = document.getElementById("uaddress").value;
+    var uusertype = document.getElementById("uusertype").value;
     var uemail = document.getElementById("uemail").value;
     var upword = document.getElementById("upword").value;
     var userid = document.getElementById("userid").value;
     var token = "update";
-    xhttp.open("GET", "userCrud.php?ufname="+ufname+"&ulname="+ulname+"&umname="+umname+"&uage="+uage+"&ugender="+ugender+
-    "&uaddress="+uaddress+"&uemail="+uemail+"&upword="+upword+"&userid="+userid+"&token="+token, true);
+    xhttp.open("GET", "userCrud.php?ufname="+ufname+"&ulname="+ulname+"&umname="+umname+"&ubday="+ubday+"&ugender="+ugender+
+    "&uusertype="+uusertype+"&uemail="+uemail+"&upword="+upword+"&userid="+userid+"&token="+token, true);
       xhttp.send();
 
   }
