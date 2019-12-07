@@ -293,8 +293,9 @@
 
                 <form>
                   <input type="hidden" id="banuserid">
+                  Do you want to ban
                   <output id="banfname"></output>
-                  <output id="banlname"></output>
+                  <output id="banlname"></output> ?
                 </form>
 
 
