@@ -1,6 +1,8 @@
 <?php
 include('dbConfig.php');
 $token = $_GET['token'];
+
+//add user
 if($token=="insert")
 {
   $fname = $_GET['fname'];
@@ -21,6 +23,8 @@ if (mysqli_query($con, $sql)) {
     echo "Error: " . $sql . "<br>" . mysqli_error($con);
 }
 }
+
+//edit user
 if($token =="edit"){
 	$id=$_GET['forIpinasa'];
 	$querySaDatabase = "SELECT * FROM usertbl WHERE userid='$id' ";
@@ -38,6 +42,8 @@ if($token =="edit"){
 		}
 		echo json_encode($pambato);
 }
+
+//update user
 if($token=="update")
 {
   $fname = $_GET['ufname'];
@@ -58,6 +64,33 @@ if (mysqli_query($con, $sql)) {
     echo "$fname record updated successfully";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($con);
+}
+}
+
+//ban user
+if($token =="ban"){
+	$id=$_GET['forIpinasa'];
+	$querySaDatabase = "SELECT * FROM usertbl WHERE userid='$id' ";
+	$executeQuery = mysqli_query($con, $querySaDatabase);
+		$pambato = array();
+		while($row = mysqli_fetch_array($executeQuery)){
+			$pambato['banfname'] = $row['Fname'];
+			$pambato['banlname'] = $row['Lname'];
+		}
+		echo json_encode($pambato);
+}
+
+//ban Confirmed
+if($token=="banConfirm")
+{
+$userid = $_GET['banuserid'];
+
+$sql = "DELETE FROM usertbl WHERE userid='$userid'";
+
+if (mysqli_query($con, $sql)) {
+    echo "User banned successfully";
+} else {
+    echo "Error deleting record: " . mysqli_error($con);
 }
 }
 ?>
