@@ -93,7 +93,7 @@
                               <?php
                               include('dbConfig.php');
 
-                              $sql="SELECT concat(Fname,' ',Lname) as 'NAME', date as 'DATE', email as 'EMAIL', count(purchaseid) as 'NOPP'
+                              $sql="SELECT  purchasetbl.userid as 'userid', concat(Fname,' ',Lname) as 'NAME', date as 'DATE', email as 'EMAIL', count(purchaseid) as 'NOPP'
                                from purchasetbl inner join usertbl on purchasetbl.userid = usertbl.userid group by purchasetbl.userid";
                               $result=mysqli_query($con, $sql);
 
@@ -108,7 +108,7 @@
 
                                     <td>
 
-                                     <center> <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
+                                     <center> <button class="btn-warning" data-toggle="modal" onclick="edit(<?php echo $row['userid'] ?>)" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
                                         <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center>
                                     </td>
@@ -194,7 +194,7 @@
 
             <!-- Modal footer -->
             <div class="modal-footer">
-              <div id="response">
+              <div id="addResponse">
 
               </div>
                 <button type="submit" onclick="insert()" class="btn btn-success">Submit</button>
@@ -223,16 +223,16 @@
             <div class="modal-body">
 
                 <form>
-                    <input type="text"  name="userid" placeholder="Users Id" readonly/>
+                    <input type="text"  id="userid" placeholder="Users Id" readonly/>
                     <hr>
-                    <input type="text"  name="firstname" placeholder="Firstname"/>
-                    <input type="text"  name="lastname" placeholder="Lastname"/>
-                    <input type="text"  name="middlename" placeholder="Middlename"/>
-                    <input type="text"  name="age" placeholder="Age"/>
-                    <input type="text"  name="gender" placeholder="Gender"/>
-                    <input type="text"  name="address" placeholder="Address"/>
-                    <input type="email"  name="email" placeholder="Email"/>
-                    <input type="password"  name="password" placeholder="Password"/>
+                    <input type="text"  id="ufname" placeholder="Firstname"/>
+                    <input type="text"  id="ulname" placeholder="Lastname"/>
+                    <input type="text"  id="umname" placeholder="Middlename"/>
+                    <input type="text"  id="uage" placeholder="Age"/>
+                    <input type="text"  id="ugender" placeholder="Gender"/>
+                    <input type="text"  id="uaddress" placeholder="Address"/>
+                    <input type="email"  id="uemail" placeholder="Email"/>
+                    <input type="password"  id="upword" placeholder="Password"/>
 
                     </form>
 
@@ -244,7 +244,10 @@
 
             <!-- Modal footer -->
             <div class="modal-footer">
-                <button type="submit" onclick="insert()" class="btn btn-success">Submit</button>
+              <div id="updateResponse">
+
+              </div>
+                <button type="submit" onclick="update()" class="btn btn-success">Save</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 
 
