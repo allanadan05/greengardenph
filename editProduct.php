@@ -31,7 +31,7 @@ if($token=="update")
   SET productname='$productName',price='$price',description='$productDescription',category='$category',quantity='$quantity' WHERE productid = '$id'";
 
 if (mysqli_query($con, $sql)) {
-    echo "$productname record updated successfully";
+    echo "$productName record updated successfully";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($con);
 }
