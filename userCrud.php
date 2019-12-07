@@ -8,14 +8,14 @@ if($token=="insert")
   $fname = $_GET['fname'];
   $lname = $_GET['lname'];
   $mname = $_GET['mname'];
-  $age = $_GET['age'];
+  $bday = $_GET['bday'];
   $gender = $_GET['gender'];
-  $address = $_GET['address'];
+  $usertype = $_GET['usertype'];
   $email = $_GET['email'];
   $pword = $_GET['pword'];
 
-  $sql = "INSERT INTO usertbl (Fname, Lname, Mname, userpass, email, gender, address, age)
-  VALUES ('$fname', '$lname', '$mname', '$pword', '$email', '$gender', '$address', '$age')";
+  $sql = "INSERT INTO usertbl(email, password, fname, lname, mname, usertype, birthdate, gender,confirmpass)
+  VALUES ('$email', '$pword', '$fname', '$lname', '$mname', '$usertype', '$bday', '$gender', '$pword')";
 
 if (mysqli_query($con, $sql)) {
     echo "$fname record created successfully";
