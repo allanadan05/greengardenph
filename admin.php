@@ -229,18 +229,24 @@
                 <form>
                     <input type="hidden"  id="userid"/>
                     <hr>
-                    <input type="text"  id="ufname" placeholder="Firstname"/>
-                    <input type="text"  id="ulname" placeholder="Lastname"/>
-                    <input type="text"  id="umname" placeholder="Middlename"/>
-                    <input type="text"  id="uage" placeholder="Age"/>
+                    <input type="text" id="ufname" placeholder="Firstname"/>
+                    <input type="text" id="ulname" placeholder="Lastname"/>
+                    <input type="text" id="umname" placeholder="Middlename"/>
+                    <input type="text" id="ubday" placeholder="Birthdate"/>
+                    <br>
                     <select id="ugender">
-                      <option value="">Select Gender</option>
-                      <option value="Male">Male</option>
-                      <option value="Female">Female</option>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
                     </select>
-                    <input type="text"  id="uaddress" placeholder="Address"/>
-                    <input type="email"  id="uemail" placeholder="Email"/>
-                    <input type="password"  id="upword" placeholder="Password"/>
+                    <select id="uusertype">
+                        <option value="">Usertype</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Customer">Customer</option>
+                    </select>
+                    <br>
+                    <input type="email" id="uemail" placeholder="Email"/>
+                    <input type="password" id="upword" placeholder="Password"/>
 
                     </form>
 
