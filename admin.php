@@ -93,17 +93,18 @@
                               <?php
                               include('dbConfig.php');
 
-                              $sql="SELECT * FROM usertbl";
+                              $sql="SELECT concat(Fname,' ',Lname) as 'NAME', date as 'DATE', email as 'EMAIL', count(purchaseid) as 'NOPP'
+                               from purchasetbl inner join usertbl on purchasetbl.userid = usertbl.userid group by purchasetbl.userid";
                               $result=mysqli_query($con, $sql);
 
                               if(mysqli_num_rows($result)){
                               while($row = mysqli_fetch_array($result))
                               { ?>
                             <tr>
-                                    <td><?php echo $row['Fname'] ?></td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
+                                    <td><?php echo $row['NAME'] ?></td>
+                                    <td><?php echo $row['DATE'] ?></td>
+                                    <td><?php echo $row['EMAIL'] ?></td>
+                                    <td><?php echo $row['NOPP'] ?></td>
 
                                     <td>
 
