@@ -1,4 +1,20 @@
-<div class="py-1 bg-primary">
+<?php 
+include('connection.php');
+session_start();
+
+$logacc="";
+@$id=@$_SESSION['userid'];
+
+$sql="SELECT * FROM usertbl where email='$id'";
+$insert=mysqli_query($con, $sql);
+$result = mysqli_fetch_assoc($insert);
+if($id == true){
+
+$logacc=$_SESSION['fname'];
+
+}
+
+?><div class="py-1 bg-primary">
         <div class="container">
             <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
                 <div class="col-lg-12 d-block">
@@ -49,12 +65,12 @@
             aria-expanded="false"
           
             <span class="icon-person"></span>
-            &nbsp Angelico Gomez
+            <?php echo $logacc;?>
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="#">Account</a>
             <a class="dropdown-item" href="#">Settings</a>
-            <a class="dropdown-item" href="index.php" >Logout</a>
+            <a class="dropdown-item" href="logout.php" >Logout</a>
           </div>
         </div>
       </ul>

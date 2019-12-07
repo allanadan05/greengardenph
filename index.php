@@ -1,28 +1,6 @@
 
 <?php
-session_start();
-    $name="";
-
-if(isset($_POST["login"])){ 
-
-    $con= new mysqli("localhost","root","","project");
-
-    $email = $con->real_escape_string($_POST["email"]);
-    $userpass = $con->real_escape_string($_POST["userpass"]);
-    $data = $con->query("Select * from usertbl where email='$email' AND userpass='$userpass'" );
-    if($data ->num_rows>0)
-    {
-        
-            while($sql=$data ->fetch_array()){
-                   $name=$sql['Fname'];
-        }
-  
-    }
-    else {
-        echo "incorrect email or password";
-    }
-
-}
+include('connection.php');
 
 ?>
 
@@ -547,15 +525,15 @@ if(isset($_POST["login"])){
                                 </div>
                                 <!--manually login-->
                                 <div class="col-sm-5 col-xs-6">
-                                    <form method="post" action="index.php">
+                                    <form method="POST" action="login.php">
                                         <div class="manually">
 
                                         <h5>Sign in manually</h5>
 
                                         <br>
-                                        <form method="post" action="shop.php">
+                                        <form action="navbar.php" method="POST">
                                         <input type="text" placeholder="Username or Email" name="email" required>
-                                        <input type="password" class="glyphicon glyphicon-user" name="userpass" placeholder="Password" required> 
+                                        <input type="password" class="glyphicon glyphicon-user" name="password" placeholder="Password" required> 
                     
                                          </div>
                                          <div class="btn">
@@ -563,11 +541,11 @@ if(isset($_POST["login"])){
                                          <input type="checkbox" name="" value="" class="checkbox" placeholder="Remember me">
                                          <label for="remember">Remember me</label>
                                          </span>
-                                         <button type="submit" value="Login" name="login" class="btn btn-success btn-sm">Log in</button>
+                                         <button type="submit" id="login" name="login" class="btn btn-success btn-sm">Log in</button>
                                         </div>
                                         <div class="lower-btn">
                                         
-                                        <a href="#" class="reg">Register now</a>|<a href="forgot.php"class="forgot">Forgot Password?</a>
+                                        <a href="#" id="reg" data-toggle="modal" data-target="#myModal">Register now</a>|<a href="forgot.php"class="forgot">Forgot Password?</a>
                                         </div>
                                     </form>
 
@@ -581,7 +559,52 @@ if(isset($_POST["login"])){
                 </div>
             </div>
             <!--/LOGIN MODAL-->
-               
+
+
+            <!-- register MODAL -->
+            <!-- Modal -->
+		  <div class="modal fade" id="myModal" role="dialog">
+		    <div class="modal-dialog">
+		    	
+		    
+		      <!-- Modal content-->
+			      
+			      <div class="modal-content">
+				        <div class="modal-header">
+				        	
+						        	<div class="form-input">
+						        			<center><h4 id="signup" ><b>Sign up</b></h4></center>
+								          	<input type="text" id="fname"  placeholder=" Firstname..">
+								          	<input type="text" id="lname"  placeholder=" Lastname..">
+								          	<input type="text" id="mname"  placeholder=" Midlename..">
+								          	<input type="text" id="age"  placeholder=" Age..">
+								          	
+								          	
+								          	<select  id="gender" placeholder="gender">gender
+											<option value="male">male</option>
+											<option value="fe-male">fe-male</option></select>
+											
+											<input type="text" id="email"  placeholder=" Email..">
+											<input type="text" id="password"  placeholder=" Password..">
+											<input type="text" id="confirm"  placeholder=" Confirm password..">
+											<br>
+
+											<button class="button"><span>Sign up </span></button>
+										
+						     
+
+						        			<button type="button" class="btn btn-outline-success" id="btn" data-dismiss=modal>close</button>
+						        	</div>
+				        </div>
+			       </div>
+		      
+		      </div>
+
+		  </div>
+		
+            
+				        
+             <!-- /register Modal -->  
 
     <script> 
      document.getElementById("login-btn").addEventListener("click",function(){
@@ -593,6 +616,9 @@ if(isset($_POST["login"])){
         document.querySelector(".close").addEventListener("click",function(){
         document.querySelector(".popup").style.display = "none";
         });
+
+    
+    
     </script>
 
 <?php require_once("footer.php"); ?>

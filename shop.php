@@ -1,28 +1,7 @@
 
 <?php
-session_start();
-    $name="";
+include('connection.php');
 
-if(isset($_POST["login"])){
-
-    $con= new mysqli("localhost","root","","project");
-
-    $email = $con->real_escape_string($_POST["email"]);
-    $userpass = $con->real_escape_string($_POST["userpass"]);
-    $data = $con->query("Select * from usertbl where email='$email' AND userpass='$userpass'" );
-    if($data ->num_rows>0)
-    {
-        
-            while($sql=$data ->fetch_array()){
-                   $name=$sql['Fname'];
-        }
-  
-    }
-    else {
-        echo "incorrect email or password";
-    }
-
-}
 
 ?>
 
@@ -61,7 +40,7 @@ if(isset($_POST["login"])){
     
     <body class="goto-here">
 
-       <?php include'navbar.php';?>
+    <?php include('navbar.php'); ?>
 
     <div class="hero-wrap hero-bread" style="background-image: url('images/bg_1.jpg');">
         <div class="container">
