@@ -234,13 +234,15 @@
                     <input type="text" id="ufname" placeholder="Firstname"/>
                     <input type="text" id="ulname" placeholder="Lastname"/>
                     <input type="text" id="umname" placeholder="Middlename"/>
+                    <br>Birthdate:
                     <input type="date" id="ubday" placeholder="Birthdate"/>
-                    <br>
+                    <br>Gender:
                     <select id="ugender">
                         <option value="">Select Gender</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
+                    <br>Usertype:
                     <select id="uusertype">
                         <option value="">Usertype</option>
                         <option value="Admin">Admin</option>
