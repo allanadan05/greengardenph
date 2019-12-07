@@ -75,3 +75,33 @@ function edit(ipinasa){
       xhttp.send();
 
   }
+  //Ban and confirm
+  function ban(ipinasa){
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+                var buongObject=JSON.parse(this.responseText);
+                document.getElementById("banfname").value = buongObject.banfname;
+                document.getElementById("banlname").value = buongObject.banlname;
+                document.getElementById("banuserid").value = forIpinasa;
+        }
+      };
+
+        var forIpinasa = ipinasa;
+        console.log(forIpinasa);
+        var token = "ban";
+        xhttp.open("GET", "userCrud.php?forIpinasa="+forIpinasa+"&token="+token, true);
+        xhttp.send();
+}
+function banConfirm(){
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById("banConfirmResponse").innerHTML = this.responseText;
+    }
+  };
+	var token ="banConfirm";
+	var banuserid = document.getElementById("banuserid").value;
+	xhttp.open("GET", "userCrud.php?banuserid="+banuserid+"&token="+token, true);
+    xhttp.send();
+}
