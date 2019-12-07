@@ -75,8 +75,8 @@ if($token =="ban"){
 	$executeQuery = mysqli_query($con, $querySaDatabase);
 		$pambato = array();
 		while($row = mysqli_fetch_array($executeQuery)){
-			$pambato['banfname'] = $row['Fname'];
-			$pambato['banlname'] = $row['Lname'];
+			$pambato['banfname'] = $row['fname'];
+			$pambato['banlname'] = $row['lname'];
 		}
 		echo json_encode($pambato);
 }
