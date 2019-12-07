@@ -93,7 +93,7 @@
                               <?php
                               include('dbConfig.php');
 
-                              $sql="SELECT  userid as 'userid', concat(Fname,' ',Lname) as 'NAME', date as 'DATE', email as 'EMAIL'
+                              $sql="SELECT  userid as 'userid', concat(fname,' ',mname) as 'NAME', date as 'DATE', email as 'EMAIL'
                                from usertbl";
                               $result=mysqli_query($con, $sql);
 
