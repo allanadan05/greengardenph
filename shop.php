@@ -36,6 +36,14 @@ include('connection.php');
         <link rel="stylesheet" href="./import/css/flaticon.css">
         <link rel="stylesheet" href="./import/css/icomoon.css">
         <link rel="stylesheet" href="./import/css/style.css">
+
+    <link rel="stylesheet" href="./import/css/flaticon.css">
+    <link rel="stylesheet" href="./import/css/icomoon.css">
+    <link rel="stylesheet" href="./import/css/style.css">
+    <link rel="stylesheet" href="./stevenimport/style.css">
+    <link rel="stylesheet" href="./espencerimport/style2.css">
+
+    
     </head>
     
     <body class="goto-here">

@@ -18,7 +18,7 @@ if(isset($_POST['login'])){
             $_SESSION['email']=$result['email'];
             $_SESSION['lname']=$result['lname'];
             $_SESSION['fname']=$result['fname'];
-
+            $_SESSION['fullname']=$result['lname']." ".$result['fname'];
             if($result['usertype']== admin ){
             header("Location: admin.php?login=s&fname=".$result['fname']);
             exit();

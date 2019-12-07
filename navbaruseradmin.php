@@ -10,7 +10,8 @@ $insert=mysqli_query($con, $sql);
 $result = mysqli_fetch_assoc($insert);
 if($id == true){
 
-$logacc=$_SESSION['fname'];
+$logacc=$_SESSION['fullname'];
+
 
 }
 

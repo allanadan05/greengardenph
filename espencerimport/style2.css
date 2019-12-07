@@ -1,35 +1,4 @@
-body{
 
-}
-#fname{
-	
-	border-radius: 5px;
-	margin-left: 30px;
-	margin-top: 20px;
-	
-	
-}
-#lname{
-	border-radius: 5px;
-	margin-left: 30px;
-}
-#mname{
-	border-radius: 5px;
-	margin-left: 30px;
-}
-#age{
-	border-radius: 5px;
-	margin-left: 30px;
-	width: 64%;
-}
-#btn{
-	float: right;
-	color: white;
-	margin-left: 20px;
-	margin-top: 50px;
-
-	
-}
 .sign_up{
 		text-align: center;
 		
@@ -37,62 +6,16 @@ body{
 	
 
 	font-family: "Times New Roman", Times, serif;
-}
-.modal-content{
-
-	border-radius: 50%;
-	
-	background: #00F260;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
 
 
-}
-#gender{
-	width: 80px;
-	border-radius: 5px;
-	margin-left: 12px;
 
-}
-#signup{
-	font-family: "Times New Roman", Times, serif;
-	
-}#email{
-	border-radius: 5px;
-	margin-left: 30px;
-
-}
-#address{
-	border-radius: 5px;
-	margin-left: 30px;
-
-}
-#password{
-		border-radius: 5px;
-		margin-left: 30px;
-		background-color: #E6ECF3;
-		width: 85%;
-		margin-top: 10px;
-		height: 30px;
-
-}
-#confirm{
-		border-radius: 5px;
-		margin-left: 30px;
-		background-color: #E6ECF3;
-		width: 85%;
-		margin-top: 10px;
-		height: 30px;
 
 }
 .button {
   border-radius: 4px;
-  background: #ad5389;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+background-color: #19E64D;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -105,7 +28,9 @@ background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, F
   margin: 5px;
   margin-left: 30px;
   margin-top: 40px;
+
 }
+
 
 .button span {
   cursor: pointer;
@@ -121,6 +46,7 @@ background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, F
   top: 0;
   right: -20px;
   transition: 0.5s;
+
 }
 
 .button:hover span {
@@ -131,6 +57,28 @@ background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, F
   opacity: 1;
   right: 0;
 }
-
-
-
+.modal-content .form-input input{
+margin: 5px;
+border-radius: 5px;
+border :none;
+}
+#gender{
+	margin-left: 30px;
+}
+.modal-content{
+	border-radius: 10px;
+	background-color: whitesmoke;
+}
+.ex{
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	box-shadow: 6px 10px 10px -6px rgba(0,0,0, .75);
+	cursor: pointer;
+}
+#add{
+	width: 420px;
+}

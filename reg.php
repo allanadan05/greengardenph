@@ -44,7 +44,7 @@
 		 
 
 </head>
-<?php include('navbar.php');?>
+
 <body>
 	 <button id="sign_up" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Sign up</button>
 

@@ -1,3 +1,8 @@
+<?php 
+include('connection.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -54,71 +59,18 @@
         <link rel="stylesheet" href="./import/css/flaticon.css">
         <link rel="stylesheet" href="./import/css/icomoon.css">
         <link rel="stylesheet" href="./import/css/style.css">
+
+        <link rel="stylesheet" href="./import/css/flaticon.css">
+        <link rel="stylesheet" href="./import/css/icomoon.css">
+        <link rel="stylesheet" href="./import/css/style.css">
+        <link rel="stylesheet" href="./stevenimport/style.css">
+        <link rel="stylesheet" href="./espencerimport/style2.css">
+
     </head>
     
     <body class="goto-here">
-        <div class="py-1 bg-primary">
-            <div class="container">
-                <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
-                    <div class="col-lg-12 d-block">
-                        <div class="row d-flex">
-                            <div class="col-md pr-4 d-flex topper align-items-center">
-                                <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
-                                <span class="text">+63 945 0928 187</span>
-                            </div>
-                            <div class="col-md pr-4 d-flex topper align-items-center">
-                                <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-                                <span class="text">greengarden@gmail.com</span>
-                            </div>
-                            <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
-                                <span class="text">3-5 Business days delivery &amp; Free Returns</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-            <div class="container">
-                <a class="navbar-brand" href="index.php">GreenGarden</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span> Menu
-              </button>
-    
-                <div class="collapse navbar-collapse" id="ftco-nav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="shop.php" class="nav-link">Products</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</a>
-                            <div class="dropdown-menu" aria-labelledby="dropdown04">
-                                <a class="dropdown-item" href="#">Bonsai</a>
-                                <a class="dropdown-item" href="#">Fortune Plants</a>
-                                <a class="dropdown-item" href="#">Pots</a>
-                                <a class="dropdown-item" href="#">Miniatures</a>
-                            </div>
-                        </li>
-                        <!-- <li class="nav-item"><a href="about.php" class="nav-link">About</a></li> -->
-                        <li class="nav-item"><a href="blog.php" class="nav-link">Feed</a></li>
-                        <!-- <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li> -->
-                        <li class="nav-item cta cta-colored"><a href="wishlist.php" class="nav-link"><span class="icon-heart"></span>[0]</a></li>
-                        <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-                        <li class="nav-item cta cta-colored"><a href="profile.php" class="nav-link"><span class="icon-person"></span>Hi, [name] !</a></li>
-                    </ul>
-                </div>
-            </div>
-    
-            <!-- Search Bar -->
-    
-    
-            <form action="index.php" class="search-form">
-                <form class="form-group">
-                    <span class="icon ion-ios-search" style="color: green ;"></span>
-                    <input type="text" class="form-control" placeholder="Search..." style="font-size: small;">
-                </form>
-            </form>
-    
-        </nav>
+        
+        <?php include('navbar.php');?>
     
         <!-- END nav -->
 
@@ -380,6 +332,141 @@
     </section>
     <!-- .section -->
 
+
+    <!-- LOGIN MODAL -->
+   <div class="popup">
+                <div class="popup-content">
+                 <img src="images/close.png" alt="Close" class="close">
+                
+                 
+                        <div class="row">
+                                <div class="col-sm-5 col-xs-6">
+                                    <br>
+                                
+                                    <br><!--login social media accounts-->
+                                        <div class="fb-login">
+                                            <Button>
+                                            <img src="images/facebook-icon.png" alt="">Login with Facebook</Button>
+                                        </div>
+                                        <div class="twit-login">
+                                                <Button>
+                                                <img src="images/twitter-icon.png" alt="">Login with Twitter</Button>
+                                        </div>
+                                        <div class="google-login">
+                                                <Button>
+                                                <img src="images/google-icon.png" alt="">Login with Gmail</Button>
+                                        </div>
+
+                                </div>
+                
+                                <div class="col-sm-2 col-xs-6">
+                                    <div class="or">
+                                       <h6>OR</h6> 
+                                    </div>
+
+                                </div>
+                                <!--manually login-->
+                                <div class="col-sm-5 col-xs-6">
+                                    <form method="POST" action="login.php">
+                                        <div class="manually">
+
+                                        <h5>Sign in manually</h5>
+
+                                        <br>
+                                        <form action="navbar.php" method="POST">
+                                        <input type="text" placeholder="Username or Email" name="email" required>
+                                        <input type="password" class="glyphicon glyphicon-user" name="password" placeholder="Password" required> 
+                    
+                                         </div>
+                                         <div class="btn">
+                                         <span>
+                                         <input type="checkbox" name="" value="" class="checkbox" placeholder="Remember me">
+                                         <label for="remember">Remember me</label>
+                                         </span>
+                                         <button type="submit" id="login" name="login" class="btn btn-success btn-sm">Log in</button>
+                                        </div>
+                                        <div class="lower-btn">
+                                        
+                                        <a href="#" class="" data-toggle="modal" data-target="#myModal">Register now</a>|<a href="forgot.php"class="forgot">Forgot Password?</a>
+                                        </div>
+                                    </form>
+
+                                        
+                                </div>
+
+                                
+                         </div>
+                    
+
+                </div>
+            </div>
+             <!-- Modal -->
+     
+
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                
+            
+              <!-- Modal content-->
+                  
+                  <div class="modal-content">
+                                          <div class="modal-header">
+                            
+                                    <div class="form-input">
+                                            <center><h4 id="signup" ><b>Sign up</b></h4></center>
+                                            <input type="text" id="fname"  placeholder=" Firstname..">
+                                            <input type="text" id="lname"  placeholder=" Lastname..">
+                                            <input type="text" id="mname"  placeholder=" Midlename..">
+                                            <input type="text" id="email"  placeholder=" Email..">
+                                            <input type="text" id="add"  placeholder=" Address..">
+                                           <br>
+                                             
+                                            <input type="date" id="bday"  placeholder="Birthday..">
+                                            
+                                            
+
+                                            <select  id="gender" placeholder="gender">
+                                            <option selected disabled>Gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="fe-male">Female</option></select>
+                                            <br>
+                                            
+                                            <input type="password" id="password"  placeholder=" Password..">
+                                            <input type="password" id="confirm"  placeholder=" Confirm password..">
+                                            <br>
+
+                                            <button class="button"><span>Sign up </span></button>
+                                        
+                                            <button type="button" class="btn btn-default" data-dismiss="modal"><img src="images/close.png" class="ex"></button>
+
+                                            
+                                    </div>
+                        </div>
+                   </div>
+              
+              </div>
+
+          </div>
+      
+     
+        
+            <!--/LOGIN MODAL-->
+               
+
+    <script> 
+     document.getElementById("login-btn").addEventListener("click",function(){
+
+        document.querySelector(".popup").style.display = "flex";
+
+        });
+
+        document.querySelector(".close").addEventListener("click",function(){
+        document.querySelector(".popup").style.display = "none";
+        });
+
+
+    </script>
+
     <footer class="ftco-footer ftco-section">
         <div class="container">
             <div class="row">
@@ -466,7 +553,7 @@
 
 
 
-
+    
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 

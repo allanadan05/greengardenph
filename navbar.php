@@ -8,6 +8,7 @@ $insert=mysqli_query($con, $sql);
 $result = mysqli_fetch_assoc($insert);
 if($id == true){
 
+
 $logacc=$_SESSION['fname'];
 
 }
@@ -46,6 +47,8 @@ $logacc=$_SESSION['fname'];
             <span class="oi oi-menu"></span> Menu
           </button>
 
+          
+
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
@@ -55,7 +58,7 @@ $logacc=$_SESSION['fname'];
                         <div class="dropdown-menu" aria-labelledby="dropdown04">
                             <a class="dropdown-item" href="pots.php">Pots</a>
                             <a class="dropdown-item" href="bonsai.php">Bonsai</a>
-                            <a class="dropdown-item" href="fortuneplants.php">Fortune plants</a>
+                            <a class="dropdown-item" href="fortuneplants.php">For tune plants</a>
                             <a class="dropdown-item" href="miniatures.php">Miniatures</a>
                         </div>
                     </li>
@@ -64,22 +67,32 @@ $logacc=$_SESSION['fname'];
                     <!-- <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li> -->
                     <li class="nav-item cta cta-colored"><a href="wishlist.php" class="nav-link"><span class="icon-heart"></span>[0]</a></li>
                     <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-                     <li class='nav-item cta cta-colored'><a name='prof' id='login-btn' class='nav-link'><span class='icon-person'><?php echo "$logacc"; ?>
-                    </span></a></li>
+                <?php   if($logacc==false){   echo "<li class='nav-item cta cta-colored'><a name='prof' id='login-btn' class='nav-link'><span class='icon-person'>".$logacc."</span></a></li>";
+                }else if($logacc==true){
+                    echo "<li class='nav-item dropdown'>
+                    <a class='nav-link dropdown-toggle' href='#' id='dropdown04' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>".$logacc."</a>
+                    <div class='dropdown-menu' aria-labelledby='dropdown04'>
+                        <a class='dropdown-item' href='user.php'>Profile</a>
+                        <a class='dropdown-item' href='logout.php'>Logout</a>
+                        
+                    </div>
+                </li>";
+
+                } ?>
                 </ul>
             </div>
         </div>
 
-
-        <!-- Search Bar -->
-
-
         <form action="index.php" class="search-form">
             <form class="form-group">
                 <span class="icon ion-ios-search" style="color: green ;"></span>
-                <input type="text" class="form-control" placeholder="Search..." style="font-size: small;">
+                <input type="text" class="form-control"  placeholder="Search..." style="font-size: small;">
             </form>
         </form>
+        <!-- Search Bar -->
+
+
+        
 
     </nav>
 

@@ -1,3 +1,8 @@
+<?php 
+include('connection.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -27,6 +32,13 @@
         <link rel="stylesheet" href="./import/css/flaticon.css">
         <link rel="stylesheet" href="./import/css/icomoon.css">
         <link rel="stylesheet" href="./import/css/style.css">
+
+        <link rel="stylesheet" href="./import/css/flaticon.css">
+        <link rel="stylesheet" href="./import/css/icomoon.css">
+        <link rel="stylesheet" href="./import/css/style.css">
+        <link rel="stylesheet" href="./stevenimport/style.css">
+        <link rel="stylesheet" href="./espencerimport/style2.css">
+
     </head>
     
     <body class="goto-here">
@@ -443,6 +455,146 @@
             </div>
         </div>
     </section>
+
+
+
+
+
+
+    <!-- LOGIN MODAL -->
+   <div class="popup">
+                <div class="popup-content">
+                 <img src="images/close.png" alt="Close" class="close">
+                
+                 
+                        <div class="row">
+                                <div class="col-sm-5 col-xs-6">
+                                    <br>
+                                
+                                    <br><!--login social media accounts-->
+                                        <div class="fb-login">
+                                            <Button>
+                                            <img src="images/facebook-icon.png" alt="">Login with Facebook</Button>
+                                        </div>
+                                        <div class="twit-login">
+                                                <Button>
+                                                <img src="images/twitter-icon.png" alt="">Login with Twitter</Button>
+                                        </div>
+                                        <div class="google-login">
+                                                <Button>
+                                                <img src="images/google-icon.png" alt="">Login with Gmail</Button>
+                                        </div>
+
+                                </div>
+                
+                                <div class="col-sm-2 col-xs-6">
+                                    <div class="or">
+                                       <h6>OR</h6> 
+                                    </div>
+
+                                </div>
+                                <!--manually login-->
+                                <div class="col-sm-5 col-xs-6">
+                                    <form method="POST" action="login.php">
+                                        <div class="manually">
+
+                                        <h5>Sign in manually</h5>
+
+                                        <br>
+                                        <form action="navbar.php" method="POST">
+                                        <input type="text" placeholder="Username or Email" name="email" required>
+                                        <input type="password" class="glyphicon glyphicon-user" name="password" placeholder="Password" required> 
+                    
+                                         </div>
+                                         <div class="btn">
+                                         <span>
+                                         <input type="checkbox" name="" value="" class="checkbox" placeholder="Remember me">
+                                         <label for="remember">Remember me</label>
+                                         </span>
+                                         <button type="submit" id="login" name="login" class="btn btn-success btn-sm">Log in</button>
+                                        </div>
+                                        <div class="lower-btn">
+                                        
+                                        <a href="#" class="" data-toggle="modal" data-target="#myModal">Register now</a>|<a href="forgot.php"class="forgot">Forgot Password?</a>
+                                        </div>
+                                    </form>
+
+                                        
+                                </div>
+
+                                
+                         </div>
+                    
+
+                </div>
+            </div>
+             <!-- Modal -->
+     
+
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                
+            
+              <!-- Modal content-->
+                  
+                  <div class="modal-content">
+                                          <div class="modal-header">
+                            
+                                    <div class="form-input">
+                                            <center><h4 id="signup" ><b>Sign up</b></h4></center>
+                                            <input type="text" id="fname"  placeholder=" Firstname..">
+                                            <input type="text" id="lname"  placeholder=" Lastname..">
+                                            <input type="text" id="mname"  placeholder=" Midlename..">
+                                            <input type="text" id="email"  placeholder=" Email..">
+                                            <input type="text" id="add"  placeholder=" Address..">
+                                           <br>
+                                             
+                                            <input type="date" id="bday"  placeholder="Birthday..">
+                                            
+                                            
+
+                                            <select  id="gender" placeholder="gender">
+                                            <option selected disabled>Gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="fe-male">Female</option></select>
+                                            <br>
+                                            
+                                            <input type="password" id="password"  placeholder=" Password..">
+                                            <input type="password" id="confirm"  placeholder=" Confirm password..">
+                                            <br>
+
+                                            <button class="button"><span>Sign up </span></button>
+                                        
+                                            <button type="button" class="btn btn-default" data-dismiss="modal"><img src="images/close.png" class="ex"></button>
+
+                                            
+                                    </div>
+                        </div>
+                   </div>
+              
+              </div>
+
+          </div>
+      
+     
+        
+            <!--/LOGIN MODAL-->
+               
+
+    <script> 
+     document.getElementById("login-btn").addEventListener("click",function(){
+
+        document.querySelector(".popup").style.display = "flex";
+
+        });
+
+        document.querySelector(".close").addEventListener("click",function(){
+        document.querySelector(".popup").style.display = "none";
+        });
+
+
+    </script>
+
     <?php require_once("footer.php");?>
 
 
