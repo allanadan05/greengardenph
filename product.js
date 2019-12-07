@@ -64,7 +64,7 @@ function edit(ipinasa){
       xhttp.send();
 
   }
-  //Ban and confirm
+  //remove and confirm
   function rm(ipinasa){
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
@@ -80,16 +80,17 @@ function edit(ipinasa){
         var token = "remove";
         xhttp.open("GET", "removeProduct.php?forIpinasa="+forIpinasa+"&token="+token, true);
         xhttp.send();
-}
-function rmConfirm(){
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-			document.getElementById("rmConfirmResponse").innerHTML = this.responseText;
     }
-  };
-	var token ="rmConfirm";
-	var rmproductid = document.getElementById("rmproductid").value;
-	xhttp.open("GET", "removeProduct.php?rmproductid="+rmproductid+"&token="+token, true);
-    xhttp.send();
-}
+
+    function rmConfirm(){
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+    			document.getElementById("rmConfirmResponse").innerHTML = this.responseText;
+        }
+      };
+    	var token ="rmConfirm";
+    	var rmproductid = document.getElementById("rmproductid").value;
+    	xhttp.open("GET", "removeProduct.php?rmproductid="+rmproductid+"&token="+token, true);
+        xhttp.send();
+    }
