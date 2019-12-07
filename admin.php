@@ -172,13 +172,15 @@
                     <input type="text" id="fname" placeholder="Firstname"/>
                     <input type="text" id="lname" placeholder="Lastname"/>
                     <input type="text" id="mname" placeholder="Middlename"/>
-                    <input type="text" id="bday" placeholder="Birthdate"/>
-                    <br>
+                    <br>Birthdate:
+                    <input type="date" id="bday"/>
+                    <br>Gender:
                     <select id="gender">
                         <option value="">Select Gender</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
+                    <br>Usertype:
                     <select id="usertype">
                         <option value="">Usertype</option>
                         <option value="Admin">Admin</option>
@@ -232,7 +234,7 @@
                     <input type="text" id="ufname" placeholder="Firstname"/>
                     <input type="text" id="ulname" placeholder="Lastname"/>
                     <input type="text" id="umname" placeholder="Middlename"/>
-                    <input type="text" id="ubday" placeholder="Birthdate"/>
+                    <input type="date" id="ubday" placeholder="Birthdate"/>
                     <br>
                     <select id="ugender">
                         <option value="">Select Gender</option>
