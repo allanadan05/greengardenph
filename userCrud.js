@@ -7,9 +7,9 @@ function insert() {
       document.getElementById("fname").value="";
       document.getElementById("lname").value="";
       document.getElementById("mname").value="";
-      document.getElementById("age").value="";
+      document.getElementById("bday").value="";
       document.getElementById("gender").value="";
-      document.getElementById("address").value="";
+      document.getElementById("usertype").value="";
       document.getElementById("email").value="";
       document.getElementById("pword").value="";
     }
@@ -17,14 +17,14 @@ function insert() {
   var fname = document.getElementById("fname").value;
   var lname = document.getElementById("lname").value;
   var mname = document.getElementById("mname").value;
-  var age = document.getElementById("age").value;
+  var bday = document.getElementById("bday").value;
   var gender = document.getElementById("gender").value;
-  var address = document.getElementById("address").value;
+  var usertype = document.getElementById("usertype").value;
   var email = document.getElementById("email").value;
   var pword = document.getElementById("pword").value;
   var token = "insert";
-  xhttp.open("GET", "userCrud.php?fname="+fname+"&lname="+lname+"&mname="+mname+"&age="+age+"&gender="+gender+
-  "&address="+address+"&email="+email+"&pword="+pword+"&token="+token, true);
+  xhttp.open("GET", "userCrud.php?fname="+fname+"&lname="+lname+"&mname="+mname+"&bday="+bday+"&gender="+gender+
+  "&usertype="+usertype+"&email="+email+"&pword="+pword+"&token="+token, true);
     xhttp.send();
 
 }
