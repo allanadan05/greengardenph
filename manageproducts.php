@@ -29,7 +29,8 @@
     <link rel="stylesheet" href="./import/css/style.css">
     <link rel="stylesheet" href="./angelicoimport/angelicostyles.css">
     <link rel="stylesheet" href="./stevenimport/style.css">
-    
+    <script src="product.js"></script>
+
 </head>
 
 <body class="goto-here">
@@ -98,7 +99,7 @@
 
                         <td>
                             <center>
-                                
+
                                 <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
                                 <button class="btn-danger">Remove</button>
                             </center>
@@ -112,7 +113,7 @@
                         <td>123</td>
                         <td>
                             <center>
-                                
+
                                 <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
                                 <button class="btn-danger">Remove</button>
                             </center>
@@ -126,7 +127,7 @@
                         <td>123</td>
                         <td>
                             <center>
-                                
+
                                 <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
                                 <button class="btn-danger">Remove</button>
                             </center>
@@ -140,7 +141,7 @@
                         <td>123</td>
                         <td>
                             <center>
-                                
+
                                 <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
                                 <button class="btn-danger">Remove</button>
                             </center>
@@ -154,7 +155,7 @@
                         <td>123</td>
                         <td>
                             <center>
-                               
+
                                 <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
                                 <button class="btn-danger">Remove</button>
                             </center>
@@ -168,7 +169,7 @@
                         <td>123</td>
                         <td>
                             <center>
-                                
+
                                 <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
                                 <button class="btn-danger">Remove</button>
                             </center>
@@ -182,7 +183,7 @@
                         <td>123</td>
                         <td>
                             <center>
-                               
+
                                 <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
                                 <button class="btn-danger">Remove</button>
                             </center>
@@ -196,7 +197,7 @@
                         <td>123</td>
                         <td>
                             <center>
-                               
+
                                 <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
                                 <button class="btn-danger">Remove</button>
                             </center>
@@ -243,34 +244,37 @@
             <!-- Modal Header -->
             <div class="modal-header">
                 <h6 class="modal-title">Add Users</h6>
-                
+
             </div>
 
             <!-- Modal body -->
             <div class="modal-body">
-                
+
                 <form>
-                    <input type="text"  name="firstname" placeholder="Product name"/>
-                    <input type="text"  name="lastname" placeholder="Description"/>
-                    <input type="text"  name="middlename" placeholder="Category"/>
-                    <input type="text"  name="age" placeholder="Quantity"/>
-                    <input type="text"  name="address" placeholder="Price"/>
-                  
+                    <input type="text"  id="productName" placeholder="Product name"/>
+                    <input type="text"  id="productDescription" placeholder="Description"/>
+                    <input type="text"  id="category" placeholder="Category"/>
+                    <input type="text"  id="quantity" placeholder="Quantity"/>
+                    <input type="text"  id="price" placeholder="Price"/>
+
 
                     </form>
-                    
 
-                
-                
-            
+
+
+
+
             </div>
 
             <!-- Modal footer -->
             <div class="modal-footer">
-                <button type="submit" id="" class="btn btn-success">Submit</button>
+              <div id="addResponse">
+
+              </div>
+                <button type="submit" onclick="insert()" class="btn btn-success">Submit</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                
-                
+
+
             </div>
         </div>
     </div>
@@ -286,12 +290,12 @@
             <!-- Modal Header -->
             <div class="modal-header">
                 <h6 class="modal-title">Edit Users</h6>
-                
+
             </div>
 
             <!-- Modal body -->
             <div class="modal-body">
-                
+
                 <form>
                     <input type="text"  name="userid" placeholder="Product id" readonly/>
                     <hr>
@@ -302,19 +306,19 @@
                     <input type="text"  name="address" placeholder="Price"/>
 
                     </form>
-                    
 
-                
-                
-            
+
+
+
+
             </div>
 
             <!-- Modal footer -->
             <div class="modal-footer">
                 <button type="submit" id="" class="btn btn-success">Submit</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                
-                
+
+
             </div>
         </div>
     </div>
