@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="./import/css/style.css">
     <link rel="stylesheet" href="./angelicoimport/angelicostyles.css">
     <link rel="stylesheet" href="./stevenimport/style.css">
+    <script src="userCrud.js"></script>
 
 </head>
 
@@ -42,7 +43,7 @@
         <div class="row"><!-- row -->
                 <!-- SIDEBAR -->
                 <div class="col-sm-2">
-                    <div class="side-bar">  
+                    <div class="side-bar">
                         <ul>
                         <hr><a href="messageadmin.php" class="active"><button type="button"style="width:180px;" class="btn btn-primary">
                         Messages <span class="badge badge-light"> 9 </span>
@@ -77,7 +78,7 @@
                 <div class="user-table">
                    <button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button>
                     <table border='.5' class="user-table">
-                        
+
                             <thead>
                             <tr>
                                 <th>Name</th>
@@ -89,113 +90,43 @@
                             </tr>
                             </thead>
                             <tbody>
+                              <?php
+                              include('dbConfig.php');
+
+                              $sql="SELECT  userid as 'userid', concat(Fname,' ',Lname) as 'NAME', date as 'DATE', email as 'EMAIL'
+                               from usertbl";
+                              $result=mysqli_query($con, $sql);
+
+                              if(mysqli_num_rows($result)){
+                              while($row = mysqli_fetch_array($result))
+                              { ?>
                             <tr>
-                                    <td>John Steven Francisco</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
+                                    <td><?php echo $row['NAME'] ?></td>
+                                    <td><?php echo $row['DATE'] ?></td>
+                                    <td><?php echo $row['EMAIL'] ?></td>
+                                    <td><?php echo "0" ?></td>
 
                                     <td>
-                                       
-                                     <center> <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
-                                    </center>
-                                    </td>
-                                     
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>3 pataas</td>
-                                    <td>
-                                    <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
-                                    </center> 
-                                    </td>
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
-                                    <td>
-                                    <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
+
+                                     <center> <button class="btn-warning" data-toggle="modal" onclick="edit(<?php echo $row['userid'] ?>)" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
+                                        <button class="btn-danger" data-toggle="modal" onclick="ban(<?php echo $row['userid'] ?>)" data-target="#ban"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center>
                                     </td>
 
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
-                                    <td>
-                                    <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
-                                    </center>
-                                    </td>
 
                             </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
-                                    <td>
-                                        <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
-                                    </center> 
-                                    </td>
-
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
-                                    <td>
-                                        <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
-                                    </center>
-                                    </td>
-
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
-                                    <td>
-                                        <center> <button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
-                                    </center>
-                                     </td>
-
-                            </tr>
-                            <tr>
-                                    <td>John</td>
-                                    <td>july/30/2019</td>
-                                    <td>john@example.com</td>
-                                    <td>123</td>
-                                    <td>
-                                        <center><button class="btn-warning"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
-                                    </center>
-                                    </td>
-
-                            </tr>
+                          <?php }
+                        } ?>
                             </tbody>
                         </table>
-                
-                   
-                
-               
+
+
+
+
                 </div>
-                
+
             </div><!-- col 10 -->
-                 <!-- /TABLE -->   
+                 <!-- /TABLE -->
        </div><!-- /row -->
 </div>
     <!-- /CONTENT -->
@@ -231,42 +162,45 @@
             <!-- Modal Header -->
             <div class="modal-header">
                 <h6 class="modal-title">Add Users</h6>
-                
+
             </div>
 
             <!-- Modal body -->
             <div class="modal-body">
-                
+
                 <form>
-                    <input type="text"  name="firstname" placeholder="Firstname"/>
-                    <input type="text"  name="lastname" placeholder="Lastname"/>
-                    <input type="text"  name="middlename" placeholder="Middlename"/>
-                    <input type="text"  name="age" placeholder="Age"/>
+                    <input type="text" id="fname" placeholder="Firstname"/>
+                    <input type="text" id="lname" placeholder="Lastname"/>
+                    <input type="text" id="mname" placeholder="Middlename"/>
+                    <input type="text" id="age" placeholder="Age"/>
                     <br>
-                    <select name="gender" id="gender">
-                        <<option value="">Select Gender</option>
+                    <select id="gender">
+                        <option value="">Select Gender</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
                     <br>
-                    <input type="text"  name="address" placeholder="Address"/>
-                    <input type="email"  name="email" placeholder="Email"/>
-                    <input type="password"  name="password" placeholder="Password"/>
+                    <input type="text" id="address" placeholder="Address"/>
+                    <input type="email" id="email" placeholder="Email"/>
+                    <input type="password" id="pword" placeholder="Password"/>
 
                     </form>
-                    
 
-                
-                
-            
+
+
+
+
             </div>
 
             <!-- Modal footer -->
             <div class="modal-footer">
-                <button type="submit" id="" class="btn btn-success">Submit</button>
+              <div id="addResponse">
+
+              </div>
+                <button type="submit" onclick="insert()" class="btn btn-success">Submit</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                
-                
+
+
             </div>
         </div>
     </div>
@@ -282,44 +216,91 @@
             <!-- Modal Header -->
             <div class="modal-header">
                 <h6 class="modal-title">Edit Users</h6>
-                
+
             </div>
 
             <!-- Modal body -->
             <div class="modal-body">
-                
+
                 <form>
-                    <input type="text"  name="userid" placeholder="Users Id" readonly/>
+                    <input type="hidden"  id="userid"/>
                     <hr>
-                    <input type="text"  name="firstname" placeholder="Firstname"/>
-                    <input type="text"  name="lastname" placeholder="Lastname"/>
-                    <input type="text"  name="middlename" placeholder="Middlename"/>
-                    <input type="text"  name="age" placeholder="Age"/>
-                    <input type="text"  name="gender" placeholder="Gender"/>
-                    <input type="text"  name="address" placeholder="Address"/>
-                    <input type="email"  name="email" placeholder="Email"/>
-                    <input type="password"  name="password" placeholder="Password"/>
+                    <input type="text"  id="ufname" placeholder="Firstname"/>
+                    <input type="text"  id="ulname" placeholder="Lastname"/>
+                    <input type="text"  id="umname" placeholder="Middlename"/>
+                    <input type="text"  id="uage" placeholder="Age"/>
+                    <select id="ugender">
+                      <option value="">Select Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </select>
+                    <input type="text"  id="uaddress" placeholder="Address"/>
+                    <input type="email"  id="uemail" placeholder="Email"/>
+                    <input type="password"  id="upword" placeholder="Password"/>
 
                     </form>
-                    
 
-                
-                
-            
+
+
+
+
             </div>
 
             <!-- Modal footer -->
             <div class="modal-footer">
-                <button type="submit" id="" class="btn btn-success">Submit</button>
+              <div id="updateResponse">
+
+              </div>
+                <button type="submit" onclick="update()" class="btn btn-success">Save</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                
-                
+
+
             </div>
         </div>
     </div>
  </div>
 </div>
 <!-- /MODAL EDIT -->
+
+
+<!-- MODAL BAN -->
+<div class="add-user-modal">
+ <div class="modal" id="ban">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h6 class="modal-title">Ban User ?</h6>
+
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body" id="banConfirmResponse">
+
+                <form>
+                  <input type="hidden" id="banuserid">
+                  <output id="banfname"></output>
+                  <output id="banlname"></output>
+                </form>
+
+
+
+
+
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" onclick="banConfirm()" class="btn btn-success">Confirm</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+
+
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+<!-- /MODAL BAN -->
 
 
     <!-- Footer -->
