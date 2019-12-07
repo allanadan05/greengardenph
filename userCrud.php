@@ -31,14 +31,14 @@ if($token =="edit"){
 	$executeQuery = mysqli_query($con, $querySaDatabase);
 		$pambato = array();
 		while($row = mysqli_fetch_array($executeQuery)){
-			$pambato['ufname'] = $row['Fname'];
-			$pambato['ulname'] = $row['Lname'];
-			$pambato['umname'] = $row['Mname'];
-			$pambato['uage'] = $row['age'];
+			$pambato['ufname'] = $row['fname'];
+			$pambato['ulname'] = $row['lname'];
+			$pambato['umname'] = $row['mname'];
+			$pambato['ubday'] = $row['birthdate'];
 			$pambato['ugender'] = $row['gender'];
-			$pambato['uaddress'] = $row['address'];
+			$pambato['uusertype'] = $row['usertypr'];
 			$pambato['uemail'] = $row['email'];
-			$pambato['upword'] = $row['userpass'];
+			$pambato['upword'] = $row['password'];
 		}
 		echo json_encode($pambato);
 }
@@ -49,16 +49,17 @@ if($token=="update")
   $fname = $_GET['ufname'];
   $lname = $_GET['ulname'];
   $mname = $_GET['umname'];
-  $age = $_GET['uage'];
+  $bday = $_GET['ubday'];
   $gender = $_GET['ugender'];
-  $address = $_GET['uaddress'];
+  $usertype = $_GET['uusertype'];
   $email = $_GET['uemail'];
   $pword = $_GET['upword'];
   $userid = $_GET['userid'];
 
   $sql = "UPDATE usertbl
-  SET Fname='$fname',Lname='$lname',Mname='$mname',userpass='$pword',
-  email='$email',gender='$gender',address='$address',age='$age' WHERE userid = '$userid'";
+  SET email='$email',password='$pword',fname='$fname',
+  lname='$lname',mname='$mname',usertype='$usertype',birthdate='$bday',
+  gender='$gender',confirmpass='$pword' WHERE userid='$userid' ";
 
 if (mysqli_query($con, $sql)) {
     echo "$fname record updated successfully";
