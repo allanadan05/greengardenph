@@ -93,8 +93,8 @@
                               <?php
                               include('dbConfig.php');
 
-                              $sql="SELECT  purchasetbl.userid as 'userid', concat(Fname,' ',Lname) as 'NAME', date as 'DATE', email as 'EMAIL', count(purchaseid) as 'NOPP'
-                               from purchasetbl inner join usertbl on purchasetbl.userid = usertbl.userid group by purchasetbl.userid";
+                              $sql="SELECT  userid as 'userid', concat(Fname,' ',Lname) as 'NAME', date as 'DATE', email as 'EMAIL'
+                               from usertbl";
                               $result=mysqli_query($con, $sql);
 
                               if(mysqli_num_rows($result)){
@@ -104,12 +104,12 @@
                                     <td><?php echo $row['NAME'] ?></td>
                                     <td><?php echo $row['DATE'] ?></td>
                                     <td><?php echo $row['EMAIL'] ?></td>
-                                    <td><?php echo $row['NOPP'] ?></td>
+                                    <td><?php echo "0" ?></td>
 
                                     <td>
 
                                      <center> <button class="btn-warning" data-toggle="modal" onclick="edit(<?php echo $row['userid'] ?>)" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
-                                        <button class="btn-danger"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
+                                        <button class="btn-danger" data-toggle="modal" onclick="ban(<?php echo $row['userid'] ?>)" data-target="#ban"><i class='fas fa-user-times'></i> BAN</button> <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal"><i class="icon-envelope"></i> MESSAGE</button>
                                     </center>
                                     </td>
 
@@ -223,7 +223,7 @@
             <div class="modal-body">
 
                 <form>
-                    <input type="text"  id="userid" placeholder="Users Id" readonly/>
+                    <input type="hidden"  id="userid"/>
                     <hr>
                     <input type="text"  id="ufname" placeholder="Firstname"/>
                     <input type="text"  id="ulname" placeholder="Lastname"/>
@@ -261,6 +261,46 @@
  </div>
 </div>
 <!-- /MODAL EDIT -->
+
+
+<!-- MODAL BAN -->
+<div class="add-user-modal">
+ <div class="modal" id="ban">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h6 class="modal-title">Ban User ?</h6>
+
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body" id="banConfirmResponse">
+
+                <form>
+                  <input type="hidden" id="banuserid">
+                  <output id="banfname"></output>
+                  <output id="banlname"></output>
+                </form>
+
+
+
+
+
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" onclick="banConfirm()" class="btn btn-success">Confirm</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+
+
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+<!-- /MODAL BAN -->
 
 
     <!-- Footer -->
