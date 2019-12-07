@@ -16,7 +16,7 @@ function insert() {
   var productDescription = document.getElementById("productDescription").value;
   var category = document.getElementById("category").value;
   var quantity = document.getElementById("quantity").value;
-  var price = document.getElementById("price").value;;
+  var price = document.getElementById("price").value;
   var token = "insert";
   xhttp.open("GET", "addProduct.php?productName="+productName+"&productDescription="+productDescription+"&category="+category+"&quantity="+quantity+"&price="+price+
   "&token="+token, true);
@@ -30,22 +30,19 @@ function edit(ipinasa){
     xhttp.onreadystatechange = function() {
       if (xhttp.readyState == 4 && xhttp.status == 200) {
               var buongObject=JSON.parse(this.responseText);
-              document.getElementById("ufname").value = buongObject.ufname;
-              document.getElementById("ulname").value = buongObject.ulname;
-              document.getElementById("umname").value = buongObject.umname;
-              document.getElementById("uage").value = buongObject.uage;
-              document.getElementById("ugender").value = buongObject.ugender;
-              document.getElementById("uaddress").value = buongObject.uaddress;
-              document.getElementById("uemail").value = buongObject.uemail;
-              document.getElementById("upword").value = buongObject.upword;
-              document.getElementById("userid").value = forIpinasa;
+              document.getElementById("productid").value = forIpinasa;
+              document.getElementById("uproductName").value = buongObject.uproductName;
+              document.getElementById("uproductDescription").value = buongObject.uproductDescription;
+              document.getElementById("ucategory").value = buongObject.ucategory;
+              document.getElementById("uquantity").value = buongObject.uquantity;
+              document.getElementById("uprice").value = buongObject.uprice;
       }
     };
 
       var forIpinasa = ipinasa;
       console.log(forIpinasa);
       var token = "edit";
-      xhttp.open("GET", "userCrud.php?forIpinasa="+forIpinasa+"&token="+token, true);
+      xhttp.open("GET", "editProduct.php?forIpinasa="+forIpinasa+"&token="+token, true);
       xhttp.send();
   }
   function update() {
@@ -55,18 +52,14 @@ function edit(ipinasa){
         document.getElementById("updateResponse").innerHTML = this.responseText;
       }
     };
-    var ufname = document.getElementById("ufname").value;
-    var ulname = document.getElementById("ulname").value;
-    var umname = document.getElementById("umname").value;
-    var uage = document.getElementById("uage").value;
-    var ugender = document.getElementById("ugender").value;
-    var uaddress = document.getElementById("uaddress").value;
-    var uemail = document.getElementById("uemail").value;
-    var upword = document.getElementById("upword").value;
-    var userid = document.getElementById("userid").value;
+    var productName = document.getElementById("uproductName").value;
+    var productDescription = document.getElementById("uproductDescription").value;
+    var category = document.getElementById("ucategory").value;
+    var quantity = document.getElementById("uquantity").value;
+    var price = document.getElementById("productid").value;
     var token = "update";
-    xhttp.open("GET", "userCrud.php?ufname="+ufname+"&ulname="+ulname+"&umname="+umname+"&uage="+uage+"&ugender="+ugender+
-    "&uaddress="+uaddress+"&uemail="+uemail+"&upword="+upword+"&userid="+userid+"&token="+token, true);
+    xhttp.open("GET", "editProduct.php?uproductName="+uproductName+"&uproductDescription="+uproductDescription+"&ucategory="+ucategory+"&uquantity="+uquantity+"&uprice="+uprice+
+    "&token="+token+"&productid="+productid, true);
       xhttp.send();
 
   }
