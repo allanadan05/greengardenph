@@ -90,119 +90,31 @@
                     </tr>
                 </thead>
                 <tbody>
+                  <?php include('dbConfig.php');
+
+                  $sql="SELECT  * FROM producttbl";
+                  $result=mysqli_query($con, $sql);
+
+                  if(mysqli_num_rows($result)){
+                  while($row = mysqli_fetch_array($result))
+                  { ?>
                     <tr>
-                        <td>Pepsi</td>
-                        <td>asdasd</td>
-                        <td>john@example.com</td>
-                        <td>123</td>
-                        <td>123</td>
+                        <td><?php echo $row['productname'] ?></td>
+                        <td><?php echo $row['description'] ?></td>
+                        <td><?php echo $row['category'] ?></td>
+                        <td><?php echo $row['quantity'] ?></td>
+                        <td><?php echo $row['price'] ?></td>
 
                         <td>
                             <center>
 
-                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
+                                <button class="btn-warning" data-toggle="modal" onclick="edit(<?php echo $row['productid'] ?>)" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
                                 <button class="btn-danger">Remove</button>
                             </center>
                         </td>
                     </tr>
-                    <tr>
-                        <td>ESpencer</td>
-                        <td>sdsdsd</td>
-                        <td>adfadfa</td>
-                        <td>sdfsdfsdfsd</td>
-                        <td>123</td>
-                        <td>
-                            <center>
-
-                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
-                                <button class="btn-danger">Remove</button>
-                            </center>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>sadasd</td>
-                        <td>sadasdas</td>
-                        <td>asdasdas</td>
-                        <td>123</td>
-                        <td>123</td>
-                        <td>
-                            <center>
-
-                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
-                                <button class="btn-danger">Remove</button>
-                            </center>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>John</td>
-                        <td>july/30/2019</td>
-                        <td>john@example.com</td>
-                        <td>123</td>
-                        <td>123</td>
-                        <td>
-                            <center>
-
-                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
-                                <button class="btn-danger">Remove</button>
-                            </center>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>sdsdsd</td>
-                        <td>asdasdasd</td>
-                        <td>sdsdsds</td>
-                        <td>sss</td>
-                        <td>123</td>
-                        <td>
-                            <center>
-
-                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
-                                <button class="btn-danger">Remove</button>
-                            </center>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>sdsd</td>
-                        <td>asdasd</td>
-                        <td>asdasda</td>
-                        <td>sadasdas</td>
-                        <td>123</td>
-                        <td>
-                            <center>
-
-                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
-                                <button class="btn-danger">Remove</button>
-                            </center>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>sad</td>
-                        <td>asdasdsa</td>
-                        <td>jaasdas</td>
-                        <td>123</td>
-                        <td>123</td>
-                        <td>
-                            <center>
-
-                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
-                                <button class="btn-danger">Remove</button>
-                            </center>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>John</td>
-                        <td>july/30/2019</td>
-                        <td>john@example.com</td>
-                        <td>123</td>
-                        <td>123</td>
-                        <td>
-                            <center>
-
-                                <button class="btn-warning" data-toggle="modal" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
-                                <button class="btn-danger">Remove</button>
-                            </center>
-                        </td>
-                    </tr>
+                  <?php }
+                } ?>
                 </tbody>
             </table>
         </div>
@@ -297,13 +209,12 @@
             <div class="modal-body">
 
                 <form>
-                    <input type="text"  name="userid" placeholder="Product id" readonly/>
-                    <hr>
-                    <input type="text"  name="firstname" placeholder="Product name"/>
-                    <input type="text"  name="lastname" placeholder="Description"/>
-                    <input type="text"  name="middlename" placeholder="Category"/>
-                    <input type="text"  name="age" placeholder="Quantity"/>
-                    <input type="text"  name="address" placeholder="Price"/>
+                    <input type="text"  id="productid" placeholder="Product id" readonly/>
+                    <input type="text"  id="uproductName" placeholder="Product name"/>
+                    <input type="text"  id="uproductDescription" placeholder="Description"/>
+                    <input type="text"  id="ucategory" placeholder="Category"/>
+                    <input type="text"  id="uquantity" placeholder="Quantity"/>
+                    <input type="text"  id="uprice" placeholder="Price"/>
 
                     </form>
 
@@ -315,7 +226,10 @@
 
             <!-- Modal footer -->
             <div class="modal-footer">
-                <button type="submit" id="" class="btn btn-success">Submit</button>
+              <div id="updateResponse">
+
+              </div>
+                <button type="submit" onclick="update()" class="btn btn-success">Save</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 
 
