@@ -175,7 +175,7 @@
                     <input type="text" id="age" placeholder="Age"/>
                     <br>
                     <select id="gender">
-                        <<option value="">Select Gender</option>
+                        <option value="">Select Gender</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
@@ -229,7 +229,11 @@
                     <input type="text"  id="ulname" placeholder="Lastname"/>
                     <input type="text"  id="umname" placeholder="Middlename"/>
                     <input type="text"  id="uage" placeholder="Age"/>
-                    <input type="text"  id="ugender" placeholder="Gender"/>
+                    <select id="ugender">
+                      <option value="">Select Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </select>
                     <input type="text"  id="uaddress" placeholder="Address"/>
                     <input type="email"  id="uemail" placeholder="Email"/>
                     <input type="password"  id="upword" placeholder="Password"/>
