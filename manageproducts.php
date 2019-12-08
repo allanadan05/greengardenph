@@ -254,7 +254,9 @@
 
                 <form>
                   <input type="hidden" id="rmproductid">
+                  Do yu want to remove
                   <output id="rmproductName"></output>
+                  ?
                 </form>
 
 
