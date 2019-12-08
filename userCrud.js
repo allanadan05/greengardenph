@@ -7,9 +7,9 @@ function insert() {
       document.getElementById("fname").value="";
       document.getElementById("lname").value="";
       document.getElementById("mname").value="";
-      document.getElementById("age").value="";
+      document.getElementById("bday").value="";
       document.getElementById("gender").value="";
-      document.getElementById("address").value="";
+      document.getElementById("usertype").value="";
       document.getElementById("email").value="";
       document.getElementById("pword").value="";
     }
@@ -17,14 +17,14 @@ function insert() {
   var fname = document.getElementById("fname").value;
   var lname = document.getElementById("lname").value;
   var mname = document.getElementById("mname").value;
-  var age = document.getElementById("age").value;
+  var bday = document.getElementById("bday").value;
   var gender = document.getElementById("gender").value;
-  var address = document.getElementById("address").value;
+  var usertype = document.getElementById("usertype").value;
   var email = document.getElementById("email").value;
   var pword = document.getElementById("pword").value;
   var token = "insert";
-  xhttp.open("GET", "userCrud.php?fname="+fname+"&lname="+lname+"&mname="+mname+"&age="+age+"&gender="+gender+
-  "&address="+address+"&email="+email+"&pword="+pword+"&token="+token, true);
+  xhttp.open("GET", "userCrud.php?fname="+fname+"&lname="+lname+"&mname="+mname+"&bday="+bday+"&gender="+gender+
+  "&usertype="+usertype+"&email="+email+"&pword="+pword+"&token="+token, true);
     xhttp.send();
 
 }
@@ -38,9 +38,9 @@ function edit(ipinasa){
               document.getElementById("ufname").value = buongObject.ufname;
               document.getElementById("ulname").value = buongObject.ulname;
               document.getElementById("umname").value = buongObject.umname;
-              document.getElementById("uage").value = buongObject.uage;
+              document.getElementById("ubday").value = buongObject.ubday;
               document.getElementById("ugender").value = buongObject.ugender;
-              document.getElementById("uaddress").value = buongObject.uaddress;
+              document.getElementById("uusertype").value = buongObject.uusertype;
               document.getElementById("uemail").value = buongObject.uemail;
               document.getElementById("upword").value = buongObject.upword;
               document.getElementById("userid").value = forIpinasa;
@@ -63,15 +63,15 @@ function edit(ipinasa){
     var ufname = document.getElementById("ufname").value;
     var ulname = document.getElementById("ulname").value;
     var umname = document.getElementById("umname").value;
-    var uage = document.getElementById("uage").value;
+    var ubday = document.getElementById("ubday").value;
     var ugender = document.getElementById("ugender").value;
-    var uaddress = document.getElementById("uaddress").value;
+    var uusertype = document.getElementById("uusertype").value;
     var uemail = document.getElementById("uemail").value;
     var upword = document.getElementById("upword").value;
     var userid = document.getElementById("userid").value;
     var token = "update";
-    xhttp.open("GET", "userCrud.php?ufname="+ufname+"&ulname="+ulname+"&umname="+umname+"&uage="+uage+"&ugender="+ugender+
-    "&uaddress="+uaddress+"&uemail="+uemail+"&upword="+upword+"&userid="+userid+"&token="+token, true);
+    xhttp.open("GET", "userCrud.php?ufname="+ufname+"&ulname="+ulname+"&umname="+umname+"&ubday="+ubday+"&ugender="+ugender+
+    "&uusertype="+uusertype+"&uemail="+uemail+"&upword="+upword+"&userid="+userid+"&token="+token, true);
       xhttp.send();
 
   }

@@ -93,7 +93,7 @@
                               <?php
                               include('dbConfig.php');
 
-                              $sql="SELECT  userid as 'userid', concat(Fname,' ',Lname) as 'NAME', date as 'DATE', email as 'EMAIL'
+                              $sql="SELECT  userid as 'userid', concat(fname,' ',lname) as 'NAME', date as 'DATE', email as 'EMAIL'
                                from usertbl";
                               $result=mysqli_query($con, $sql);
 
@@ -172,15 +172,18 @@
                     <input type="text" id="fname" placeholder="Firstname"/>
                     <input type="text" id="lname" placeholder="Lastname"/>
                     <input type="text" id="mname" placeholder="Middlename"/>
-                    <input type="text" id="age" placeholder="Age"/>
-                    <br>
+                    <br>Birthdate:
+                    <input type="date" id="bday" placeholder="Birthdate"/>
+                    <br>Gender:
                     <select id="gender">
-                        <option value="">Select Gender</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
-                    <br>
-                    <input type="text" id="address" placeholder="Address"/>
+                    <br>Usertype:
+                    <select id="usertype">
+                      <option value="Customer">Customer</option>
+                      <option value="Admin">Admin</option>
+                    </select>
                     <input type="email" id="email" placeholder="Email"/>
                     <input type="password" id="pword" placeholder="Password"/>
 
@@ -225,18 +228,23 @@
                 <form>
                     <input type="hidden"  id="userid"/>
                     <hr>
-                    <input type="text"  id="ufname" placeholder="Firstname"/>
-                    <input type="text"  id="ulname" placeholder="Lastname"/>
-                    <input type="text"  id="umname" placeholder="Middlename"/>
-                    <input type="text"  id="uage" placeholder="Age"/>
+                    <input type="text" id="ufname" placeholder="Firstname"/>
+                    <input type="text" id="ulname" placeholder="Lastname"/>
+                    <input type="text" id="umname" placeholder="Middlename"/>
+                    <br>Birthdate:
+                    <input type="date" id="ubday" placeholder="Birthdate"/>
+                    <br>Gender:
                     <select id="ugender">
-                      <option value="">Select Gender</option>
-                      <option value="Male">Male</option>
-                      <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
                     </select>
-                    <input type="text"  id="uaddress" placeholder="Address"/>
-                    <input type="email"  id="uemail" placeholder="Email"/>
-                    <input type="password"  id="upword" placeholder="Password"/>
+                    <br>Usertype:
+                    <select id="uusertype">
+                      <option value="Customer">Customer</option>
+                      <option value="Admin">Admin</option>
+                    </select>
+                    <input type="email" id="uemail" placeholder="Email"/>
+                    <input type="password" id="upword" placeholder="Password"/>
 
                     </form>
 
@@ -279,8 +287,10 @@
 
                 <form>
                   <input type="hidden" id="banuserid">
+                  Do you want to ban
                   <output id="banfname"></output>
                   <output id="banlname"></output>
+                  ?
                 </form>
 
 

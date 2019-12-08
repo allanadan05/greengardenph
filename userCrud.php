@@ -8,14 +8,14 @@ if($token=="insert")
   $fname = $_GET['fname'];
   $lname = $_GET['lname'];
   $mname = $_GET['mname'];
-  $age = $_GET['age'];
+  $bday = $_GET['bday'];
   $gender = $_GET['gender'];
-  $address = $_GET['address'];
+  $usertype = $_GET['address'];
   $email = $_GET['email'];
   $pword = $_GET['pword'];
 
-  $sql = "INSERT INTO usertbl (Fname, Lname, Mname, userpass, email, gender, address, age)
-  VALUES ('$fname', '$lname', '$mname', '$pword', '$email', '$gender', '$address', '$age')";
+  $sql = "INSERT INTO usertbl(email, password, fname, lname, mname, usertype, birthdate, gender,confirmpass)
+  VALUES ('$email', '$pword', '$fname', '$lname', '$mname', '$usertype', '$bday', '$gender', '$pword')";
 
 if (mysqli_query($con, $sql)) {
     echo "$fname record created successfully";
@@ -31,14 +31,14 @@ if($token =="edit"){
 	$executeQuery = mysqli_query($con, $querySaDatabase);
 		$pambato = array();
 		while($row = mysqli_fetch_array($executeQuery)){
-			$pambato['ufname'] = $row['Fname'];
-			$pambato['ulname'] = $row['Lname'];
-			$pambato['umname'] = $row['Mname'];
-			$pambato['uage'] = $row['age'];
+      $pambato['ufname'] = $row['fname'];
+			$pambato['ulname'] = $row['lname'];
+			$pambato['umname'] = $row['mname'];
+			$pambato['ubday'] = $row['birthdate'];
 			$pambato['ugender'] = $row['gender'];
-			$pambato['uaddress'] = $row['address'];
+			$pambato['uusertype'] = $row['usertype'];
 			$pambato['uemail'] = $row['email'];
-			$pambato['upword'] = $row['userpass'];
+			$pambato['upword'] = $row['password'];
 		}
 		echo json_encode($pambato);
 }
@@ -49,16 +49,17 @@ if($token=="update")
   $fname = $_GET['ufname'];
   $lname = $_GET['ulname'];
   $mname = $_GET['umname'];
-  $age = $_GET['uage'];
+  $bday = $_GET['ubday'];
   $gender = $_GET['ugender'];
-  $address = $_GET['uaddress'];
+  $usertype = $_GET['uusertype'];
   $email = $_GET['uemail'];
   $pword = $_GET['upword'];
   $userid = $_GET['userid'];
 
   $sql = "UPDATE usertbl
-  SET Fname='$fname',Lname='$lname',Mname='$mname',userpass='$pword',
-  email='$email',gender='$gender',address='$address',age='$age' WHERE userid = '$userid'";
+  SET email='$email',password='$pword',fname='$fname',
+  lname='$lname',mname='$mname',usertype='$usertype',birthdate='$bday',
+  gender='$gender',confirmpass='$pword' WHERE userid='$userid' ";
 
 if (mysqli_query($con, $sql)) {
     echo "$fname record updated successfully";
@@ -74,8 +75,8 @@ if($token =="ban"){
 	$executeQuery = mysqli_query($con, $querySaDatabase);
 		$pambato = array();
 		while($row = mysqli_fetch_array($executeQuery)){
-			$pambato['banfname'] = $row['Fname'];
-			$pambato['banlname'] = $row['Lname'];
+			$pambato['banfname'] = $row['fname'];
+			$pambato['banlname'] = $row['lname'];
 		}
 		echo json_encode($pambato);
 }
