@@ -1,6 +1,10 @@
 <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "project";
 
-$con=mysqli_connect("localhost", "root", "");
-mysqli_select_db($con, "project");
+// Create connection
+$con = mysqli_connect($servername, $username, $password,$dbname);
 
 ?>

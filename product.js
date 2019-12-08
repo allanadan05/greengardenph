@@ -52,44 +52,45 @@ function edit(ipinasa){
         document.getElementById("updateResponse").innerHTML = this.responseText;
       }
     };
-    var productName = document.getElementById("uproductName").value;
-    var productDescription = document.getElementById("uproductDescription").value;
-    var category = document.getElementById("ucategory").value;
-    var quantity = document.getElementById("uquantity").value;
-    var price = document.getElementById("productid").value;
+    var uproductName = document.getElementById("uproductName").value;
+    var uproductDescription = document.getElementById("uproductDescription").value;
+    var ucategory = document.getElementById("ucategory").value;
+    var uquantity = document.getElementById("uquantity").value;
+    var uprice = document.getElementById("uprice").value;
+    var productid = document.getElementById("productid").value;
     var token = "update";
     xhttp.open("GET", "editProduct.php?uproductName="+uproductName+"&uproductDescription="+uproductDescription+"&ucategory="+ucategory+"&uquantity="+uquantity+"&uprice="+uprice+
     "&token="+token+"&productid="+productid, true);
       xhttp.send();
 
   }
-  //Ban and confirm
-  function ban(ipinasa){
+  //remove and confirm
+  function rm(ipinasa){
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
                 var buongObject=JSON.parse(this.responseText);
-                document.getElementById("banfname").value = buongObject.banfname;
-                document.getElementById("banlname").value = buongObject.banlname;
-                document.getElementById("banuserid").value = forIpinasa;
+                document.getElementById("rmproductid").value = forIpinasa;
+                document.getElementById("rmproductName").value = buongObject.rmproductName;
         }
       };
 
         var forIpinasa = ipinasa;
         console.log(forIpinasa);
-        var token = "ban";
-        xhttp.open("GET", "userCrud.php?forIpinasa="+forIpinasa+"&token="+token, true);
+        var token = "remove";
+        xhttp.open("GET", "removeProduct.php?forIpinasa="+forIpinasa+"&token="+token, true);
         xhttp.send();
-}
-function banConfirm(){
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-			document.getElementById("banConfirmResponse").innerHTML = this.responseText;
     }
-  };
-	var token ="banConfirm";
-	var banuserid = document.getElementById("banuserid").value;
-	xhttp.open("GET", "userCrud.php?banuserid="+banuserid+"&token="+token, true);
-    xhttp.send();
-}
+
+    function rmConfirm(){
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+    			document.getElementById("rmConfirmResponse").innerHTML = this.responseText;
+        }
+      };
+    	var token ="rmConfirm";
+    	var rmproductid = document.getElementById("rmproductid").value;
+    	xhttp.open("GET", "removeProduct.php?rmproductid="+rmproductid+"&token="+token, true);
+        xhttp.send();
+    }
