@@ -40,6 +40,8 @@ function edit(ipinasa){
               document.getElementById("ucategory").value = buongObject.ucategory;
               document.getElementById("uquantity").value = buongObject.uquantity;
               document.getElementById("uprice").value = buongObject.uprice;
+              document.getElementById("udeliveryCost").value = buongObject.udeliveryCost;
+              document.getElementById("uproductImg").value = buongObject.uproductImg;
       }
     };
 

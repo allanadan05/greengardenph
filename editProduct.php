@@ -13,6 +13,8 @@ if($token =="edit"){
 			$pambato['ucategory'] = $row['category'];
 			$pambato['uquantity'] = $row['quantity'];
 			$pambato['uprice'] = $row['price'];
+			$pambato['uproductImg'] = $row['productImg'];
+			$pambato['udeliveryCost'] = $row['deliveryCost'];
 		}
 		echo json_encode($pambato);
 }
