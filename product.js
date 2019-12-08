@@ -9,6 +9,8 @@ function insert() {
       document.getElementById("category").value="";
       document.getElementById("quantity").value="";
       document.getElementById("price").value="";
+      document.getElementById("productImg").value="";
+      document.getElementById("deliveryCost").value="";
 
     }
   };
@@ -17,9 +19,11 @@ function insert() {
   var category = document.getElementById("category").value;
   var quantity = document.getElementById("quantity").value;
   var price = document.getElementById("price").value;
+  var productImg = document.getElementById("productImg").value;
+  var deliveryCost = document.getElementById("deliveryCost").value;
   var token = "insert";
   xhttp.open("GET", "addProduct.php?productName="+productName+"&productDescription="+productDescription+"&category="+category+"&quantity="+quantity+"&price="+price+
-  "&token="+token, true);
+  "&token="+token+"&productImg="+productImg+"&deliveryCost="+deliveryCost, true);
     xhttp.send();
 
 }

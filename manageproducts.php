@@ -76,11 +76,12 @@
         <!-- TABLE -->
         <div class="col-sm-10">
             <!-- PRODUCT TABLE-->
-        <div class="user-table">
+        <div class="user-table" style="overflow-x:auto;">
         <button class="btn-success" data-toggle="modal" data-target="#add"><i class='fas fa-user-plus'></i> ADD</button>
             <table border=".5">
                 <thead>
                     <tr>
+                        <th>Product Image</th>
                         <th>Product Name</th>
                         <th>Description</th>
                         <th>Category</th>
@@ -97,6 +98,7 @@
                   while($row = mysqli_fetch_array($result))
                   { ?>
                     <tr>
+                        <td><?php echo'<img height="50" width="50" src="data:image;base64,'.$rows['productImg'].'">'; ?></td>
                         <td><?php echo $row['productname'] ?></td>
                         <td><?php echo $row['description'] ?></td>
                         <td><?php echo $row['category'] ?></td>
@@ -161,11 +163,13 @@
             <div class="modal-body">
 
                 <form>
+                    Choose image:<input type="file"  id="productImg"/>
                     <input type="text"  id="productName" placeholder="Product name"/>
                     <input type="text"  id="productDescription" placeholder="Description"/>
                     <input type="text"  id="category" placeholder="Category"/>
                     <input type="text"  id="quantity" placeholder="Quantity"/>
                     <input type="text"  id="price" placeholder="Price"/>
+                    <input type="text" id="deliveryCost" placeholder="Delivery Cost">
 
 
                     </form>
@@ -207,12 +211,14 @@
             <div class="modal-body">
 
                 <form>
-                    <input type="text"  id="productid" placeholder="Product id" readonly/>
+                    <input type="hidden"  id="productid" placeholder="Product id" readonly/>
+                    Choose image:<input type="file"  id="uproductImg"/>
                     <input type="text"  id="uproductName" placeholder="Product name"/>
                     <input type="text"  id="uproductDescription" placeholder="Description"/>
                     <input type="text"  id="ucategory" placeholder="Category"/>
                     <input type="text"  id="uquantity" placeholder="Quantity"/>
                     <input type="text"  id="uprice" placeholder="Price"/>
+                    <input type="text" id="udeliveryCost" placeholder="Delivery Cost">
 
                     </form>
 

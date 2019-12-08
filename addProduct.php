@@ -10,9 +10,11 @@ if($token=="insert")
   $category = $_GET['category'];
   $quantity = $_GET['quantity'];
   $price = $_GET['price'];
+  $productImg = $_GET['productImg'];
+  $deliveryCost = $_GET['deliveryCost'];
 
-  $sql = "INSERT INTO producttbl(productname, price, description, category, quantity)
-  VALUES ('$productName', '$price', '$productDescription', '$category', '$quantity')";
+  $sql = "INSERT INTO producttbl(productname, price, description, category, quantity, deliveryCost, productImg)
+  VALUES ('$productName', '$price', '$productDescription', '$category', '$quantity', '$deliveryCost', '$productImg')";
 
 if (mysqli_query($con, $sql)) {
     echo "$productName record added successfully";
