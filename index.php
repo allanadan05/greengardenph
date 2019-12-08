@@ -29,13 +29,13 @@ include('connection.php');
 
     <link rel="stylesheet" href="./import/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="./import/css/jquery.timepicker.css">
-
+   
 
     <link rel="stylesheet" href="./import/css/flaticon.css">
     <link rel="stylesheet" href="./import/css/icomoon.css">
     <link rel="stylesheet" href="./import/css/style.css">
     <link rel="stylesheet" href="./stevenimport/style.css">
-
+    <link rel="stylesheet" href="./espencerimport/style2.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -525,7 +525,7 @@ include('connection.php');
                                 </div>
                                 <!--manually login-->
                                 <div class="col-sm-5 col-xs-6">
-                                    <form method="POST" action="login.php">
+                                    <form method="POST" action="index.php">
                                         <div class="manually">
 
                                         <h5>Sign in manually</h5>
@@ -545,7 +545,7 @@ include('connection.php');
                                         </div>
                                         <div class="lower-btn">
                                         
-                                        <a href="#" id="reg" data-toggle="modal" data-target="#myModal">Register now</a>|<a href="forgot.php"class="forgot">Forgot Password?</a>
+                                        <a href="#" class="" data-toggle="modal" data-target="#myModal">Register now</a>|<a href="forgot.php"class="forgot">Forgot Password?</a>
                                         </div>
                                     </form>
 
@@ -558,53 +558,61 @@ include('connection.php');
 
                 </div>
             </div>
-            <!--/LOGIN MODAL-->
+             <!-- Modal -->
+     
 
-
-            <!-- register MODAL -->
-            <!-- Modal -->
-		  <div class="modal fade" id="myModal" role="dialog">
-		    <div class="modal-dialog">
-		    	
-		    
-		      <!-- Modal content-->
-			      
-			      <div class="modal-content">
-				        <div class="modal-header">
-				        	
-						        	<div class="form-input">
-						        			<center><h4 id="signup" ><b>Sign up</b></h4></center>
-								          	<input type="text" id="fname"  placeholder=" Firstname..">
-								          	<input type="text" id="lname"  placeholder=" Lastname..">
-								          	<input type="text" id="mname"  placeholder=" Midlename..">
-								          	<input type="text" id="age"  placeholder=" Age..">
-								          	
-								          	
-								          	<select  id="gender" placeholder="gender">gender
-											<option value="male">male</option>
-											<option value="fe-male">fe-male</option></select>
-											
-											<input type="text" id="email"  placeholder=" Email..">
-											<input type="text" id="password"  placeholder=" Password..">
-											<input type="text" id="confirm"  placeholder=" Confirm password..">
-											<br>
-
-											<button class="button"><span>Sign up </span></button>
-										
-						     
-
-						        			<button type="button" class="btn btn-outline-success" id="btn" data-dismiss=modal>close</button>
-						        	</div>
-				        </div>
-			       </div>
-		      
-		      </div>
-
-		  </div>
-		
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                
             
-				        
-             <!-- /register Modal -->  
+              <!-- Modal content-->
+                  
+                  <div class="modal-content">
+                                          <div class="modal-header">
+                            
+                                    <div class="form-input">
+                                            <center><h4 id="signup" ><b>Sign up</b></h4></center>
+
+                                            <form action="registercrud.php"method="POST">
+
+                                            <input type="text" id="fname" name="fnames"  placeholder=" Firstname..">
+                                            <input type="text" id="lname" name="lnames"  placeholder=" Lastname..">
+                                            <input type="text" id="mname" name="mnames" placeholder=" Midlename..">
+                                            <input type="text" id="email" name="emails" placeholder=" Email..">
+                                            <input type="text" id="add"  name="adds" placeholder=" Address..">
+                                           <br>
+                                            <input type="date" id="bday" name="bdays" placeholder=" Birthday..">
+                                            
+                                            
+
+                                            <select  id="gender" name="gnders" placeholder="gender">
+                                            <option selected disabled>gender</option>
+                                            <option value="male">male</option>
+                                            <option value="female">female</option></select>
+                                            <br>
+                                                
+                                            <input type="password" id="password" name="passwords" placeholder=" Password..">
+                                            <input type="password" id="confirm"  name="confirms"placeholder=" Confirm password..">
+                                            <br>
+
+                                            <button class="button" name="signup"type="submit"><span>Sign up </span></button>
+                                        </form>
+                                        
+                                            <button type="button" class="btn btn-default" data-dismiss="modal"><img src="images/close.png" class="ex"></button>
+
+                                            
+                                    </div>
+                        </div>
+                   </div>
+              
+              </div>
+
+          </div>
+      
+     
+        
+            <!--/LOGIN MODAL-->
+               
 
     <script> 
      document.getElementById("login-btn").addEventListener("click",function(){
@@ -617,8 +625,7 @@ include('connection.php');
         document.querySelector(".popup").style.display = "none";
         });
 
-    
-    
+
     </script>
 
 <?php require_once("footer.php"); ?>
@@ -641,6 +648,7 @@ include('connection.php');
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="./import/js/google-map.js"></script>
     <script src="./import/js/main.js"></script>
+
 
 
 
