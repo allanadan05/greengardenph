@@ -91,10 +91,8 @@
                 </thead>
                 <tbody>
                   <?php include('dbConfig.php');
-
                   $sql="SELECT  * FROM producttbl";
                   $result=mysqli_query($con, $sql);
-
                   if(mysqli_num_rows($result)){
                   while($row = mysqli_fetch_array($result))
                   { ?>
@@ -109,7 +107,7 @@
                             <center>
 
                                 <button class="btn-warning" data-toggle="modal" onclick="edit(<?php echo $row['productid'] ?>)" data-target="#edit"><i class='fas fa-user-edit'></i> EDIT</button>
-                                <button class="btn-danger">Remove</button>
+                                <button class="btn-danger" data-toggle="modal" onclick="rm(<?php echo $row['productid'] ?>)" data-target="#rm">Remove</button>
                             </center>
                         </td>
                     </tr>
@@ -239,6 +237,44 @@
  </div>
 </div>
 <!-- /MODAL EDIT -->
+
+<!-- MODAL REMOVE -->
+<div class="add-user-modal">
+ <div class="modal" id="rm">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h6 class="modal-title">Remove Product?</h6>
+
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body" id="rmConfirmResponse">
+
+                <form>
+                  <input type="hidden" id="rmproductid">
+                  <output id="rmproductName"></output>
+                </form>
+
+
+
+
+
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" onclick="rmConfirm()" class="btn btn-success">Confirm</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+
+
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+<!-- /MODAL REMOVE -->
 
 
 
