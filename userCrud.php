@@ -14,8 +14,8 @@ if($token=="insert")
   $email = $_GET['email'];
   $pword = $_GET['pword'];
 
-  $sql = "INSERT INTO usertbl(email, password, fname, lname, mname, usertype, birthdate, gender,confirmpass)
-  VALUES ('$email', '$pword', '$fname', '$lname', '$mname', '$usertype', '$bday', '$gender', '$pword')";
+  $sql = "INSERT INTO usertbl(email, password, fname, lname, mname, usertype, birthdate, gender)
+  VALUES ('$email', '$pword', '$fname', '$lname', '$mname', '$usertype', '$bday', '$gender')";
 
 if (mysqli_query($con, $sql)) {
     echo "$fname record created successfully";
@@ -59,7 +59,7 @@ if($token=="update")
   $sql = "UPDATE usertbl
   SET email='$email',password='$pword',fname='$fname',
   lname='$lname',mname='$mname',usertype='$usertype',birthdate='$bday',
-  gender='$gender',confirmpass='$pword' WHERE userid='$userid' ";
+  gender='$gender' WHERE userid='$userid' ";
 
 if (mysqli_query($con, $sql)) {
     echo "$fname record updated successfully";
