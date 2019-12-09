@@ -1,6 +1,6 @@
 <?php
 
 $con=mysqli_connect("localhost", "root", "");
-mysqli_select_db($con, "project");
+mysqli_select_db($con, "greengardendb");
 
 ?>

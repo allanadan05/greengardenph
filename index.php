@@ -12,6 +12,9 @@ include('connection.php');
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- google sign in meta tag -->
+    <meta name="google-signin-client_id" content="284149964642-b2rid3g556j1l7p0d6btr1g1spo20d5i.apps.googleusercontent.com">
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
@@ -46,6 +49,35 @@ include('connection.php');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+        //google sign-on get profile
+        function onSignIn(googleUser) {
+          var profile = googleUser.getBasicProfile();
+          console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+          console.log('Name: ' + profile.getName());
+          console.log('Image URL: ' + profile.getImageUrl());
+          console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+
+
+          //To retrieve profile information for a user, use the getBasicProfile() method.
+          //Note: By default, the fetch_basic_profile parameter of gapi.auth2.init() is set to true, which will automatically add 'email profile openid' as scope.
+          //Important: Do not use the Google IDs returned by getId() or the user's profile information to communicate the currently signed in user to your backend server. Instead, send ID tokens, which can be securely validated on the server.
+        }
+
+        //google sign-out get profile
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+              console.log('User signed out.');
+            });
+
+            //You can enable users to sign out of your app without signing out of Google by adding a sign-out button or link to your site. To create a sign-out link, attach a function that calls the GoogleAuth.signOut() method to the link's onclick event.
+          }
+    </script>
+
+    <!--Google Sign in-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
 </head>
 
@@ -514,6 +546,9 @@ include('connection.php');
                                                 <Button>
                                                 <img src="images/google-icon.png" alt="">Login with Gmail</Button>
                                         </div>
+                                        <!-- Google Sign-in button -->
+                                        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                                        <a href="index.php" onclick="signOut();"> <span><i class="fa fa-power-off"></i></span> Logout</a>
 
                                 </div>
                 

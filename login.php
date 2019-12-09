@@ -19,14 +19,17 @@ if(isset($_POST['login'])){
             $_SESSION['lname']=$result['lname'];
             $_SESSION['fname']=$result['fname'];
             $_SESSION['fullname']=$result['lname']." ".$result['fname'];
-            if($result['usertype']== admin ){
+            if($result['usertype']== "admin" ){
             header("Location: admin.php?login=s&fname=".$result['fname']);
             exit();
             }
-            if($result['usertype']== user ){
+            else if($result['usertype']== "user" ){
                     header("Location: user.php?login=s&fname=".$result['fname']);
                     exit();
-                    }    
+            }else{
+                 header("Location: index.php?login=error");
+            }
+
         
     }else{
         echo "log in failed!";
